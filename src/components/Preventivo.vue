@@ -138,7 +138,7 @@ export default {
     </v-container>
 
     <v-container>
-        <v-form fast-fail methods="POST" name="contact" data-netlify="true">
+        <v-form fast-fail methods="POST" name="contact" data-netlify="true" on-submit="submit">
             <input type="hidden" name="test" value="New lead from %{formName} (%{submissionId})" autocomplete="on">
             <v-text-field :rules="firstNameRules" density="compact" prepend-inner-icon="mdi-account" label="Nome o Azienda"
                 variant="underlined" color="light-blue" counter clearable aria-required="true" type="text" name="name"
