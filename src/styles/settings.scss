@@ -1,0 +1,18 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+// https://vuetifyjs.com/features/sass-variables/`
+// @use 'vuetify/settings' with (
+//   $color-pack: false
+// );
+
+@font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Barlow-Black') url(https://www.mi-ke.ch/fonts/Barlow/woff2/Barlow-Black.woff2) format('woff2');
+    font-display: swap;
+}
