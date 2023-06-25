@@ -12,7 +12,6 @@ export default {
                 { id: 4, title: 'Servizi', number: 'five', icon: 'mdi-account-wrench' },
                 { id: 5, title: 'Contatti', number: 'six', icon: 'mdi-account-box' },
             ],
-            logo: '/src/assets/puliservice.webp',
             menuClosed: 'mdi-menu',
             menuOpen: 'mdi-menu-open',
             badge: 'mdi-calendar-badge',
@@ -42,7 +41,7 @@ export default {
         <v-app-bar-nav-icon variant="text" :flat="true" color="light-blue" v-on:click.stop="drawer = !drawer"
             id="disable-mb" role="button" aria-label="Menù"></v-app-bar-nav-icon>
 
-        <v-img v-on:click="scrollUp" :src="logo" width="200" height="50" class="pa-1 ma-1" style="cursor: pointer;" alt="Logo Puliservice srls"></v-img>
+        <v-img v-on:click="scrollUp" src="/src/assets/puliservice.webp" width="200" height="50" class="pa-1 ma-1" style="cursor: pointer;" alt="Logo Puliservice srls"></v-img>
 
         <v-spacer></v-spacer>
 
@@ -51,10 +50,10 @@ export default {
             <v-tab v-for="item in navItems" :id="item.id" :value='item.number' class='rounded-xl mt-2' density='compact'>
                 {{ item.title }}
             </v-tab>
-            <v-tab style="color: rgb(74,193,246)" class='rounded-pill mt-2' density='compact' :prepend-icon='badge'
+            <v-btn style="color: rgb(74,193,246)" class='rounded-pill mt-2' density='compact' :prepend-icon='badge'
                 variant="tonal" v-on:click="this.$router.push('/preventivo')" id="disable-btn">
                 <span style="color: black;">Richiedi un preventivo gratuito</span>
-            </v-tab>
+            </v-btn>
 
         </v-tabs>
         
