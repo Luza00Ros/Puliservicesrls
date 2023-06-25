@@ -3,14 +3,14 @@ export default {
     data() {
         return {
             slides: [
-                { id: 0, name: 'Vileda Professional', img: '/src/assets/vileda.webp', link: 'https://www.vileda-professional.it/' },
-                { id: 1, name: 'Marbec', img: '/src/assets/marbec.webp', link: 'https://www.marbec.it/' },
-                { id: 2, name: 'Sutter Professional', img: '/src/assets/sutter.webp', link: 'https://www.sutterprofessional.it/' },
+                { id: 0, name: 'Vileda Professional', img: "/src/assets/vileda.webp", link: 'https://www.vileda-professional.it/' },
+                { id: 1, name: 'Marbec', img: "/src/assets/marbec.webp", link: 'https://www.marbec.it/' },
+                { id: 2, name: 'Sutter Professional', img: "/src/assets/sutter.webp", link: 'https://www.sutterprofessional.it/' },
             ],
             services: [
-                { id: 0, type: 'Servizi', title: 'pulizie di condomini', description: 'Esplora i servizi offerti su Potenza e provincia dalla nostra ditta di pulizie.', location: '/pulizieTraslochi', img: '/src/assets/pulizieCondomini.webp' },
-                { id: 1, type: 'Servizi', title: 'pulizie di uffici', description: 'Trova i servizi offerti dalla nostra ditta di pulizie a Potenza e provincia.', location: '/pulizieUffici', img: '/src/assets/pulizieUffici.webp' },
-                { id: 2, type: 'Servizi', title: 'pulizie professionali', description: 'Qui tutti i servizi di pulizie professionali a Potenza e provincia.', location: '/pulizieProfessionali', img: '/src/assets/pulizieProfessionali.jpg' },
+                { id: 0, type: 'Servizi', title: 'pulizie di condomini', description: 'Esplora i servizi offerti su Potenza e provincia dalla nostra ditta di pulizie.', location: '/pulizieTraslochi', img: "/src/assets/pulizieCondomini.webp" },
+                { id: 1, type: 'Servizi', title: 'pulizie di uffici', description: 'Trova i servizi offerti dalla nostra ditta di pulizie a Potenza e provincia.', location: '/pulizieUffici', img: "/src/assets/pulizieUffici.webp" },
+                { id: 2, type: 'Servizi', title: 'pulizie professionali', description: 'Qui tutti i servizi di pulizie professionali a Potenza e provincia.', location: '/pulizieProfessionali', img: "/src/assets/pulizieProfessionali.jpg" },
             ],
             overviews: [
                 { id: 0, title: 'PULIZIE DI APPARTAMENTI', img: 'mdi-home', text: "Il nostro servizio di pulizie di appartamenti è progettato per offrire un'esperienza di pulizia completa e di alta qualità per garantire un ambiente pulito e confortevole nella tua casa. Che tu sia un proprietario di un appartamento che desidera preparare lo spazio per i nuovi inquilini o un inquilino che cerca di mantenere l'appartamento pulito e ordinato, siamo qui per aiutarti." },
@@ -33,7 +33,7 @@ export default {
 <template>
     <!-- PARALLAX -->
 
-    <v-parallax :src='/src/assets/cleaning.webp' alt="Immagine in background">
+    <v-parallax src="/src/assets/cleaning.webp" alt="Immagine in background">
         <div class="d-flex flex-column fill-height justify-center text-center align-center text-white">
             <div class=" text-h2 text-center font-weight-bold mb-3" id="title-responsive2"
                 style="padding-left: 15%; padding-right: 15%;">
