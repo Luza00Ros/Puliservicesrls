@@ -73,27 +73,27 @@ Utilizzando queste tecnologie, è stato possibile sviluppare un'applicazione web
 
 1. Clona il repository sul tuo computer utilizzando il comando:
    ```
-   git clone https://github.com/tuonome/nome-progetto.git
+   git clone https://github.com/Dino-996/Puliservicesrls.git
    ```
 
 2. Naviga nella directory del progetto:
    ```
-   cd nome-progetto
+   cd Puliservicesrls
    ```
 
 3. Installa le dipendenze necessarie eseguendo il comando:
    ```
-   npm install
+   yarn install
    ```
 
 ## Utilizzo
 
 1. Avvia l'applicazione con il seguente comando:
    ```
-   npm start
+   yarn dev
    ```
 
-2. Accedi all'applicazione dal tuo browser all'indirizzo [localhost:porta] (localhost:3000).
+2. Accedi all'applicazione dal tuo browser all'indirizzo [localhost:porta] (es: localhost:3000).
 
 ## Contributi
 
