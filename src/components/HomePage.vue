@@ -2,7 +2,6 @@
 export default {
     data() {
         return {
-            cleaning: '/src/assets/cleaning.webp',
             slides: [
                 { id: 0, name: 'Vileda Professional', img: '/src/assets/vileda.webp', link: 'https://www.vileda-professional.it/' },
                 { id: 1, name: 'Marbec', img: '/src/assets/marbec.webp', link: 'https://www.marbec.it/' },
@@ -34,7 +33,7 @@ export default {
 <template>
     <!-- PARALLAX -->
 
-    <v-parallax :src="cleaning" alt="Immagine in background">
+    <v-parallax :src='/src/assets/cleaning.webp' alt="Immagine in background">
         <div class="d-flex flex-column fill-height justify-center text-center align-center text-white">
             <div class=" text-h2 text-center font-weight-bold mb-3" id="title-responsive2"
                 style="padding-left: 15%; padding-right: 15%;">
