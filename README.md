@@ -126,7 +126,7 @@ Siamo felici di accettare contributi da parte della community per migliorare Pul
 
 ## Contatti
 
-Per ulteriori informazioni o domande, puoi contattarci all'indirizzo puliservicesrls@gmail.com.
+Per ulteriori informazioni o domande, puoi contattarci all'indirizzo adv.puliservicesrls@gmail.com.
 
 ## CREDITS
 
