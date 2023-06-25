@@ -50,12 +50,12 @@ export default {
             <v-tab v-for="item in navItems" :id="item.id" :value='item.number' class='rounded-xl mt-2' density='compact'>
                 {{ item.title }}
             </v-tab>
-            <v-btn style="color: rgb(74,193,246)" class='rounded-pill mt-2' density='compact' :prepend-icon='badge'
-                variant="tonal" v-on:click="this.$router.push('/preventivo')" id="disable-btn">
+        </v-tabs>
+
+        <v-btn style="color: rgb(74,193,246)" class='rounded-pill mt-2' size="large" density='compact' large :prepend-icon='badge'
+                variant="fill" v-on:click="this.$router.push('/preventivo')" id="disable-btn">
                 <span style="color: black;">Richiedi un preventivo gratuito</span>
             </v-btn>
-
-        </v-tabs>
         
     </v-app-bar>
 
