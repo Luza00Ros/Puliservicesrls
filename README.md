@@ -95,8 +95,6 @@ Utilizzando queste tecnologie, è stato possibile sviluppare un'applicazione web
 
 2. Accedi all'applicazione dal tuo browser all'indirizzo [localhost:porta] (localhost:3000).
 
-3. [Spiegare come utilizzare l'applicazione, includendo eventuali opzioni o funzionalità speciali]
-
 ## Contributi
 
 Siamo felici di accettare contributi da parte della community per migliorare Puliservice SRLS. Se desideri contribuire, segui questi passaggi:
