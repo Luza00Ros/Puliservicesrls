@@ -14,7 +14,7 @@ const routes = [
       { //404 - PAGE NOT FOUND
         path: '/:pathMatch(.*)*',
         name: 'PageNotFound',
-        component: () => import('/PageNotFound.vue'),
+        component: () => import('@/components/PageNotFound.vue'),
       },
       {
         path: 'pulizieTraslochi',
