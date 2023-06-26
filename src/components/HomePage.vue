@@ -64,7 +64,7 @@ export default {
 
     <!--STORYTELLING-->
 
-    <v-container class="mt-5">
+    <div class="ma-5">
         <v-row class="d-flex justify-center align-center ml-1 flex-wrap">
 
             <v-col class="text-start" cols="auto" md="8" sm="12">
@@ -95,7 +95,7 @@ export default {
             </v-col>
 
         </v-row>
-    </v-container>
+    </div>
 
     <v-spacer></v-spacer>
     <v-divider></v-divider>
@@ -157,7 +157,7 @@ export default {
 
     <div class="d-flex justify-space-evently align-center flex-wrap">
         <v-card v-for="service in services" :key="service.id" class="mx-auto mt-5 mb-5" max-width="600" color="light-blue">
-            <v-img :src="service.img" height="300px" width="600px" cover rounded="xl"></v-img>
+            <v-img :src='service.img' height="300px" width="600px" cover rounded="xl"></v-img>
             <v-card-item>
                 <div>
                     <div class="text-overline mb-1">
