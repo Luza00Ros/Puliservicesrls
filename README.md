@@ -130,4 +130,4 @@ Per ulteriori informazioni o domande, puoi contattarci all'indirizzo adv.puliser
 
 [@Dino996](https://github.com/Dino-996) - [@Luza00Ros](https://github.com/Luza00Ros)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/15d9f03b-cf52-4b59-b6d0-1fc17c4b5be1/deploy-status)](https://app.netlify.com/sites/flourishing-cucurucho-65d124/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/15d9f03b-cf52-4b59-b6d0-1fc17c4b5be1/deploy-status)](https://app.netlify.com/sites/puliservicesrls/deploys)
