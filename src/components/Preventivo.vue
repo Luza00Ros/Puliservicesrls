@@ -122,8 +122,41 @@ export default {
                 { id: 99, state: 'Viggiano', abbr: 'PZ' },
             ],
             checkbox: false,
-            isCheck: [value => !!value || 'Questo campo è obligatorio'],
+            isCheck: [
+                value => !!value || 'Questo campo è obligatorio'
+            ],
+            userId: 0,
+            name: '',
+            email: '',
+            city: '',
+            request: '',
+            date: new Date().toLocaleDateString(), 
+            hours: new Date().getHours(),
+            minute: new Date().getMinutes()
         }
+    },
+    methods: {
+        submit() {
+
+            const db = getDatabase();
+            const reference = ref(db, 'contactform/' + this.increment());
+            
+                set(reference, {
+                    name: this.name,
+                    email: this.email,
+                    select: this.select,
+                    dateTime: `${this.date} - ${this.hours} : ${this.minute}`,
+                    request: this.request,
+                });
+        },
+
+        increment() {
+            //PER RESETTARE BASTA IMPOSTARE document.cookie = 0;
+            document.cookie = 0;
+            this.userId = document.cookie;
+            console.log(document.cookie);
+            return document.cookie++;
+        },
     },
 }
 </script>
@@ -133,37 +166,36 @@ export default {
 
     <v-container class="mt-3">
         <div class="text-start text-h1" id="title-responsive0">Richiesta preventivo</div>
-        <p class="text-start text-light-blue mt-5 text-h6">Compila i campi sottostanti indicando la tua esigenza. Saremo lieti di
+        <p class="text-start text-light-blue mt-5 text-h6">Compila i campi sottostanti indicando la tua esigenza. Saremo
+            lieti di
             ricontattarti per offrirti la nostra migliore proposta</p>
     </v-container>
 
     <v-container>
-        <form name="contact" method="POST" netlify>
-        <v-form fast-fail>
+        <v-form :fast-fail="true" name="contact" method="POST" ref="form">
 
-            <v-text-field :rules="firstNameRules" density="compact" prepend-inner-icon="mdi-account" label="Nome o Azienda"
-                variant="underlined" color="light-blue" counter clearable aria-required="true" type="text"
-                autocomplete="on"> <input type="hidden" name="name" /> 
+            <v-text-field :rules="firstNameRules" density="compact" variant="underlined" prepend-inner-icon="mdi-account" label="Nome o Azienda"
+                color="light-blue" counter clearable aria-required="true" type="text" name="name" v-model="name"
+                bg-color="transparent" autocomplete="on">
             </v-text-field>
 
-            <v-text-field :rules="rules" density="compact" prepend-inner-icon="mdi-email" label="E-mail"
-                variant="underlined" color="light-blue" class="mt-5" clearable type="email"
-                autocomplete="on"> <input type="hidden" name="email" /> 
-            </v-text-field>
+                <v-text-field :rules="rules" density="compact" prepend-inner-icon="mdi-email" label="E-mail"
+                    variant="underlined" color="light-blue" class="mt-5" clearable type="email" name="email" v-model="email"
+                    autocomplete="on">
+                </v-text-field>
 
-            <!--
+                
             <v-select prepend-inner-icon="mdi-map-marker" color="light-blue" v-model="select"
                 :hint="`${select.state}, ${select.abbr}`" :items="items" item-title="state" item-value="abbr"
-                label="Provincia" persistent-hint return-object single-line variant="underlined" class="mt-5" type="text"> 
-                <input type="hidden" name="city" />
+                label="Provincia" persistent-hint return-object single-line variant="underlined" class="mt-5" 
+                type="text" name="city"> 
             </v-select>
             
 
             <v-textarea color="light-blue" variant="underlined" label="Inserisci qui la tua richiesta"
-                prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5" type="text">
-                <input type="text" name="message" />
+                prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5" 
+                type="text" name="message" v-model="request">
             </v-textarea>
-
             <v-checkbox v-model="checkbox" :rules="isCheck" color="light-blue">
                 <template v-slot:label>
                     <div>
@@ -179,11 +211,11 @@ export default {
                     </div>
                 </template>
             </v-checkbox>
-            -->
+            
             <v-spacer></v-spacer>
-                <v-btn color="light-blue" class="mt-5" rounded="pill" type="submit">Invia la richiesta</v-btn>
+            <v-btn v-on:click="submit()" name="invia" color="light-blue" class="mt-5" rounded="pill">Invia la
+                richiesta</v-btn>
         </v-form>
-    </form>
     </v-container>
 
     <Bottom />
@@ -200,6 +232,7 @@ export default {
 
 <script setup>
 import Backwards from './Backwards.vue';
-import Bottom from '@/components/Bootom.vue'
+import Bottom from '@/components/Bootom.vue';
+import { getDatabase, ref, set} from 'firebase/database';
 //RICORDA DI INSERIRE RECAPTCHA V3
 </script>
