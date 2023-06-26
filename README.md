@@ -51,22 +51,34 @@ Il progetto Puliservice SRLS è una web app che rappresenta il sito web dell'omo
 ## Tecnologie Utilizzate
 
 -   **Vue.js**: Vue.js è un framework JavaScript progressivo per la costruzione di interfacce utente. È stato utilizzato per creare una struttura solida e reattiva per l'applicazione, consentendo di gestire facilmente la logica di visualizzazione dei dati e la gestione degli eventi.
-    
+-   ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
+
  -   **HTML**:  (*HyperText Markup Language*) è il linguaggio di markup utilizzato per strutturare il contenuto delle pagine web. È stato utilizzato per definire la struttura delle pagine e per incorporare gli elementi dell'interfaccia utente.
+ -   ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
     
  -   **SCSS**:  (*Sassy Cascading Style Sheets*) estensione del linguaggio CSS che offre funzionalità avanzate come variabili, mixin e nesting. È stato utilizzato per scrivere i file di stile CSS in modo più efficiente, modulare e riutilizzabile.
+ -   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
     
  -   **JavaScript**: Linguaggio di programmazione ad alto livello che aggiunge funzionalità dinamiche e interattive alle pagine web. È stato utilizzato per implementare la logica e la manipolazione dei dati dell'applicazione.
+ -   ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
     
  -   **Vuetify**: Libreria di componenti UI basata su Vue.js. È stata utilizzata per implementare rapidamente e in modo coerente i componenti dell'interfaccia utente, come pulsanti, modali, tabelle e barre di navigazione, risparmiando tempo nello sviluppo e garantendo uno stile coerente nell'intera applicazione.
+ -   ![Vuetify](https://img.shields.io/badge/Vuetify-1867C0?style=for-the-badge&logo=vuetify&logoColor=AEDDFF)
+
+ -   **Babel**: strumento di transpilazione per il linguaggio JavaScript. La sua principale funzione è convertire il codice JavaScript scritto con le ultime caratteristiche del linguaggio in una forma    compatibile con i browser più vecchi e altri ambienti di esecuzione.
+ -   ![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)
     
  -   **Vite**:  Sistema di build veloce e leggero per applicazioni web. È stato utilizzato per creare un ambiente di sviluppo reattivo, che permette di avviare l'applicazione rapidamente durante lo sviluppo e di effettuare modifiche in tempo reale.
+ -   ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
  
  -   **Jest**:  Jest è un framework di testing JavaScript. È stato utilizzato per creare e eseguire test automatizzati per verificare la correttezza e il corretto funzionamento delle diverse parti dell'applicazione.
+ -   ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 
  -   **Yarn**: Package manager che gestisce le dipendenze dell'applicazione. È stato utilizzato per installare e gestire le librerie e i pacchetti necessari per il progetto, garantendo una gestione efficiente delle dipendenze.
+ -   ![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)
     
  -   **Firebase**: Abbiamo recentemente aggiornato la nostra piattaforma di hosting, passando a Firebase. Firebase ci offre un'infrastruttura affidabile e scalabile per gestire il nostro sito web. Grazie a Firebase Hosting, il nostro sito viene distribuito su una rete globale di server, garantendo un caricamento rapido delle pagine e un'esperienza utente ottimale.
+ -   ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
  
 Utilizzando queste tecnologie, è stato possibile sviluppare un'applicazione web **moderna**, **reattiva** e **performante**, con un'**interfaccia utente intuitiva e accattivante**, in grado di offrire un'esperienza di utilizzo ottimale agli utenti.
 
