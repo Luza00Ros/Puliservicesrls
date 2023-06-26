@@ -30,6 +30,9 @@ export default {
                 behavior: 'smooth',
             });
         },
+        routerPush(link) {
+            return this.$router.push(link);
+        },
     },
 }
 </script>
@@ -55,7 +58,7 @@ export default {
         </v-tabs>
 
         <v-btn style="color: rgb(74,193,246)" class='rounded-pill mt-2' size="large" density='compact' large
-            :prepend-icon='badge' variant="fill" v-on:click="$event => this.$router.push('/preventivo')" role="link"
+            :prepend-icon='badge' variant="fill" v-on:click="routerPush('preventivo')" role="link"
             id="disable-btn">
             <span style="color: black;">Richiedi un preventivo gratuito</span>
         </v-btn>
