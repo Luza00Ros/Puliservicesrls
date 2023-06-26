@@ -23,7 +23,7 @@ export default {
                 Oops, questa pagina non è stata trovata!
             </div>
 
-            <v-btn v-on:click="$event => goHome()" role="link" rounded="xl" color="white" variant="tonal"
+            <v-btn v-on:click="goHome()" role="link" rounded="xl" color="white" variant="tonal"
                 class="mr-5 pa-5 d-flex text-center align-center">
                 <span style="padding-left: 5px;"><b>Torna alla Home</b></span>
             </v-btn>
