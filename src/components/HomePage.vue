@@ -7,10 +7,10 @@ export default {
                 { id: 1, name: 'Marbec', img: "/src/assets/marbec.webp", link: 'https://www.marbec.it/' },
                 { id: 2, name: 'Sutter Professional', img: "/src/assets/sutter.webp", link: 'https://www.sutterprofessional.it/' },
             ],
-            services: [
-                { id: 0, type: 'Servizi', title: 'pulizie di condomini', description: 'Esplora i servizi offerti su Potenza e provincia dalla nostra ditta di pulizie.', location: '/pulizieTraslochi', img: "/src/assets/pulizieCondomini.webp" },
-                { id: 1, type: 'Servizi', title: 'pulizie di uffici', description: 'Trova i servizi offerti dalla nostra ditta di pulizie a Potenza e provincia.', location: '/pulizieUffici', img: "/src/assets/pulizieUffici.webp" },
-                { id: 2, type: 'Servizi', title: 'pulizie professionali', description: 'Qui tutti i servizi di pulizie professionali a Potenza e provincia.', location: '/pulizieProfessionali', img: "/src/assets/pulizieProfessionali.jpg" },
+            sliders: [
+            "/src/assets/vileda.webp",
+            "/src/assets/marbec.webp",
+            "/src/assets/sutter.webp"
             ],
             overviews: [
                 { id: 0, title: 'PULIZIE DI APPARTAMENTI', img: 'mdi-home', text: "Il nostro servizio di pulizie di appartamenti è progettato per offrire un'esperienza di pulizia completa e di alta qualità per garantire un ambiente pulito e confortevole nella tua casa. Che tu sia un proprietario di un appartamento che desidera preparare lo spazio per i nuovi inquilini o un inquilino che cerca di mantenere l'appartamento pulito e ordinato, siamo qui per aiutarti." },
@@ -56,7 +56,15 @@ export default {
         <v-carousel-item v-for="slide in slides" :key="slide.id" cover>
             <v-sheet color="light-blue" height="100%">
                 <div class="d-flex fill-height justify-center d-flex text-center align-center">
-                    <a role="link" aria-label="Le nostre marche certificate" target="_blank" :href="slide.link" class="h-50"> <v-img :src='slide.img' alt="Marchi da noi utilizzati"/></a>
+                    <template v-if="slide.id == 0">
+                        <a role="link" aria-label="Le nostre marche certificate" target="_blank" :href="slide.link" class="h-50"> <v-img src='/src/assets/vileda.webp' alt="Marchi da noi utilizzati"/></a>
+                    </template>
+                    <template v-if="slide.id == 1">
+                        <a role="link" aria-label="Le nostre marche certificate" target="_blank" :href="slide.link" class="h-50"> <v-img src='/src/assets/marbec.webp' alt="Marchi da noi utilizzati"/></a>
+                    </template>
+                    <template v-if="slide.id == 2">
+                        <a role="link" aria-label="Le nostre marche certificate" target="_blank" :href="slide.link" class="h-50"> <v-img src='/src/assets/sutter.webp' alt="Marchi da noi utilizzati"/></a>
+                    </template>
                 </div>
             </v-sheet>
         </v-carousel-item>
@@ -156,25 +164,76 @@ export default {
     </v-container>
 
     <div class="d-flex justify-space-evently align-center flex-wrap">
-        <v-card v-for="service in services" :key="service.id" class="mx-auto mt-5 mb-5" max-width="600" color="light-blue">
-            <v-img v-bind:src='service.img' height="300px" width="600px" cover rounded="xl"></v-img>
+        <v-card class="mx-auto mt-5 mb-5" max-width="600" color="light-blue">
+            <v-img src="/src/assets/pulizieCondomini.webp" height="300px" width="600px" cover rounded="xl"></v-img>
+
             <v-card-item>
                 <div>
                     <div class="text-overline mb-1">
-                        <span style="font-size: 14px;"> {{ service.type }} </span>
+                        <span style="font-size: 14px;"> Servizi </span>
                     </div>
                     <div class="font-weight-bold text-h6 mb-1">
-                        <span class="text-h6"> {{ service.title.toUpperCase() }} </span>
+                        <span class="text-h6"> Pulizie di condomini </span>
                     </div>
                     <div class="text-caption font-weight-bold">
-                        <span style="font-size: 14px;">{{ service.description }} </span>
+                        <span style="font-size: 14px;"> Esplora i servizi offerti su Potenza e provincia dalla nostra ditta di pulizie </span>
                     </div>
                 </div>
             </v-card-item>
 
             <v-card-actions>
-                <v-btn append-icon="mdi-arrow-right-thin" v-on:click="$event => routerPush(service.location)" rounded="xl" color="white" variant="tonal"
-                    class="mr-5 pa-2 align-center" size="large">
+                <v-btn append-icon="mdi-arrow-right-thin" v-on:click="$event => routerPush('pulizieTraslochi')" rounded="xl" color="white" variant="tonal"
+                    class="mr-5 pa-2 align-center">
+                    <span style="padding-left: 5px;"><b>Vai al servizio</b></span>
+                </v-btn>
+            </v-card-actions>
+        </v-card>
+
+        <v-card class="mx-auto mt-5 mb-5" max-width="600" color="light-blue">
+            <v-img src="/src/assets/pulizieUffici.webp" height="300px" width="600px" cover rounded="xl"></v-img>
+
+            <v-card-item>
+                <div>
+                    <div class="text-overline mb-1">
+                        <span style="font-size: 14px;"> Servizi </span>
+                    </div>
+                    <div class="font-weight-bold text-h6 mb-1">
+                        <span class="text-h6"> Pulizie di uffici </span>
+                    </div>
+                    <div class="text-caption font-weight-bold">
+                        <span style="font-size: 14px;"> Trova i servizi offerti dalla nostra ditta di pulizie a Potenza e provincia </span>
+                    </div>
+                </div>
+            </v-card-item>
+
+            <v-card-actions>
+                <v-btn append-icon="mdi-arrow-right-thin" v-on:click="$event => routerPush('pulizieUffici')" rounded="xl" color="white" variant="tonal"
+                    class="mr-5 pa-2 align-center">
+                    <span style="padding-left: 5px;"><b>Vai al servizio</b></span>
+                </v-btn>
+            </v-card-actions>
+        </v-card>
+
+        <v-card class="mx-auto mt-5 mb-5" max-width="600" color="light-blue">
+            <v-img src="/src/assets/pulizieProfessionali.jpg" height="300px" width="600px" cover rounded="xl"></v-img>
+
+            <v-card-item>
+                <div>
+                    <div class="text-overline mb-1">
+                        <span style="font-size: 14px;"> Servizi </span>
+                    </div>
+                    <div class="font-weight-bold text-h6 mb-1">
+                        <span class="text-h6"> Pulizie professionali </span>
+                    </div>
+                    <div class="text-caption font-weight-bold">
+                        <span style="font-size: 14px;"> Qui tutti i servizi di pulizie professionali a Potenza e provincia. </span>
+                    </div>
+                </div>
+            </v-card-item>
+
+            <v-card-actions>
+                <v-btn append-icon="mdi-arrow-right-thin" v-on:click="$event => routerPush('pulizieProfessionali')" rounded="xl" color="white" variant="tonal"
+                    class="mr-5 pa-2 align-center">
                     <span style="padding-left: 5px;"><b>Vai al servizio</b></span>
                 </v-btn>
             </v-card-actions>
