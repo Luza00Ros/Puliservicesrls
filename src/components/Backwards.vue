@@ -2,7 +2,6 @@
 export default {
     data() {
         return {
-            logo: '/src/assets/puliservice.webp',
             backIcon : 'mdi-arrow-left',
         }
     },
@@ -36,7 +35,7 @@ export default {
         <span v-else>
             <v-btn v-on:click="goHome" :icon="backIcon" rounded="xl" color="light-blue" density="compact" variant="flat" class="text-center ml-2"></v-btn>
         </span>
-        <v-img v-on:click="scrollUp" :src="logo" width="200" height="50" class="pa-1 ma-1" style="cursor: pointer;" alt="Logo Puliservice srls"></v-img>
+        <v-img v-on:click="scrollUp" src="/src/assets/puliservice.webp" width="200" height="50" class="pa-1 ma-1" style="cursor: pointer;" alt="Logo Puliservice srls"></v-img>
     </v-app-bar>
 </template>
 
