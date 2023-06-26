@@ -157,7 +157,7 @@ export default {
 
     <div class="d-flex justify-space-evently align-center flex-wrap">
         <v-card v-for="service in services" :key="service.id" class="mx-auto mt-5 mb-5" max-width="600" color="light-blue">
-            <v-img :src='service.img' height="300px" width="600px" cover rounded="xl"></v-img>
+            <v-img v-bind:src='service.img' height="300px" width="600px" cover rounded="xl"></v-img>
             <v-card-item>
                 <div>
                     <div class="text-overline mb-1">
