@@ -41,7 +41,8 @@ export default {
         <v-app-bar-nav-icon variant="text" :flat="true" color="light-blue" v-on:click.stop="drawer = !drawer"
             id="disable-mb" role="button" aria-label="Menù"></v-app-bar-nav-icon>
 
-        <v-img v-on:click="scrollUp" src="/src/assets/puliservice.webp" width="200" height="50" class="pa-1 ma-1" style="cursor: pointer;" alt="Logo Puliservice srls"></v-img>
+        <v-img v-on:click="scrollUp" src="/src/assets/puliservice.webp" width="200" height="50" class="pa-1 ma-1"
+            style="cursor: pointer;" alt="Logo Puliservice srls"></v-img>
 
         <v-spacer></v-spacer>
 
@@ -51,15 +52,13 @@ export default {
                 {{ item.title }}
             </v-tab>
 
-            <v-tab style="color: rgb(74,193,246)" :prepend-icon='badge' class='rounded-pill mt-2' density="compact" v-on:click="$event => this.$router.push('preventivo')"> 
-                <span style="color: black;">Richiedi un preventivo gratuito</span> 
-            </v-tab>
-
-            <v-btn style="color: rgb(74,193,246)" class='rounded-pill mt-2' size="large" density='compact' large :prepend-icon='badge'
-                variant="fill" v-on:click="$event => this.$router.push('preventivo')" role="link" id="disable-btn">
-                <span style="color: black;">Richiedi un preventivo gratuito</span>
-            </v-btn>
         </v-tabs>
+
+        <v-btn style="color: rgb(74,193,246)" class='rounded-pill mt-2' size="large" density='compact' large
+            :prepend-icon='badge' variant="fill" v-on:click="$event => this.$router.push('/preventivo')" role="link"
+            id="disable-btn">
+            <span style="color: black;">Richiedi un preventivo gratuito</span>
+        </v-btn>
 
     </v-app-bar>
 
