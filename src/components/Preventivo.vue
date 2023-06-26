@@ -138,7 +138,8 @@ export default {
     </v-container>
 
     <v-container>
-        <v-form fast-fail method="post" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form method="POST" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+        <v-form fast-fail>
             <input type="hidden" name="form-name" value="contact">
             <v-text-field :rules="firstNameRules" density="compact" prepend-inner-icon="mdi-account" label="Nome o Azienda"
                 variant="underlined" color="light-blue" counter clearable aria-required="true" type="text" name="name"
@@ -151,7 +152,7 @@ export default {
                 label="Provincia" persistent-hint return-object single-line variant="underlined" class="mt-5" type="text"
                 name="city" />
             <v-textarea color="light-blue" variant="underlined" label="Inserisci qui la tua richiesta"
-                prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5" name="message" />
+                prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5" type="text" name="message" />
             <v-checkbox v-model="checkbox" :rules="isCheck" color="light-blue">
                 <template v-slot:label>
                     <div>
@@ -170,6 +171,7 @@ export default {
             <v-spacer></v-spacer>
                 <v-btn color="light-blue" class="mt-5" rounded="pill" type="submit">Invia la richiesta</v-btn>
         </v-form>
+    </form>
     </v-container>
 
     <Bottom />
