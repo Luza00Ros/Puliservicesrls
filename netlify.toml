@@ -1,4 +1,9 @@
-[[redirects]]
-from = "/*"
-to = "/src/components/PageNotFound.vue"
-status = 404
+  [[redirects]]
+  from = "/*"
+  to = "/src/components/PageNotFound.vue"
+  status = 404
+
+  [[redirects]]
+  from = "/preventivo"
+  to = "/"
+  status = 404
