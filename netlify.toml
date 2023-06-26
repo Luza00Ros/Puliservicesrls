@@ -1,0 +1,4 @@
+[[redirect]]
+from = "*/*"
+to = "src/components/PageNotFound.vue"
+status = 404
