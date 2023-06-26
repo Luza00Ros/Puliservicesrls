@@ -47,9 +47,10 @@ Il progetto Puliservice SRLS è una web app che rappresenta il sito web dell'omo
 11.  **Mappa del Sito**: Una pagina o un link che fornisce una panoramica strutturata delle pagine e delle sezioni del sito, facilitando la navigazione.
     
 12.  **Call to Action**: Inviti chiari e visibili per incoraggiare gli utenti a compiere azioni specifiche, come "Richiedi un Preventivo Gratuito".
--   Vue.js: Vue.js è un framework JavaScript progressivo per la costruzione di interfacce utente. È stato utilizzato per creare una struttura solida e reattiva per l'applicazione, consentendo di gestire facilmente la logica di visualizzazione dei dati e la gestione degli eventi.
 
 ## Tecnologie Utilizzate
+
+-   **Vue.js**: Vue.js è un framework JavaScript progressivo per la costruzione di interfacce utente. È stato utilizzato per creare una struttura solida e reattiva per l'applicazione, consentendo di gestire facilmente la logica di visualizzazione dei dati e la gestione degli eventi.
     
  -   **HTML**:  (*HyperText Markup Language*) è il linguaggio di markup utilizzato per strutturare il contenuto delle pagine web. È stato utilizzato per definire la struttura delle pagine e per incorporare gli elementi dell'interfaccia utente.
     
@@ -65,7 +66,7 @@ Il progetto Puliservice SRLS è una web app che rappresenta il sito web dell'omo
 
  -   **Yarn**: Package manager che gestisce le dipendenze dell'applicazione. È stato utilizzato per installare e gestire le librerie e i pacchetti necessari per il progetto, garantendo una gestione efficiente delle dipendenze.
     
- -   **Netlify**: Piattaforma di hosting e deployment che semplifica il processo di distribuzione dell'applicazione web. È stata utilizzata per il deployment dell'applicazione, offrendo un'infrastruttura sicura e affidabile per l'esecuzione dell'applicazione in produzione.
+ -   **Firebase**: Abbiamo recentemente aggiornato la nostra piattaforma di hosting, passando a Firebase. Firebase ci offre un'infrastruttura affidabile e scalabile per gestire il nostro sito web. Grazie a Firebase Hosting, il nostro sito viene distribuito su una rete globale di server, garantendo un caricamento rapido delle pagine e un'esperienza utente ottimale.
  
 Utilizzando queste tecnologie, è stato possibile sviluppare un'applicazione web **moderna**, **reattiva** e **performante**, con un'**interfaccia utente intuitiva e accattivante**, in grado di offrire un'esperienza di utilizzo ottimale agli utenti.
 
@@ -129,5 +130,3 @@ Per ulteriori informazioni o domande, puoi contattarci all'indirizzo adv.puliser
 ## CREDITS
 
 [@Dino996](https://github.com/Dino-996) - [@Luza00Ros](https://github.com/Luza00Ros)
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/15d9f03b-cf52-4b59-b6d0-1fc17c4b5be1/deploy-status)](https://app.netlify.com/sites/puliservicesrls/deploys)
