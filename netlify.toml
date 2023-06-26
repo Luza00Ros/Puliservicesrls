@@ -1,4 +1,11 @@
+  ## This rule redirects to index.html
   [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+  ## This rule redirects to not found page
+  [[redirects]]
+  from = "/*"
+  to = "/src/components/PageNotFound.vue"
+  status = 404
