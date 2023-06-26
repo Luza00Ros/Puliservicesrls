@@ -1,6 +1,6 @@
 #redirect Netlify file
 
-/*                    /index.html
+/*                    /index.html                             200
 /pulizieTraslochi     /src/components/PulizieTraslochi.vue
 /pulizieUffici        /src/components/PulizieUffici.vue
 /pulizieProfessionali /src/components/PulizieProfessionali.vue

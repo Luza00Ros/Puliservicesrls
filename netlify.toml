@@ -7,5 +7,5 @@
   ## This rule redirects to not found page
   [[redirects]]
   from = "/*"
-  to = "/src/components/PageNotFound.vue"
+  to = "/PageNotFound.vue"
   status = 404
