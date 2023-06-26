@@ -138,21 +138,32 @@ export default {
     </v-container>
 
     <v-container>
-        <form method="POST" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form method="POST" name="contact" netlify>
         <v-form fast-fail>
-            <input type="hidden" name="form-name" value="contact">
+
+            <input type="hidden" name="contact" value="contact">
+
             <v-text-field :rules="firstNameRules" density="compact" prepend-inner-icon="mdi-account" label="Nome o Azienda"
-                variant="underlined" color="light-blue" counter clearable aria-required="true" type="text" name="name"
-                autocomplete="on" />
+                variant="underlined" color="light-blue" counter clearable aria-required="true" type="text"
+                autocomplete="on"> <input type="hidden" name="name" /> 
+            </v-text-field>
+
             <v-text-field :rules="rules" density="compact" prepend-inner-icon="mdi-email" label="E-mail"
-                variant="underlined" color="light-blue" class="mt-5" clearable type="email" name="email"
-                autocomplete="on" />
+                variant="underlined" color="light-blue" class="mt-5" clearable type="email"
+                autocomplete="on"> <input type="hidden" name="email" /> 
+            </v-text-field>
+
             <v-select prepend-inner-icon="mdi-map-marker" color="light-blue" v-model="select"
                 :hint="`${select.state}, ${select.abbr}`" :items="items" item-title="state" item-value="abbr"
-                label="Provincia" persistent-hint return-object single-line variant="underlined" class="mt-5" type="text"
-                name="city" />
+                label="Provincia" persistent-hint return-object single-line variant="underlined" class="mt-5" type="text"> 
+                <input type="hidden" name="city" /> 
+            </v-select>
+
             <v-textarea color="light-blue" variant="underlined" label="Inserisci qui la tua richiesta"
-                prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5" type="text" name="message" />
+                prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5" type="text">
+                <input type="text" name="message" />
+            </v-textarea>
+
             <v-checkbox v-model="checkbox" :rules="isCheck" color="light-blue">
                 <template v-slot:label>
                     <div>
@@ -168,6 +179,7 @@ export default {
                     </div>
                 </template>
             </v-checkbox>
+
             <v-spacer></v-spacer>
                 <v-btn color="light-blue" class="mt-5" rounded="pill" type="submit">Invia la richiesta</v-btn>
         </v-form>
