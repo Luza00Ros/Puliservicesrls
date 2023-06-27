@@ -51,16 +51,16 @@ export default {
 
         <v-tabs v-on:click='scrollUp' v-model='model' align-tabs='center' color='light-blue' id="disable-dk">
 
-            <v-tab v-for="item in navItems" :id="item.id" :value='item.number' class='rounded-xl mt-2' density='compact'>
+            <v-tab v-for="item in navItems" :id="item.id" :value='item.number' class='mt-2 rounded-lg' density='compact' variant="text">
                 {{ item.title }}
             </v-tab>
 
         </v-tabs>
 
-        <v-btn style="color: rgb(74,193,246)" class='rounded-pill mt-2' size="large" density='compact' large
-            :prepend-icon='badge' variant="tonal" v-on:click="routerPush('preventivo')" role="link"
+        <v-btn class='rounded-pill mt-2 text-light-blue' size="large" density='compact' large
+            :prepend-icon='badge' variant="flat" v-on:click="routerPush('preventivo')" role="link"
             id="disable-btn">
-            <span style="color: black;">Richiedi un preventivo gratuito</span>
+            <span class="text-black">Richiedi un preventivo gratuito</span>
         </v-btn>
 
     </v-app-bar>
