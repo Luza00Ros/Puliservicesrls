@@ -1,75 +1,69 @@
-# Contributor Covenant Code of Conduct
+# Codice di condotta del Patto di collaborazione
 
-## Our Pledge
+## Il nostro impregno
 
-We as members, contributors, and leaders pledge to make participation in our
-community a harassment-free experience for everyone, regardless of age, body
-size, visible or invisible disability, ethnicity, sex characteristics, gender
-identity and expression, level of experience, education, socio-economic status,
-nationality, personal appearance, race, religion, or sexual identity
-and orientation.
+Noi, in qualità di membri, collaboratori e leader, ci impegniamo a fare della partecipazione alla nostra
+comunità sia un'esperienza priva di molestie per tutti, a prescindere da età, corporatura, disabilità visibile o invisibile, etnia, caratteristiche sessuali, genere.
+disabilità visibile o invisibile, etnia, caratteristiche sessuali, identità ed espressione di genere, livello di esperienza, istruzione, status socio-economico, etnia, identità ed espressione di genere.
+identità ed espressione di genere, livello di esperienza, istruzione, status socio-economico, nazionalità, aspetto personale, razza, età, religione, religione e cultura,
+nazionalità, aspetto personale, razza, religione o identità sessuale.
+e orientamento.
 
-We pledge to act and interact in ways that contribute to an open, welcoming,
-diverse, inclusive, and healthy community.
+Ci impegniamo ad agire e interagire in modi che contribuiscano a creare una comunità aperta, accogliente,
+comunità aperta, accogliente, diversificata, inclusiva e sana.
 
-## Our Standards
+## I nostri standard
 
-Examples of behavior that contributes to a positive environment for our
-community include:
+Esempi di comportamenti che contribuiscono a creare un ambiente positivo per la nostra comunità
+comunità includono:
 
-* Demonstrating empathy and kindness toward other people
-* Being respectful of differing opinions, viewpoints, and experiences
-* Giving and gracefully accepting constructive feedback
-* Accepting responsibility and apologizing to those affected by our mistakes,
-  and learning from the experience
-* Focusing on what is best not just for us as individuals, but for the
-  overall community
+* Dimostrare empatia e gentilezza verso gli altri.
+* Essere rispettosi di opinioni, punti di vista ed esperienze diverse.
+* Dare e accettare con garbo un feedback costruttivo.
+* Accettare la responsabilità e chiedere scusa a coloro che sono stati colpiti dai nostri errori, e imparare dall'esperienza.
+* Concentrarsi su ciò che è meglio non solo per noi come individui, ma per l'intera comunità nel suo complesso.
 
-Examples of unacceptable behavior include:
+Esempi di comportamenti inaccettabili sono:
 
-* The use of sexualized language or imagery, and sexual attention or
-  advances of any kind
-* Trolling, insulting or derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or email
-  address, without their explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
-  professional setting
+* L'uso di un linguaggio o di immagini sessualizzate e le attenzioni o le avances sessuali di qualsiasi tipo.
+* Trolling, commenti offensivi o dispregiativi e attacchi personali o politici.
+* Molestie pubbliche o private.
+* Pubblicazione di informazioni private altrui, come l'indirizzo fisico o di posta elettronica, indirizzo e-mail, senza il loro esplicito consenso.
+* Altri comportamenti che potrebbero ragionevolmente essere considerati inappropriati in un contesto professionale.
 
-## Enforcement Responsibilities
+## Responsabilità di applicazione
 
-Community leaders are responsible for clarifying and enforcing our standards of
-acceptable behavior and will take appropriate and fair corrective action in
-response to any behavior that they deem inappropriate, threatening, offensive,
-or harmful.
+I leader della comunità hanno la responsabilità di chiarire e far rispettare i nostri standard di
+comportamento accettabile e intraprenderanno azioni correttive appropriate e giuste in
+in risposta a qualsiasi comportamento che ritengano inappropriato, minaccioso, offensivo o dannoso,
+o dannoso.
 
-Community leaders have the right and responsibility to remove, edit, or reject
-comments, commits, code, wiki edits, issues, and other contributions that are
-not aligned to this Code of Conduct, and will communicate reasons for moderation
-decisions when appropriate.
+I leader della comunità hanno il diritto e la responsabilità di rimuovere, modificare o rifiutare
+commenti, commit, codice, modifiche al wiki, problemi e altri contributi che non sono in linea con il Codice di Condotta.
+e comunicheranno le ragioni delle decisioni di moderazione quando opportuno.
 
 ## Scope
 
-This Code of Conduct applies within all community spaces, and also applies when
-an individual is officially representing the community in public spaces.
-Examples of representing our community include using an official e-mail address,
-posting via an official social media account, or acting as an appointed
-representative at an online or offline event.
+Il presente Codice di condotta si applica in tutti gli spazi della comunità e si applica anche quando
+un individuo rappresenta ufficialmente la comunità in spazi pubblici.
+Esempi di rappresentanza della comunità sono l'uso di un indirizzo e-mail ufficiale,
+pubblicare su un account ufficiale di social media, o agire come rappresentante nominato
+rappresentante nominato a un evento online o offline.
 
-## Enforcement
+## Applicazione
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
+I casi di comportamento abusivo, molesto o comunque inaccettabile possono essere
+ai leader della comunità responsabili dell'applicazione della legge all'indirizzo
 e-mail.
-All complaints will be reviewed and investigated promptly and fairly.
+Tutti i reclami saranno esaminati e indagati tempestivamente e in modo equo.
 
-All community leaders are obligated to respect the privacy and security of the
-reporter of any incident.
+Tutti i leader della comunità sono tenuti a rispettare la privacy e la sicurezza di chi segnala un episodio.
+di chi ha segnalato l'incidente.
 
-## Enforcement Guidelines
+## Linee guida per l'applicazione
 
-Community leaders will follow these Community Impact Guidelines in determining
-the consequences for any action they deem in violation of this Code of Conduct:
+I leader della comunità si atterranno alle presenti Linee guida per l'impatto sulla comunità nel determinare
+le conseguenze di qualsiasi azione che ritengano in violazione del presente Codice di condotta:
 
 ### 1. Correction
 
@@ -114,15 +108,15 @@ the community.
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage],
-version 2.0, available at
+Il presente Codice di condotta è adattato dal [Contributor Covenant][homepage],
+versione 2.0, disponibile all'indirizzo
 https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
 
-Community Impact Guidelines were inspired by [Mozilla's code of conduct
+Le Linee guida per l'impatto sulla comunità sono state ispirate da [Mozilla's code of conduct
 enforcement ladder](https://github.com/mozilla/diversity).
 
 [homepage]: https://www.contributor-covenant.org
 
-For answers to common questions about this code of conduct, see the FAQ at
+Per le risposte alle domande più comuni su questo codice di condotta, consultare le FAQ all'indirizzo
 https://www.contributor-covenant.org/faq. Translations are available at
 https://www.contributor-covenant.org/translations.
