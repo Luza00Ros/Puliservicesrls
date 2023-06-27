@@ -162,13 +162,6 @@ export default {
             console.log(document.cookie);
             return document.cookie++;
         },
-        scrollCenter: function () {
-            window.scrollTo({
-                top: 250,
-                left: 0,
-                behavior: 'smooth',
-            });
-        }
     },
 }
 </script>
@@ -177,14 +170,14 @@ export default {
     <Backwards />
 
     <div>
-        <v-parallax src="/src/assets/callToActionBg.webp">
+        <v-parallax src="/src/assets/callToActionBg.webp" height="200">
 
-            <div class="d-flex flex-column fill-height justify-center text-center align-center text-white">
+            <div class="d-flex flex-column fill-height justify-center align-start text-white">
 
-                <div class="text-start mr-3 ml-3 mt-5 mb-5">
-                    <h1 id="title-responsive">Richiedi subito il tuo preventivo gratuito <v-btn v-on:click="scrollCenter"
-                            icon="mdi-arrow-down-bold-outline" color="white" rounded="xl" variant="tonal" id="mobile-button"
-                            size="small" roundend="xl"></v-btn></h1>
+                <div class="mr-3 ml-3 mt-5 mb-5">
+                    <h1 id="title-responsive">
+                        Richiedi subito il tuo preventivo gratuito
+                    </h1>
                 </div>
 
             </div>
@@ -232,7 +225,7 @@ export default {
                         Acconsento al trattamento dei dati come specificato nell'informativa
                         <v-tooltip location="bottom" class="mt-5 mb-5">
                             <template v-slot:activator="{ props }">
-                                <a target="_blank" href="https://vuetifyjs.com" v-bind="props" @click.stop>
+                                <a class="text-decoration-none text-light-blue-darken-3" target="_blank" href="https://vuetifyjs.com" v-bind="props" @click.stop>
                                     Privacy Policy
                                 </a>
                             </template>
@@ -258,18 +251,12 @@ export default {
 <style>
 @media screen and (max-width: 966px) {
     #title-responsive {
-        font-size: 3em !important;
-        line-height: normal;
+        font-size: 2em !important;
     }
+    
     #mobile-button-right {
         display: flex;
         justify-content: end;
-    }
-}
-
-@media screen and (min-width: 967px) {
-    #mobile-button {
-        display: none;
     }
 }
 </style>
