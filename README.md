@@ -71,7 +71,7 @@ Il progetto Puliservice SRLS è una web app che rappresenta il sito web dell'omo
  -   **Vite**:  Sistema di build veloce e leggero per applicazioni web. È stato utilizzato per creare un ambiente di sviluppo reattivo, che permette di avviare l'applicazione rapidamente durante lo sviluppo e di effettuare modifiche in tempo reale.
  -   ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
  
- -   **Jest**:  Jest è un framework di testing JavaScript. È stato utilizzato per creare e eseguire test automatizzati per verificare la correttezza e il corretto funzionamento delle diverse parti dell'applicazione.
+ -   **Jest**:  Jest è un framework di testing JavaScript. È stato utilizzato per creare e eseguire test automatizzati per verificare il corretto funzionamento delle diverse parti dell'applicazione.
  -   ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 
  -   **Yarn**: Package manager che gestisce le dipendenze dell'applicazione. È stato utilizzato per installare e gestire le librerie e i pacchetti necessari per il progetto, garantendo una gestione efficiente delle dipendenze.
