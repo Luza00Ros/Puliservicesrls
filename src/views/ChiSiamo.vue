@@ -4,8 +4,10 @@
 
 <template>
     <h1>Chi siamo</h1>
+    <FacebookReview />
 </template>
   
 <script setup>
-    //RICORDA DI INSERIRE RECAPTCHA V3
+import FacebookReview from '@/components/FacebookReview.vue';
+//RICORDA DI INSERIRE RECAPTCHA V3
 </script>
