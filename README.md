@@ -28,7 +28,7 @@ Il progetto Puliservice SRLS è una web app che rappresenta il sito web dell'omo
     
 2.  **Menu di Navigazione**: Un menu di navigazione ben strutturato che consente agli utenti di spostarsi tra le diverse pagine o sezioni del sito.
     
-3.  **Pagine di Contenuto**: Pagine dedicate al contenuto specifico del sito, come "Chi Siamo", "Servizi", "Prodotti", "Blog", "Contattaci", etc.
+3.  **Pagine di Contenuto**: Pagine dedicate al contenuto specifico del sito, come "Chi Siamo", "Servizi", "Contatti", etc.
     
 4.  **Design Responsivo**: Un design che si adatta a diversi dispositivi e dimensioni dello schermo, garantendo una buona esperienza utente su desktop, tablet e smartphone.
     
