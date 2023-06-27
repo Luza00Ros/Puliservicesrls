@@ -20,7 +20,7 @@ Il progetto Puliservice SRLS è una web app che rappresenta il sito web dell'omo
 
 -   **Aumento della Visibilità**: Grazie alla presenza online di Puliservice SRLS, l'azienda potrà raggiungere un pubblico più ampio, aumentando la sua visibilità e la consapevolezza del marchio.
     
--   **Incremento del Fatturato**: La web app permette agli utenti di richiedere facilmente un preventivo gratuito per i servizi di pulizia desiderati. Questo agevola il processo di prenotazione e genera potenziali nuovi clienti, contribuendo all'incremento del fatturato dell
+-   **Incremento del Fatturato**: La web app permette agli utenti di richiedere facilmente un preventivo gratuito per i servizi di pulizia desiderati. Questo agevola il processo di prenotazione e genera potenziali nuovi clienti, contribuendo all'incremento del fatturato dell'impresa.
 
 ## Caratteristiche
 
