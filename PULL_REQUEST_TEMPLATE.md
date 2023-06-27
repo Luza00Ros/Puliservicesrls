@@ -1,9 +1,9 @@
-## Describe your changes
+## Descrivete le vostre modifiche
 
-## Issue ticket number and link
+## Numero e link del ticket di emissione
 
-## Checklist before requesting a review
-- [ ] I have performed a self-review of my code
-- [ ] If it is a core feature, I have added thorough tests.
-- [ ] Do we need to implement analytics?
-- [ ] Will this be part of a product update? If yes, please write one phrase about this update.
+## Lista di controllo prima di richiedere una revisione
+- [ ] Ho eseguito un'auto-revisione del mio codice
+- [ ] Se si tratta di una funzionalità fondamentale, ho aggiunto test approfonditi.
+- [ ] Dobbiamo implementare gli analytics?
+- [ ] Farà parte di un aggiornamento del prodotto? Se sì, descrivete l'aggiornamento.
