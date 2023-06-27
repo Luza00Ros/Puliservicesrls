@@ -36,7 +36,7 @@ Il progetto Puliservice SRLS è una web app che rappresenta il sito web dell'omo
     
 6.  **Form di Contatto**: Un formulario di contatto per consentire agli utenti di inviare messaggi o richieste direttamente al proprietario del sito.
     
-7.  **Integrazione con i Social Media**: Collegamenti ai profili social dell'azienda o del sito web per promuovere la condivisione dei contenuti e facilitare l'interazione con il pubblico.
+7.  **Integrazione con i Social Media**: Collegamenti ai profili social dell'azienda per promuovere la condivisione dei contenuti e facilitare l'interazione con il pubblico.
     
 8.  **Ottimizzazione per i Motori di Ricerca (SEO)**: L'ottimizzazione del sito per migliorare la visibilità su motori di ricerca come Google, tramite l'uso di parole chiave, metadati appropriati e altre tecniche SEO.
     
