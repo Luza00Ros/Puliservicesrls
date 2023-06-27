@@ -125,10 +125,14 @@ export default {
             isCheck: [
                 value => !!value || 'Questo campo è obligatorio'
             ],
+            phoneRules: [
+                value => (value?.length > 9 && /[0-9-]+/.test(value)) || 'Inserisci un numero di telefono valido',
+            ],
             userId: 0,
             name: '',
             email: '',
             city: '',
+            phone: '',
             request: '',
             date: new Date().toLocaleDateString(), 
             hours: new Date().getHours(),
@@ -145,6 +149,7 @@ export default {
                     name: this.name,
                     email: this.email,
                     select: this.select,
+                    phone: this.phone,
                     dateTime: `${this.date} - ${this.hours} : ${this.minute}`,
                     request: this.request,
                 });
@@ -157,6 +162,13 @@ export default {
             console.log(document.cookie);
             return document.cookie++;
         },
+        scrollCenter: function () {
+            window.scrollTo({
+                top: 250,
+                left: 0,
+                behavior: 'smooth',
+            });
+        }
     },
 }
 </script>
@@ -164,43 +176,61 @@ export default {
 <template>
     <Backwards />
 
-    <v-container class="mt-3">
-        <div class="text-start text-h1" id="title-responsive0">Richiesta preventivo</div>
-        <p class="text-start text-light-blue mt-5 text-h6">Compila i campi sottostanti indicando la tua esigenza. Saremo
+    <div>
+        <v-parallax src="/src/assets/callToActionBg.webp">
+
+            <div class="d-flex flex-column fill-height justify-center text-center align-center text-white">
+
+                <div class="text-start mr-3 ml-3 mt-5 mb-5">
+                    <h1 id="title-responsive">Richiedi subito il tuo preventivo gratuito <v-btn v-on:click="scrollCenter"
+                            icon="mdi-arrow-down-bold-outline" color="white" rounded="xl" variant="tonal" id="mobile-button"
+                            size="small" roundend="xl"></v-btn></h1>
+                </div>
+
+            </div>
+
+        </v-parallax>
+    </div>
+
+    <div class="ml-3 mr-3 mt-3 mb-3">
+        <p class="text-light-blue font-weight-medium mt-5 mb-5">Compila i campi sottostanti indicando la tua esigenza.
+            Saremo
             lieti di
-            ricontattarti per offrirti la nostra migliore proposta</p>
-    </v-container>
+            ricontattarti per offrirti la nostra migliore proposta </p>
+        <v-form fast-fail @submit.prevent name="contact" method="POST" ref="form" class="mt-5 mb-5">
 
-    <v-container>
-        <v-form :fast-fail="true" name="contact" method="POST" ref="form">
-
-            <v-text-field :rules="firstNameRules" density="compact" variant="underlined" prepend-inner-icon="mdi-account" label="Nome o Azienda"
-                color="light-blue" counter clearable aria-required="true" type="text" name="name" v-model="name"
-                bg-color="transparent" autocomplete="on">
+            <v-text-field :rules="firstNameRules" density="compact" variant="underlined" prepend-inner-icon="mdi-account"
+                label="Nome o Azienda" color="light-blue" counter clearable aria-required="true" type="text" name="name"
+                v-model="name" bg-color="transparent" class="mt-5 mb-5">
             </v-text-field>
 
-                <v-text-field :rules="rules" density="compact" prepend-inner-icon="mdi-email" label="E-mail"
-                    variant="underlined" color="light-blue" class="mt-5" clearable type="email" name="email" v-model="email"
-                    autocomplete="on">
-                </v-text-field>
+            <v-text-field :rules="rules" density="compact" prepend-inner-icon="mdi-email" label="E-mail"
+                variant="underlined" color="light-blue" class="mt-5 mb-5" clearable type="email" name="email" v-model="email">
+            </v-text-field>
 
-                
+            <v-text-field type="text" label="Telefono" :rules="phoneRules" name="phone" class="mt-5 mb-5"
+                prepend-inner-icon="mdi-cellphone" density="compact" variant="underlined" color="light-blue" v-model="phone"
+                clearable>
+
+            </v-text-field>
+
+
             <v-select prepend-inner-icon="mdi-map-marker" color="light-blue" v-model="select"
                 :hint="`${select.state}, ${select.abbr}`" :items="items" item-title="state" item-value="abbr"
-                label="Provincia" persistent-hint return-object single-line variant="underlined" class="mt-5" 
-                type="text" name="city"> 
+                label="Provincia" persistent-hint return-object single-line variant="underlined" class="mt-5 mb-5" type="text"
+                name="city">
             </v-select>
-            
+
 
             <v-textarea color="light-blue" variant="underlined" label="Inserisci qui la tua richiesta"
-                prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5" 
-                type="text" name="message" v-model="request">
+                prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5 mb-5" type="text" name="message"
+                v-model="request">
             </v-textarea>
             <v-checkbox v-model="checkbox" :rules="isCheck" color="light-blue">
                 <template v-slot:label>
                     <div>
                         Acconsento al trattamento dei dati come specificato nell'informativa
-                        <v-tooltip location="bottom">
+                        <v-tooltip location="bottom" class="mt-5 mb-5">
                             <template v-slot:activator="{ props }">
                                 <a target="_blank" href="https://vuetifyjs.com" v-bind="props" @click.stop>
                                     Privacy Policy
@@ -211,21 +241,35 @@ export default {
                     </div>
                 </template>
             </v-checkbox>
-            
-            <v-spacer></v-spacer>
-            <v-btn v-on:click="submit()" name="invia" color="light-blue" class="mt-5" rounded="pill">Invia la
-                richiesta</v-btn>
-        </v-form>
-    </v-container>
 
+
+
+            <v-spacer></v-spacer>
+            <div id="mobile-button-right">
+                <v-btn type="submit" v-on:click="submit()" name="invia" color="light-blue" rounded="xl" variant="tonal"
+                    class="mt-5 mb-5 font-weight-medium">Invia la
+                    richiesta</v-btn>
+            </div>
+        </v-form>
+    </div>
     <Bottom />
 </template>
 
 <style>
 @media screen and (max-width: 966px) {
-    #title-responsive1 {
+    #title-responsive {
         font-size: 3em !important;
         line-height: normal;
+    }
+    #mobile-button-right {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+@media screen and (min-width: 967px) {
+    #mobile-button {
+        display: none;
     }
 }
 </style>
