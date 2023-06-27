@@ -139,6 +139,6 @@ Siamo felici di accettare contributi da parte della community per migliorare Pul
 
 Per ulteriori informazioni o domande, puoi contattarci all'indirizzo adv.puliservicesrls@gmail.com.
 
-## CREDITS
+## Credits
 
 [@Dino996](https://github.com/Dino-996) - [@Luza00Ros](https://github.com/Luza00Ros)
