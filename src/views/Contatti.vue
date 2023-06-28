@@ -10,7 +10,6 @@ export default {
 
 <template>
     <h1>Contatti</h1>
-    <v-img></v-img>
 </template>
 
 

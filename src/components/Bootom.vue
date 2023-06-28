@@ -15,7 +15,7 @@ export default {
                 { id: 0, title: "Indirizzo", ref: "https://goo.gl/maps/DD7JXHidro1wLhvz7", value: "Piazzale Budapest 9, 85100, PZ", img: 'mdi-routes' },
                 { id: 1, title: "Telefono", ref: "tel:09711778000", value: '0971 177 8000', img: 'mdi-phone' },
                 { id: 2, title: "Cellulare", ref: "tel:+393484231742", value: '348 42 31 742', img: 'mdi-cellphone' },
-                { id: 3, title: "Mail", ref: "mailto:mr5235620@gmail.com", value: 'puliservice@gmail.com', img: 'mdi-email-outline' }
+                { id: 3, title: "Mail", ref: "adv.puliservicesrls@gmail.com", value: 'adv.puliservicesrls@gmail.com', img: 'mdi-email-outline' }
             ]
         }
     }

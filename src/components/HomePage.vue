@@ -44,7 +44,7 @@ export default {
                     privati a Potenza e provincia</p>
             </div>
             <div class="mb-5 mt-5 ml-2 text-center button-responsive">
-                <v-btn prepend-icon="mdi-calendar-badge" rounded="xl" color="white" variant="fill"
+                <v-btn prepend-icon="mdi-calendar-badge" rounded="xl" color="whithe" variant="outlined"
                     v-on:click="this.$router.push('/preventivo')" size="large">
                     <b>Preventivo gratuito</b>
                 </v-btn>
@@ -75,13 +75,103 @@ export default {
         </v-carousel-item>
     </v-carousel>
 
+    <!-- OVERVIEW -->
+
+    <v-container class="mt-3">
+        <h1 class="text-start title-responsive">Specialisti della pulizia</h1>
+        <h2 class="text-start text-light-blue subtitle-responsive">Professionalità, discrezione e personale altamente
+            qualificato</h2>
+    </v-container>
+
+    <v-container>
+        <v-row no-gutters>
+
+            <v-col v-for="overview in overviews" :key="overview.id"
+                class="mr-1 ml-1 d-flex justify-space-evenly align-center">
+                <v-card class="mx-auto mt-5 mb-5 ml-5 mr-5 text-h5" width="400" :prepend-icon="overview.img" variant="text"
+                    min-width="400px" color="light-blue" id="icon-color">
+                    <template v-slot:title>
+                        <span class="light-blue-lighten-1"> {{ overview.title.toUpperCase() }} </span>
+                    </template>
+
+                    <v-card-text class="ml-5 mr-5">
+                        <p class="text-black">{{ overview.text }}</p>
+                    </v-card-text>
+
+                </v-card>
+            </v-col>
+
+        </v-row>
+    </v-container>
+
+    <!-- CALL TO ACTION -->
+
+    <v-parallax src="/src/assets/callToActionBg.webp" height="600" alt="Chiamata all'azione richiesta preventivo">
+        <div class="d-flex flex-column fill-height justify-center">
+            <div class="text-center mt-5 mb-3 mr-5 ml-5">
+                <h1 class="title-responsive text-white">Scopri i nostri servizi di qualit&agrave;</h1>
+            </div>
+            <div class="ma-3 ma-5 text-center">
+                <p class="subtitle-responsive font-weight-bold text-white">Il nostro team sarà
+                    lieto di valutare le tue esigenze specifiche e fornirti una stima accurata dei costi.</p>
+            </div>
+            <div class="button-responsive mb-5 mt-5 ml-2 text-center">
+                <v-btn prepend-icon="mdi-calendar-badge" rounded="xl" color="white" variant="outlined"
+                    v-on:click="this.$router.push('/preventivo')" size="large">
+                    <b>Preventivo gratuito</b>
+                </v-btn>
+            </div>
+        </div>
+    </v-parallax>
+
+    <v-spacer></v-spacer>
+
+    <!--SERVICES-->
+
+    <v-container class="mt-5">
+        <h1 class="title-responsive text-start text-black">I nostri servizi</h1>
+        <h2 class="subtitle-responsive text-light-blue">Servizi professionali e personale altamente qualificato</h2>
+    </v-container>
+
+    <v-container class="d-flex justify-space-evently align-center flex-wrap">
+        <v-card class="mx-auto mt-5 mb-5" max-width="600" color="light-blue" v-for="service in services" :key="service.id">
+            <span v-if="service.id == 0">
+                <v-img src="/src/assets/pulizieCondomini.webp" height="300px" width="600px" rounded="xl" cover></v-img>
+            </span>
+            <span v-if="service.id == 1">
+                <v-img src="/src/assets/pulizieUffici.webp" height="300px" width="600px" rounded="xl" cover></v-img>
+            </span>
+            <span v-if="service.id == 2">
+                <v-img src="/src/assets/pulizieProfessionali.jpg" height="300px" width="600px" rounded="xl" cover></v-img>
+            </span>
+            <span v-if="service.id == 3">
+                <v-img src="/src/assets/pulizieCondomini.webp" height="300px" width="600px" rounded="xl" cover></v-img>
+            </span>
+
+            <v-card-item>
+                <h6 class="text-light-blue-darken-5"> {{ service.type }} </h6>
+                <h5 class="text-white"> {{ service.title }} </h5>
+                <p class="text-white"> {{ service.description }} </p>
+            </v-card-item>
+
+            <v-card-actions>
+                <v-btn append-icon="mdi-arrow-right-thin" v-on:click="$event => routerPush(service.page)" rounded="xl"
+                    color="text-white" variant="outlined" class="pl-3">
+                    <b>Vai al servizio</b>
+                </v-btn>
+            </v-card-actions>
+        </v-card>
+    </v-container>
+
+    <v-spacer></v-spacer>
+
     <!-- STORY -->
 
     <v-container class="mt-5">
         <v-row class="d-flex justify-center align-center flex-wrap">
 
             <v-col class="text-start" cols="auto" md="8" sm="12">
-                <h1 class="title-responsive">Background</h1>
+                <h1 class="title-responsive">La nostra storia</h1>
                 <h2 class="subtitle-responsive text-light-blue">20 anni di esperienza nel settore</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel assumenda sunt, inventore laudantium
                     accusamus
@@ -113,93 +203,10 @@ export default {
 
     <v-spacer></v-spacer>
 
-    <!-- OVERVIEW -->
-
-    <v-container class="mt-3">
-        <h1 class="text-start title-responsive">Specialisti della pulizia</h1>
-        <h2 class="text-start text-light-blue subtitle-responsive">Professionalità, discrezione e personale altamente
-            qualificato</h2>
-    </v-container>
-
-    <v-container>
-        <v-row no-gutters>
-
-            <v-col v-for="overview in overviews" :key="overview.id"
-                class="mr-1 ml-1 d-flex justify-space-evenly align-center">
-                <v-card class="mx-auto mt-5 mb-5 ml-5 mr-5 text-h5" width="400" :prepend-icon="overview.img"
-                    variant="overline" min-width="400px" color="light-blue" id="icon-color">
-                    <template v-slot:title>
-                        <span class="light-blue-lighten-1"> {{ overview.title.toUpperCase() }} </span>
-                    </template>
-
-                    <v-card-text class="ml-5 mr-5">
-                        <p class="text-black">{{ overview.text }}</p>
-                    </v-card-text>
-
-                </v-card>
-            </v-col>
-
-        </v-row>
-    </v-container>
-
-    <!-- CALL TO ACTION -->
-
-    <v-parallax src="/src/assets/callToActionBg.webp" height="600" alt="Chiamata all'azione richiesta preventivo">
-        <div class="d-flex flex-column fill-height justify-center text-white">
-            <div class="text-center mt-5 mb-3 mr-5 ml-5">
-                <h1 class="title-responsive text-light-blue-darken-4">Scopri i nostri servizi di qualit&agrave;</h1>
-            </div>
-            <div class="ma-3 ma-5 text-center">
-                <p class="subtitle-responsive font-weight-bold text-light-blue-lighten-5">Il nostro team sarà
-                    lieto di valutare le tue esigenze specifiche e fornirti una stima accurata dei costi.</p>
-            </div>
-            <div class="button-responsive mb-5 mt-5 ml-2 text-center">
-                <v-btn prepend-icon="mdi-calendar-badge" rounded="xl" color="light-blue-darken-4" variant="fill"
-                    v-on:click="this.$router.push('/preventivo')" size="large">
-                    <b>Preventivo gratuito</b>
-                </v-btn>
-            </div>
-        </div>
+    <!-- GOOGLE MAPS REVIEW -->
+    <v-parallax src="/src/assets/callToActionBg.webp" height="370" alt="Chiamata all'azione richiesta preventivo">
+        <MapsReview />
     </v-parallax>
-
-    <v-spacer></v-spacer>
-
-    <!--SERVICES-->
-
-    <v-container class="mt-5">
-        <h1 class="title-responsive text-start text-light-blue">I nostri servizi</h1>
-        <h2 class="subtitle-responsive text-start">Servizi professionali e personale altamente qualificato</h2>
-    </v-container>
-
-    <v-container class="d-flex justify-space-evently align-center flex-wrap">
-        <v-card class="mx-auto mt-5 mb-5" max-width="600" color="light-blue" v-for="service in services" :key="service.id">
-            <span v-if="service.id == 0">
-                <v-img src="/src/assets/pulizieCondomini.webp" height="300px" width="600px" cover rounded="xl"></v-img>
-            </span>
-            <span v-if="service.id == 1">
-                <v-img src="/src/assets/pulizieUffici.webp" height="300px" width="600px" cover rounded="xl"></v-img>
-            </span>
-            <span v-if="service.id == 2">
-                <v-img src="/src/assets/pulizieProfessionali.jpg" height="300px" width="600px" cover rounded="xl"></v-img>
-            </span>
-            <span v-if="service.id == 3">
-                <v-img src="/src/assets/pulizieCondomini.webp" height="300px" width="600px" cover rounded="xl"></v-img>
-            </span>
-
-            <v-card-item>
-                <h6 class="light-blue-lighten-5"> {{ service.type }} </h6>
-                <h5 class="text-light-blue-darken-4"> {{ service.title }} </h5>
-                <p class="light-blue-lighten-5"> {{ service.description }} </p>
-            </v-card-item>
-
-            <v-card-actions>
-                <v-btn append-icon="mdi-arrow-right-thin" v-on:click="$event => routerPush(service.page)" rounded="xl"
-                    color="light-blue-darken-4" variant="fill" class="pl-3">
-                    <b>Vai al servizio</b>
-                </v-btn>
-            </v-card-actions>
-        </v-card>
-    </v-container>
 
     <v-spacer></v-spacer>
 
@@ -250,7 +257,10 @@ export default {
 
     <v-spacer></v-spacer>
 
-    <!-- WORKS PLAYER //DA IMPLEMENTARE -->
+    <!-- FACEBOOK REVIEW -->
+    <v-parallax src="/src/assets/callToActionBg.webp" height="200" alt="Chiamata all'azione richiesta preventivo">
+        <FacebookReview />
+    </v-parallax>
 
     <v-spacer></v-spacer>
 
@@ -295,6 +305,11 @@ export default {
         </p>
     </v-container>
 </template>
+
+<script setup>
+import FacebookReview from '@/components/FacebookReview.vue';
+import MapsReview from './MapsReview.vue';
+</script>
 
 <style>
 #icon-color i.v-icon.v-icon {

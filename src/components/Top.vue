@@ -38,10 +38,11 @@ export default {
 </script>
 
 <template v-slot:header>
+
     <!-- APPBAR -->
     <v-app-bar :absolute='false' :flat='true' color='white' class='d-flex justify-center align-center rounded-b-xl'>
 
-        <v-app-bar-nav-icon variant="text" :flat="true" color="light-blue" v-on:click.stop="drawer = !drawer"
+        <v-app-bar-nav-icon :flat="true" color="light-blue" v-on:click.stop="drawer = !drawer"
             id="disable-mb" role="button" aria-label="Menù"></v-app-bar-nav-icon>
 
         <v-img v-on:click="scrollUp" src="/src/assets/puliservice.webp" width="200" height="50" class="pa-1 ma-1"
@@ -51,7 +52,7 @@ export default {
 
         <v-tabs v-on:click='scrollUp' v-model='model' align-tabs='center' color='light-blue' id="disable-dk">
 
-            <v-tab v-for="item in navItems" :id="item.id" :value='item.number' class='mt-2 rounded-lg' density='compact' variant="text">
+            <v-tab v-for="item in navItems" :id="item.id" :value='item.number' class='mt-2 rounded-xl' density='compact' >
                 {{ item.title }}
             </v-tab>
 
