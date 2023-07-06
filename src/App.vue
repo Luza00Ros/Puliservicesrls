@@ -2,7 +2,10 @@
 export default {
   computed: {
     setCookie() {
+      const Lax = '';
+      let SameSite;
       SameSite = Lax;
+      return SameSite;
     },
   },
 }
