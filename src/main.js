@@ -14,11 +14,13 @@ const firebaseConfig = {
   appId: "1:487930114231:web:84dc5f47db77fb5e835d32"
 };
 
+const FIREBASE_CAPTCHA_CODE = '6LfMSgMnAAAAAEygEVsRmIcS9FMMbAszuuosic_I';
+
 // Initialize Firebase
 const firebase = initializeApp(firebaseConfig);
 
 const appCheck = initializeAppCheck(firebase, {
-  provider: new ReCaptchaV3Provider('6LfMSgMnAAAAAEygEVsRmIcS9FMMbAszuuosic_I'),
+  provider: new ReCaptchaV3Provider(FIREBASE_CAPTCHA_CODE),
   isTokenAutoRefreshEnabled: true
 });
 
