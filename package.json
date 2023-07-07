@@ -1,6 +1,6 @@
 {
   "name": "puliservicesrls",
-  "version": "0.0.0",
+  "version": "0.0.5",
   "private": true,
   "license": "AGPL-3.0-or-later",
   "scripts": {
