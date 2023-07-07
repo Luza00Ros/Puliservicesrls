@@ -1,4 +1,4 @@
-# Puliservice SRLS    ![Logo pliservice srls](https://davidesabia.altervista.org/wp-content/uploads/2023/06/puliservice-1.png)
+ ![Logo pliservice srls](https://davidesabia.altervista.org/wp-content/uploads/2023/06/puliservice-1.png)
 
 ## Descrizione
 
