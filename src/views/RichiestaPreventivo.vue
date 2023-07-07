@@ -157,7 +157,7 @@ export default {
 
     increment() {
       //PER RESETTARE BASTA IMPOSTARE document.cookie = 0;
-      document.cookie = 0;
+      //document.cookie = 0;
       this.userId = document.cookie;
       console.log(document.cookie);
       return document.cookie++;

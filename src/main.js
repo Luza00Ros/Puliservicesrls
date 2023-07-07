@@ -3,10 +3,7 @@ import App from './App.vue'
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set } from  "firebase/database";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
+import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyD7sOv5hN1bj2B25lkoEowRMfZREVMTNwQ",
@@ -20,6 +17,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const firebase = initializeApp(firebaseConfig);
 
+const appCheck = initializeAppCheck(firebase, {
+  provider: new ReCaptchaV3Provider('6LfMSgMnAAAAAEygEVsRmIcS9FMMbAszuuosic_I'),
+  isTokenAutoRefreshEnabled: true
+});
+
 // Composables
 import { createApp } from 'vue'
 
@@ -30,4 +32,4 @@ const app = createApp(App)
 
 registerPlugins(app)
 
-app.use(firebase).mount('#app')
+app.use(firebase).use(appCheck).mount('#app')
