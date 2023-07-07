@@ -183,20 +183,6 @@ export default {
 
   <v-spacer></v-spacer>
 
-  <!-- GOOGLE MAPS REVIEW -->
-  <v-parallax src="/src/assets/callToActionBg.webp" height="370" alt="Chiamata all'azione richiesta preventivo">
-    <MapsReview />
-  </v-parallax>
-
-  <v-spacer></v-spacer>
-
-  <!-- FACEBOOK REVIEW -->
-  <v-parallax src="/src/assets/callToActionBg.webp" height="200" alt="Chiamata all'azione richiesta preventivo">
-    <FacebookReview />
-  </v-parallax>
-
-  <v-spacer></v-spacer>
-
   <!-- MISSION -->
 
   <v-container class="mt-3">
