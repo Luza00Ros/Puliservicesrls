@@ -244,8 +244,6 @@ export default {
 import TopNav from '@/components/TopNav.vue';
 import Bottom from '@/components/BottomFooter.vue';
 import CallToAction from '@/components/CallToAction.vue';
-import FacebookReview from '@/components/FacebookReview.vue';
-import MapsReview from '@/components/MapsReview.vue';
 </script>
 
 <style>
