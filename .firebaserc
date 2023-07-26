@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "impresa-di-pulizie"
-  }
+    "default": "puliservicesrls-4246e",
+    "puliservice": "puliservicesrls-4246e"
+  },
+  "targets": {},
+  "etags": {}
 }

@@ -15,6 +15,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_IMPRESA_DI_PULIZIE }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PULISERVICESRLS_4246E }}'
           channelId: live
-          projectId: impresa-di-pulizie
+          projectId: puliservicesrls-4246e
