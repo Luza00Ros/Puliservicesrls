@@ -35,9 +35,7 @@ export default {
   <v-carousel cycle hide-delimiters :show-arrows="false">
     <v-carousel-item v-for="slide in slides" :key="slide.id" cover>
       <v-sheet color="light-blue" height="100%">
-        <div
-          class="d-flex flex-wrap fill-height justify-center d-flex text-center align-center"
-        >
+        <div class="d-flex flex-wrap fill-height justify-center d-flex text-center align-center">
           <v-img class="h-50" :src="slide.source" :alt="slide.title" />
           <v-container>
             {{ slide.text }}
@@ -59,7 +57,7 @@ export default {
 
   <v-spacer></v-spacer>
 
-  <!--CHI È LUCIANA?-->
+  <!--WHO IS LUCIANA?-->
   <v-container class="mt-5">
     <v-row class="d-flex justify-center align-center flex-wrap">
       <v-col class="text-start" cols="auto" md="8" sm="12">
@@ -68,41 +66,28 @@ export default {
           Imprenditrice per passione
         </h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
-          assumenda sunt, inventore laudantium accusamus natus.
-        </p>
-        <v-spacer></v-spacer>
-        <p>
           Sono una ragazza umile, determinata e con una grande voglia di
           lavorare, anche se sono ancora molto giovane. Sono orgogliosa di aver
-          preso in mano l'azienda di famiglia e di poter contribuire al suo
-          successo. <br />
-          Fin da piccola, ho sempre ammirato il duro lavoro dei miei genitori e
-          di mio nonno nell'azienda. <br />
-          Ho trascorso molte ore osservandoli e imparando tutto ciò che potevo.
-          <br />
-          La mia passione per l’azienda è cresciuta di pari passo con me, e ho
-          sviluppato una forte determinazione nel voler far crescere l'azienda e
-          portarla a nuovi livelli. <br />
-          Nonostante la mia giovane età, mi impegno a imparare continuamente e a
-          migliorare le mie competenze. <br />
+          preso in mano l'impresa di famiglia e di poter contribuire al suo
+          successo.
         </p>
         <v-spacer></v-spacer>
         <p>
-          Error corporis voluptatum ipsam, minima ad sint officia nesciunt a
-          eligendi reiciendis facilis ex voluptas ducimus maxime dolor dolores
-          accusamus cupiditate est!
+          Fin da piccola, ho sempre ammirato il duro lavoro dei miei genitori e
+          di mio nonno nell'impresa. <br>
+          Ho trascorso molte ore osservandoli e imparando tutto ciò che potevo.
+          <br>
+          La mia passione per l'impresa è cresciuta di pari passo con me, e ho
+          sviluppato una forte determinazione nel voler far crescere l'impresa e
+          portarla a nuovi livelli. <br>
+          Nonostante la mia giovane età, mi impegno a imparare continuamente e a
+          migliorare le mie competenze. <br>
         </p>
+        <v-spacer></v-spacer>
       </v-col>
 
       <v-col class="d-flex justify-center" cols="auto" md="4" sm="12">
-        <v-img
-          src="/src/assets/puliservice_logo.svg"
-          width="100%"
-          max-width="300px"
-          aspect-ratio="16/9"
-          cover
-        ></v-img>
+        <v-img src="/src/assets/puliservice_logo.svg" width="100%" max-width="300px" aspect-ratio="16/9" cover></v-img>
       </v-col>
     </v-row>
   </v-container>
@@ -136,14 +121,10 @@ export default {
       guidati dai principi dell'integrità, dell'onestà e della trasparenza in
       tutte le nostre interazioni e operazioni. Rispettiamo la privacy dei
       nostri clienti e
-      <span class="text-light-blue"
-        >trattiamo le informazioni sensibili con la massima riservatezza</span
-      >. <br /><br />
+      <span class="text-light-blue">trattiamo le informazioni sensibili con la massima riservatezza</span>. <br /><br />
       <b>&#x2022; Teamwork</b>: Il nostro successo dipende dalla forza del
       nostro team. Favoriamo un ambiente di lavoro collaborativo, in cui
-      <span class="text-light-blue"
-        >ogni membro del team viene valorizzato</span
-      >
+      <span class="text-light-blue">ogni membro del team viene valorizzato</span>
       e incoraggiato a contribuire con le proprie competenze e prospettive.
       Siamo un'impresa che
       <span class="text-light-blue">crede nel valore delle persone</span> e nel
