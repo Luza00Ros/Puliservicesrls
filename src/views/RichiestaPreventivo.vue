@@ -144,15 +144,29 @@ export default {
         name: this.name,
         email: this.email,
         phone: this.phone,
-        request: this.request
+        request: this.request,
+        privacyPolicyAccepted: this.checkbox,
       };
       await setDoc(doc(database, this.documentId, this.formatDate(this.today)), docData);
+      this.onRedirect(this.name, this.email, this.phone, this.request, this.checkbox);
     },
 
     // Fomatta la data
     formatDate: function (current_datetime) {
       let formatted_date = current_datetime.getFullYear() + "-" + (current_datetime.getMonth() + 1) + "-" + current_datetime.getDate() + " " + current_datetime.getHours() + ":" + current_datetime.getMinutes() + ":" + current_datetime.getSeconds();
       return formatted_date;
+    },
+
+    // Convalido i dati prima di reindirizzare l'utente
+    onRedirect: function (name, email, phone, request, checkbox) {
+      if (name != '' && email != '' && phone != '' && request != '' && checkbox != false) {
+        console.log(name);
+        console.log(email);
+        console.log(phone);
+        console.log(request);
+        console.log(checkbox);
+        return this.$router.push('redirect');
+      }
     }
   }
 }
