@@ -9,7 +9,7 @@ export default {
   },
 
   created() {
-    setTimeout(() => this.$router.push('/'), 5000);
+    setTimeout(() => this.routerPush('/'), 5000);
   },
 
   methods: {
