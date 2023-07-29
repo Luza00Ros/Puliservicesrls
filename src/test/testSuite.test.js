@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 const sum = require('./sum');
-
+const getData = require('./database');
 /* JEST JS TEST SUITE
 
     test('two plus two is four', () => {
@@ -24,5 +24,10 @@ const sum = require('./sum');
 
 test('adds 1 + 2 to equal 3', () => {
     expect(sum(1,2)).toBe(3);
-    expect(sum(1,2)).toEqual(3)
+    expect(sum(1,2)).toEqual(3);
 });
+
+test('Return the value insert in to the form', () => {
+  expect(getData('name', 'email', 'phone', 'request', true)).toEqual();
+});
+

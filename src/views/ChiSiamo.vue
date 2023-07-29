@@ -104,6 +104,7 @@ export default {
   <v-spacer></v-spacer>
 
   <!--WHO IS LUCIANA?-->
+
   <v-container class="mt-5">
     <v-row class="d-flex justify-center align-center flex-wrap">
       <v-col class="text-start" cols="auto" md="8" sm="12">

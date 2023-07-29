@@ -145,6 +145,7 @@ export default {
         name: this.name,
         email: this.email,
         phone: this.phone,
+        select: this.select.state,
         request: this.request,
         privacyPolicyAccepted: this.checkbox,
       };
