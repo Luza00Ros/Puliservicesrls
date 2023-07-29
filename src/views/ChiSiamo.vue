@@ -5,21 +5,24 @@ export default {
       slides: [
         {
           id: 0,
-          title: "Nome foto",
+          title: "Slide 1",
+          subtitle: "Subtitle slide 1",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-          source: "src/assets/vileda.webp",
+          source: "/src/assets/vileda.webp",
         },
         {
           id: 1,
-          title: "Nome foto",
+          title: "Slide 2",
+          subtitle: "Subtitle slide 2",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-          source: "src/assets/marbec.webp",
+          source: "/src/assets/marbec.webp",
         },
         {
           id: 2,
-          title: "Nome foto",
+          title: "Slide 3",
+          subtitle: "Subtitle slide 3",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-          source: "src/assets/sutter.webp",
+          source: "/src/assets/sutter.webp",
         },
       ],
     };
@@ -30,30 +33,73 @@ export default {
 <template>
   <TopNav />
 
+  <!--STORY-->
+  <v-container class="mt-3">
+    <h1 class="title-responsive">La nostra storia</h1>
+    <h2 class="subtitle-responsive text-light-blue">
+      Una storia che risale a pi&ugrave; di 20 anni fà...
+    </h2>
+    <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae hic recusandae veniam sint iusto non, quisquam saepe? Saepe facilis nisi alias, sequi debitis eum sit culpa obcaecati ipsa. Est, qui.</p>
+  </v-container>
+
+  <v-spacer></v-spacer>
+
   <!-- CAROUSEL -->
 
   <v-carousel cycle hide-delimiters :show-arrows="false">
     <v-carousel-item v-for="slide in slides" :key="slide.id" cover>
       <v-sheet color="light-blue" height="100%">
         <div class="d-flex flex-wrap fill-height justify-center d-flex text-center align-center">
-          <v-img class="h-50" :src="slide.source" :alt="slide.title" />
-          <v-container>
-            {{ slide.text }}
-          </v-container>
+
+          <template v-if="slide.id == 0">
+            <v-card class="mx-auto card-width" max-width="600px">
+              <v-img src="/src/assets/cleaning.webp" height="250px" cover />
+              <v-card-title class="text-start">
+                {{ slide.title }}
+              </v-card-title>
+              <v-card-subtitle class="text-start">
+                {{ slide.subtitle }}
+              </v-card-subtitle>
+              <v-card-text class="text-start">
+                {{ slide.text }}
+              </v-card-text>
+            </v-card>
+          </template>
+
+          <template v-if="slide.id == 1">
+            <v-card class="mx-auto card-width" max-width="600px">
+              <v-img src="/src/assets/cleaning.webp" height="250px" cover />
+              <v-card-title class="text-start">
+                {{ slide.title }}
+              </v-card-title>
+              <v-card-subtitle class="text-start">
+                {{ slide.subtitle }}
+              </v-card-subtitle>
+              <v-card-text class="text-start">
+                {{ slide.text }}
+              </v-card-text>
+            </v-card>
+          </template>
+
+          <template v-if="slide.id == 2">
+            <v-card class="mx-auto card-width" max-width="600px">
+              <v-img src="/src/assets/cleaning.webp" height="250px" cover />
+              <v-card-title class="text-start">
+                {{ slide.title }}
+              </v-card-title>
+              <v-card-subtitle class="text-start">
+                {{ slide.subtitle }}
+              </v-card-subtitle>
+              <v-card-text class="text-start">
+                {{ slide.text }}
+              </v-card-text>
+            </v-card>
+          </template>
+
         </div>
       </v-sheet>
     </v-carousel-item>
   </v-carousel>
-
-  <v-spacer></v-spacer>
-
-  <!--STORY-->
-  <v-container class="mt-3">
-    <h1 class="title-responsive">La nostra storia</h1>
-    <h2 class="subtitle-responsive text-light-blue">
-      Una storia che risale a 20 anni fà...
-    </h2>
-  </v-container>
 
   <v-spacer></v-spacer>
 
@@ -153,3 +199,18 @@ import TopNav from "@/components/TopNav.vue";
 import Bottom from "@/components/BottomFooter.vue";
 import CallToAction from "@/components/CallToAction.vue";
 </script>
+
+<style>
+@media screen and (max-width: 966px) {
+
+  .title-responsive {
+    font-size: 3em !important;
+    text-align: start;
+    line-height: normal;
+  }
+
+  .card-width {
+    max-width: 344px !important;
+  }
+}
+</style>
