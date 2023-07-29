@@ -140,6 +140,7 @@ export default {
   methods: {
     // Aggiunge la nuova richiesta al database
     addRequest: async function () {
+      const database = firebase.db;
       const docData = {
         name: this.name,
         email: this.email,
@@ -269,7 +270,7 @@ export default {
 <script setup>
 import TopNav from '@/components/TopNav.vue'
 import Bottom from '@/components/BottomFooter.vue';
-import database from '../main';
+import firebase from '../plugins/firebase.js';
 import { setDoc, doc } from 'firebase/firestore';
 //RICORDA DI INSERIRE RECAPTCHA V3
 </script>

@@ -135,8 +135,8 @@ export default {
 
   <!-- V-NAVIGATION-DRAWER -->
   <v-navigation-drawer temporary v-model="drawer" location="left" v-on:click.stop="drawer = !drawer"
-    class="rounded-e-xl mt-5 h-50">
-    <v-list nav>
+    class="rounded-e-xl mt-5 h-50" aria-label="menu">
+    <v-list nav aria-label="menu-item">
       <v-tabs direction="vertical" color="light-blue">
 
         <div class="d-flex flex-column justify-start align-start">
