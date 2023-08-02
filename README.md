@@ -142,3 +142,5 @@ Per ulteriori informazioni o domande, puoi contattarci all'indirizzo adv.puliser
 ## Credits
 
 [@Dino996](https://github.com/Dino-996) - [@Luza00Ros](https://github.com/Luza00Ros)
+
+![status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=PuliserviceSRLS_main)
