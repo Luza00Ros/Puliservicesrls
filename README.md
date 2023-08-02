@@ -143,4 +143,5 @@ Per ulteriori informazioni o domande, puoi contattarci all'indirizzo adv.puliser
 
 [@Dino996](https://github.com/Dino-996) - [@Luza00Ros](https://github.com/Luza00Ros)
 
-![CI](https://github.com/Dino-996/Puliservicesrls/workflows/CI/badge.svg)
+[![GitHub Watches](https://img.shields.io/github/watchers/Dino-996/Puliservicesrls.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/Dino-996/Puliservicesrls/watchers)
+
