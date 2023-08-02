@@ -143,12 +143,8 @@ Per ulteriori informazioni o domande, puoi contattarci all'indirizzo adv.puliser
 
 [@Dino996](https://github.com/Dino-996) - [@Luza00Ros](https://github.com/Luza00Ros)
 
-[![GitHub Watches](https://img.shields.io/github/watchers/Dino-996/Puliservicesrls.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/Dino-996/Puliservicesrls/watchers)
-
-[![GitHub Starts](https://img.shields.io/github/stars/Dino-996/Puliservicesrls.svg?style=social&label=Star&maxAge=2592000)](https://github.com/Dino-996/Puliservicesrls/stargazers)
-
-[![GitHub Forks](https://img.shields.io/github/forks/Dino-996/Puliservicesrls.svg?style=social&label=Fork&maxAge=2592000)](https://github.com/Dino-996/Puliservicesrls/network)
-
+![GitHub Starts](https://img.shields.io/github/stars/Dino-996/Puliservicesrls.svg?style=social&logo=github&label=Star)
+![GitHub Forks](https://img.shields.io/github/forks/Dino-996/Puliservicesrls.svg?style=social&logo=github&label=Fork)
 ![GitHub watchers](https://img.shields.io/github/watchers/Dino-996/Puliservicesrls.svg?style=social&logo=github&label=Watch)
 
 
