@@ -143,4 +143,4 @@ Per ulteriori informazioni o domande, puoi contattarci all'indirizzo adv.puliser
 
 [@Dino996](https://github.com/Dino-996) - [@Luza00Ros](https://github.com/Luza00Ros)
 
-![Building and deploy](https://github.com/Dino-996/PuliserviceSRLS_main/actions/workflows/main.yml/badge.svg)
+![Building and deploy](https://github.com/Dino-996/Puliservicesrls/actions/workflows/main.yml/badge.svg)
