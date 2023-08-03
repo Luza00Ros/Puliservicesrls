@@ -39,7 +39,8 @@ export default {
     <h2 class="subtitle-responsive text-light-blue">
       Una storia che risale a pi&ugrave; di 20 anni fà...
     </h2>
-    <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae hic recusandae veniam sint iusto non, quisquam saepe? Saepe facilis nisi alias, sequi debitis eum sit culpa obcaecati ipsa. Est, qui.</p>
+    <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae hic recusandae veniam sint iusto
+      non, quisquam saepe? Saepe facilis nisi alias, sequi debitis eum sit culpa obcaecati ipsa. Est, qui.</p>
   </v-container>
 
   <v-spacer></v-spacer>
@@ -112,40 +113,49 @@ export default {
         <h2 class="subtitle-responsive text-light-blue">
           Imprenditrice per passione
         </h2>
+        <br>
         <p>
-        Sono una ragazza <b> <font color="#0398fc">umile</font></b>, <b> <font color="#0398fc">determinata </font></b> e con una grande voglia di lavorare, anche se sono ancora molto
-        giovane. Sono orgogliosa di aver preso in mano l'azienda di famiglia e di poter contribuire al suo
-        successo.
+          Sono una ragazza <span class="text-light-blue font-weight-bold">umile</span>,
+          <span class="text-light-blue font-weight-bold">determinata </span>
+          e con una grande voglia di lavorare, anche se sono ancora molto
+          giovane. Sono orgogliosa di aver preso in mano l'azienda di famiglia e di poter contribuire al suo
+          successo.
         </p>
-        <br /><br />
+        <br>
         <p>
           Fin da piccola, ho sempre ammirato il duro lavoro dei miei genitori e
-          di mio nonno nell'azienda. <br />
+          di mio nonno nell'azienda.
+          <br>
           Ho trascorso molte ore osservandoli e imparando tutto ciò che potevo.
-          <br />
+          <br>
           La mia passione per l’azienda è cresciuta di pari passo con me, e ho
           sviluppato una forte determinazione nel voler far crescere l'azienda e
-          portarla a nuovi livelli. <br />
+          portarla a nuovi livelli.
+          <br>
           Nonostante la mia giovane età, mi impegno a imparare continuamente e a
-          migliorare le mie competenze. <br /> <br>
+          migliorare le mie competenze. <br>
           Sono consapevole che ci sono ancora molte cose da imparare, ma sono pronta ad affrontare le sfide
           che si presentano lungo il percorso. <br>
         </p>
-        <v-spacer></v-spacer>
-        <br><br>
+        <v-spacer />
+        <br>
         <p>
-          La mia <b><font color="#0398fc">umiltà</font></b> mi spinge a ascoltare le idee e le opinioni degli altri membri del team, riconoscendo
+          La mia
+          <span class="text-light-blue font-weight-bold">umiltà</span>
+          mi spinge a ascoltare le idee e le opinioni degli altri membri del team, riconoscendo
           il valore dell'esperienza e della diversità di prospettive. Sono aperta a nuove idee e sono disposta
-           a mettermi in gioco, anche se ciò significa prendere decisioni difficili o affrontare situazioni
-           complesse.
+          a mettermi in gioco, anche se ciò significa prendere decisioni difficili o affrontare situazioni
+          complesse.
         </p>
-        <br><br>
+        <br>
         <p>
-          La mia <b><font color="#0398fc">determinazione</font></b> mi spinge a lavorare duramente ogni giorno, cercando nuove opportunità di
+          La mia
+          <span class="text-light-blue font-weight-bold">determinazione</span>
+          mi spinge a lavorare duramente ogni giorno, cercando nuove opportunità di
           crescita e innovazione per l'azienda. Non mi arrendo di fronte alle difficoltà, ma cerco soluzioni
           creative e mi impegno per superare gli ostacoli.
         </p>
-        <br><br>
+        <br>
         <p>
           Essere al comando dell'azienda di famiglia è un grande onore per me, ma è anche una responsabilità
           che prendo molto seriamente. Sono orgogliosa dei risultati che abbiamo ottenuto finora.
