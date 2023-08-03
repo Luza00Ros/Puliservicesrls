@@ -105,9 +105,9 @@ export default {
 
   <!--WHO IS LUCIANA?-->
 
-  <v-container class="mt-5">
+  <v-container class="mt-5" style="margin-bottom: 0;">
     <v-row class="d-flex justify-center align-center flex-wrap">
-      <v-col class="text-start" cols="auto" md="8" sm="12">
+      <v-col class="text-start" cols="auto" md="8" sm="12" style="margin-bottom: 0; padding-bottom: 0;">
         <h1 class="title-responsive">Chi è Luciana?</h1>
         <h2 class="subtitle-responsive text-light-blue">
           Imprenditrice per passione
@@ -130,11 +130,10 @@ export default {
           Nonostante la mia giovane età, mi impegno a imparare continuamente e a
           migliorare le mie competenze. <br>
         </p>
-        <v-spacer></v-spacer>
       </v-col>
 
-      <v-col class="d-flex justify-center" cols="auto" md="4" sm="12">
-        <v-img src="/src/assets/puliservice_logo.svg" width="100%" max-width="300px" aspect-ratio="16/9" cover></v-img>
+      <v-col class="d-flex justify-center" cols="auto" md="4" style="margin-bottom: 0; padding-bottom: 0;">
+        <v-img src="/src/assets/luciana.png" width="100%" max-width="400px" aspect-ratio="16/9" cover></v-img>
       </v-col>
     </v-row>
   </v-container>
