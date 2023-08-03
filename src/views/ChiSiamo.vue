@@ -68,30 +68,33 @@ export default {
           Imprenditrice per passione
         </h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
-          assumenda sunt, inventore laudantium accusamus natus.
-        </p>
-        <v-spacer></v-spacer>
-        <p>
           Sono una ragazza umile, determinata e con una grande voglia di
-          lavorare, anche se sono ancora molto giovane. Sono orgogliosa di aver
-          preso in mano l'azienda di famiglia e di poter contribuire al suo
-          successo. <br />
+          lavorare, anche se sono ancora molto giovane.
+        </p>
+        <br /><br />
+        <p>
+          Sono orgogliosa di aver preso in mano l'azienda di famiglia e di poter
+          contribuire al suo successo.
+        </p>
+        <br /><br />
+        <p>
           Fin da piccola, ho sempre ammirato il duro lavoro dei miei genitori e
-          di mio nonno nell'azienda. <br />
-          Ho trascorso molte ore osservandoli e imparando tutto ciò che potevo.
-          <br />
+          di mio nonno nell'azienda. Ho trascorso molte ore osservandoli e
+          imparando tutto ciò che potevo.
+        </p>
+        <br /><br />
+        <p>
           La mia passione per l’azienda è cresciuta di pari passo con me, e ho
           sviluppato una forte determinazione nel voler far crescere l'azienda e
           portarla a nuovi livelli. <br />
           Nonostante la mia giovane età, mi impegno a imparare continuamente e a
           migliorare le mie competenze. <br />
         </p>
-        <v-spacer></v-spacer>
+        <br /><br />
         <p>
-          Error corporis voluptatum ipsam, minima ad sint officia nesciunt a
-          eligendi reiciendis facilis ex voluptas ducimus maxime dolor dolores
-          accusamus cupiditate est!
+          Sono consapevole che ci sono ancora molte cose da imparare, <br />
+          ma sono pronta ad affrontare le sfide che si presentano lungo il
+          percorso. <br />
         </p>
       </v-col>
 
