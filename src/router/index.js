@@ -56,10 +56,15 @@ const routes = [
         name: 'VistaTraslochi',
         component: () => import('@/views/VistaTraslochi.vue'),
       },
-      { //404 - PAGE NOT FOUND
+      { //404 - Page Not Found
         path: '/:pathMatch(.*)*',
         name: 'PageNotFound',
         component: () => import('@/views/PageNotFound.vue'),
+      },
+      { //Redirect to home page
+        path: 'redirect',
+        name: 'HomeRedirect',
+        component: () => import('@/components/HomeRedirect.vue'),
       },
       {
         path: 'preventivo',

@@ -5,21 +5,24 @@ export default {
       slides: [
         {
           id: 0,
-          title: "Nome foto",
+          title: "Slide 1",
+          subtitle: "Subtitle slide 1",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-          source: "src/assets/vileda.webp",
+          source: "/src/assets/vileda.webp",
         },
         {
           id: 1,
-          title: "Nome foto",
+          title: "Slide 2",
+          subtitle: "Subtitle slide 2",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-          source: "src/assets/marbec.webp",
+          source: "/src/assets/marbec.webp",
         },
         {
           id: 2,
-          title: "Nome foto",
+          title: "Slide 3",
+          subtitle: "Subtitle slide 3",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-          source: "src/assets/sutter.webp",
+          source: "/src/assets/sutter.webp",
         },
       ],
     };
@@ -30,18 +33,69 @@ export default {
 <template>
   <TopNav />
 
+  <!--STORY-->
+  <v-container class="mt-3">
+    <h1 class="title-responsive">La nostra storia</h1>
+    <h2 class="subtitle-responsive text-light-blue">
+      Una storia che risale a pi&ugrave; di 20 anni fà...
+    </h2>
+    <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae hic recusandae veniam sint iusto non, quisquam saepe? Saepe facilis nisi alias, sequi debitis eum sit culpa obcaecati ipsa. Est, qui.</p>
+  </v-container>
+
+  <v-spacer></v-spacer>
+
   <!-- CAROUSEL -->
 
   <v-carousel cycle hide-delimiters :show-arrows="false">
     <v-carousel-item v-for="slide in slides" :key="slide.id" cover>
       <v-sheet color="light-blue" height="100%">
-        <div
-          class="d-flex flex-wrap fill-height justify-center d-flex text-center align-center"
-        >
-          <v-img class="h-50" :src="slide.source" :alt="slide.title" />
-          <v-container>
-            {{ slide.text }}
-          </v-container>
+        <div class="d-flex flex-wrap fill-height justify-center d-flex text-center align-center">
+
+          <template v-if="slide.id == 0">
+            <v-card class="mx-auto card-width" max-width="600px">
+              <v-img src="/src/assets/cleaning.webp" height="250px" cover />
+              <v-card-title class="text-start">
+                {{ slide.title }}
+              </v-card-title>
+              <v-card-subtitle class="text-start">
+                {{ slide.subtitle }}
+              </v-card-subtitle>
+              <v-card-text class="text-start">
+                {{ slide.text }}
+              </v-card-text>
+            </v-card>
+          </template>
+
+          <template v-if="slide.id == 1">
+            <v-card class="mx-auto card-width" max-width="600px">
+              <v-img src="/src/assets/cleaning.webp" height="250px" cover />
+              <v-card-title class="text-start">
+                {{ slide.title }}
+              </v-card-title>
+              <v-card-subtitle class="text-start">
+                {{ slide.subtitle }}
+              </v-card-subtitle>
+              <v-card-text class="text-start">
+                {{ slide.text }}
+              </v-card-text>
+            </v-card>
+          </template>
+
+          <template v-if="slide.id == 2">
+            <v-card class="mx-auto card-width" max-width="600px">
+              <v-img src="/src/assets/cleaning.webp" height="250px" cover />
+              <v-card-title class="text-start">
+                {{ slide.title }}
+              </v-card-title>
+              <v-card-subtitle class="text-start">
+                {{ slide.subtitle }}
+              </v-card-subtitle>
+              <v-card-text class="text-start">
+                {{ slide.text }}
+              </v-card-text>
+            </v-card>
+          </template>
+
         </div>
       </v-sheet>
     </v-carousel-item>
@@ -49,63 +103,59 @@ export default {
 
   <v-spacer></v-spacer>
 
-  <!--STORY-->
-  <v-container class="mt-3">
-    <h1 class="title-responsive">La nostra storia</h1>
-    <h2 class="subtitle-responsive text-light-blue">
-      Una storia che risale a 20 anni fà...
-    </h2>
-  </v-container>
+  <!--WHO IS LUCIANA?-->
 
-  <v-spacer></v-spacer>
-
-  <!--CHI È LUCIANA?-->
-  <v-container class="mt-5">
+  <v-container class="mt-5" style="margin-bottom: 0;">
     <v-row class="d-flex justify-center align-center flex-wrap">
-      <v-col class="text-start" cols="auto" md="8" sm="12">
+      <v-col class="text-start" cols="auto" md="8" sm="12" style="margin-bottom: 0; padding-bottom: 0;">
         <h1 class="title-responsive">Chi è Luciana?</h1>
         <h2 class="subtitle-responsive text-light-blue">
           Imprenditrice per passione
         </h2>
         <p>
-          Sono una ragazza umile, determinata e con una grande voglia di
-          lavorare, anche se sono ancora molto giovane.
-        </p>
-        <br /><br />
-        <p>
-          Sono orgogliosa di aver preso in mano l'azienda di famiglia e di poter
-          contribuire al suo successo.
+        Sono una ragazza <b> <font color="#0398fc">umile</font></b>, <b> <font color="#0398fc">determinata </font></b> e con una grande voglia di lavorare, anche se sono ancora molto
+        giovane. Sono orgogliosa di aver preso in mano l'azienda di famiglia e di poter contribuire al suo
+        successo.
         </p>
         <br /><br />
         <p>
           Fin da piccola, ho sempre ammirato il duro lavoro dei miei genitori e
-          di mio nonno nell'azienda. Ho trascorso molte ore osservandoli e
-          imparando tutto ciò che potevo.
-        </p>
-        <br /><br />
-        <p>
+          di mio nonno nell'azienda. <br />
+          Ho trascorso molte ore osservandoli e imparando tutto ciò che potevo.
+          <br />
           La mia passione per l’azienda è cresciuta di pari passo con me, e ho
           sviluppato una forte determinazione nel voler far crescere l'azienda e
           portarla a nuovi livelli. <br />
           Nonostante la mia giovane età, mi impegno a imparare continuamente e a
-          migliorare le mie competenze. <br />
+          migliorare le mie competenze. <br /> <br>
+          Sono consapevole che ci sono ancora molte cose da imparare, ma sono pronta ad affrontare le sfide
+          che si presentano lungo il percorso. <br>
         </p>
-        <br /><br />
+        <v-spacer></v-spacer>
+        <br><br>
         <p>
-          Sono consapevole che ci sono ancora molte cose da imparare, <br />
-          ma sono pronta ad affrontare le sfide che si presentano lungo il
-          percorso. <br />
+          La mia <b><font color="#0398fc">umiltà</font></b> mi spinge a ascoltare le idee e le opinioni degli altri membri del team, riconoscendo
+          il valore dell'esperienza e della diversità di prospettive. Sono aperta a nuove idee e sono disposta
+           a mettermi in gioco, anche se ciò significa prendere decisioni difficili o affrontare situazioni
+           complesse.
+        </p>
+        <br><br>
+        <p>
+          La mia <b><font color="#0398fc">determinazione</font></b> mi spinge a lavorare duramente ogni giorno, cercando nuove opportunità di
+          crescita e innovazione per l'azienda. Non mi arrendo di fronte alle difficoltà, ma cerco soluzioni
+          creative e mi impegno per superare gli ostacoli.
+        </p>
+        <br><br>
+        <p>
+          Essere al comando dell'azienda di famiglia è un grande onore per me, ma è anche una responsabilità
+          che prendo molto seriamente. Sono orgogliosa dei risultati che abbiamo ottenuto finora.
+          Tuttavia, non mi accontento mai e continuo a lavorare con impegno e passione per raggiungere nuovi
+          traguardi e garantire un futuro prospero per l'azienda che amo.
         </p>
       </v-col>
 
-      <v-col class="d-flex justify-center" cols="auto" md="4" sm="12">
-        <v-img
-          src="/src/assets/puliservice_logo.svg"
-          width="100%"
-          max-width="300px"
-          aspect-ratio="16/9"
-          cover
-        ></v-img>
+      <v-col class="d-flex justify-center" cols="auto" md="4" style="margin-bottom: 0; padding-bottom: 0;">
+        <v-img src="/src/assets/luciana.png" width="100%" max-width="400px" aspect-ratio="16/9" cover></v-img>
       </v-col>
     </v-row>
   </v-container>
@@ -139,14 +189,10 @@ export default {
       guidati dai principi dell'integrità, dell'onestà e della trasparenza in
       tutte le nostre interazioni e operazioni. Rispettiamo la privacy dei
       nostri clienti e
-      <span class="text-light-blue"
-        >trattiamo le informazioni sensibili con la massima riservatezza</span
-      >. <br /><br />
+      <span class="text-light-blue">trattiamo le informazioni sensibili con la massima riservatezza</span>. <br /><br />
       <b>&#x2022; Teamwork</b>: Il nostro successo dipende dalla forza del
       nostro team. Favoriamo un ambiente di lavoro collaborativo, in cui
-      <span class="text-light-blue"
-        >ogni membro del team viene valorizzato</span
-      >
+      <span class="text-light-blue">ogni membro del team viene valorizzato</span>
       e incoraggiato a contribuire con le proprie competenze e prospettive.
       Siamo un'impresa che
       <span class="text-light-blue">crede nel valore delle persone</span> e nel
@@ -175,3 +221,18 @@ import TopNav from "@/components/TopNav.vue";
 import Bottom from "@/components/BottomFooter.vue";
 import CallToAction from "@/components/CallToAction.vue";
 </script>
+
+<style>
+@media screen and (max-width: 966px) {
+
+  .title-responsive {
+    font-size: 3em !important;
+    text-align: start;
+    line-height: normal;
+  }
+
+  .card-width {
+    max-width: 344px !important;
+  }
+}
+</style>

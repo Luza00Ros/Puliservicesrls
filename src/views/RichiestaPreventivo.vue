@@ -128,41 +128,49 @@ export default {
       phoneRules: [
         value => (value?.length > 9 && /[0-9-]+/.test(value)) || 'Inserisci un numero di telefono valido',
       ],
-      userId: 0,
+      documentId: 'Request',
       name: '',
       email: '',
       city: '',
       phone: '',
       request: '',
-      date: new Date().toLocaleDateString(),
-      hours: new Date().getHours(),
-      minute: new Date().getMinutes()
+      today: new Date(),
     }
   },
   methods: {
-    submit() {
-
-      const db = getDatabase();
-      const reference = ref(db, 'contactform/' + this.increment());
-
-      set(reference, {
+    // Aggiunge la nuova richiesta al database
+    addRequest: async function () {
+      const database = firebase.db;
+      const docData = {
         name: this.name,
         email: this.email,
-        select: this.select,
         phone: this.phone,
-        dateTime: `${this.date} - ${this.hours} : ${this.minute}`,
+        select: this.select.state,
         request: this.request,
-      });
+        privacyPolicyAccepted: this.checkbox,
+      };
+      await setDoc(doc(database, this.documentId, this.formatDate(this.today)), docData);
+      this.onRedirect(this.name, this.email, this.phone, this.request, this.checkbox);
     },
 
-    increment() {
-      //PER RESETTARE BASTA IMPOSTARE document.cookie = 0;
-      //document.cookie = 0;
-      this.userId = document.cookie;
-      console.log(document.cookie);
-      return document.cookie++;
+    // Fomatta la data
+    formatDate: function (current_datetime) {
+      let formatted_date = current_datetime.getFullYear() + "-" + (current_datetime.getMonth() + 1) + "-" + current_datetime.getDate() + " " + current_datetime.getHours() + ":" + current_datetime.getMinutes() + ":" + current_datetime.getSeconds();
+      return formatted_date;
     },
-  },
+
+    // Convalido i dati prima di reindirizzare l'utente
+    onRedirect: function (name, email, phone, request, checkbox) {
+      if (name != '' && email != '' && phone != '' && request != '' && checkbox != false) {
+        console.log(name);
+        console.log(email);
+        console.log(phone);
+        console.log(request);
+        console.log(checkbox);
+        return this.$router.push('redirect');
+      }
+    }
+  }
 }
 </script>
 
@@ -238,7 +246,7 @@ export default {
 
       <v-spacer></v-spacer>
       <div id="mobile-button-right">
-        <v-btn type="submit" v-on:click="submit()" name="invia" color="light-blue" rounded="xl" variant="tonal"
+        <v-btn type="submit" v-on:click="addRequest()" name="invia" color="light-blue" rounded="xl" variant="tonal"
           class="mt-5 mb-5 font-weight-medium">Invia la
           richiesta</v-btn>
       </div>
@@ -263,6 +271,7 @@ export default {
 <script setup>
 import TopNav from '@/components/TopNav.vue'
 import Bottom from '@/components/BottomFooter.vue';
-import { getDatabase, ref, set } from 'firebase/database';
+import firebase from '../plugins/firebase.js';
+import { setDoc, doc } from 'firebase/firestore';
 //RICORDA DI INSERIRE RECAPTCHA V3
 </script>
