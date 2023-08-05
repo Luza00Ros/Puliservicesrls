@@ -8,25 +8,22 @@ export default {
           title: "Slide 1",
           subtitle: "Subtitle slide 1",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-          source: "/src/assets/vileda.webp",
         },
         {
           id: 1,
           title: "Slide 2",
           subtitle: "Subtitle slide 2",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-          source: "/src/assets/marbec.webp",
         },
         {
           id: 2,
           title: "Slide 3",
           subtitle: "Subtitle slide 3",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-          source: "/src/assets/sutter.webp",
         },
       ],
     };
-  },
+  }
 };
 </script>
 

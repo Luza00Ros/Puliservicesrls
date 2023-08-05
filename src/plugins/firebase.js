@@ -34,7 +34,7 @@ const appCheck = initializeAppCheck(firebase, {
 });
 */
 
-// Export database
+// Export
 export default {
   db,
   app,

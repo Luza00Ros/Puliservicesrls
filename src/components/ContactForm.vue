@@ -2,6 +2,7 @@
 export default {
   data() {
     return {
+      dialog: false,
       firstNameRules: [
         value => (value || '').length <= 50 || 'Max 50 caratteri',
         value => !!value || 'Inerisci il tuo nome e cognome o la Ragione Sociale della tua azienda'
@@ -175,93 +176,84 @@ export default {
 </script>
 
 <template>
-  <TopNav />
+  <!--DIALOG-->
+  <v-dialog v-model="dialog" width="auto">
 
-  <v-container fluid>
+    <template v-slot:activator="{ props }">
+      <v-btn color="light-blue-darken-4" rounded v-bind="props">
+        Preventivo gratuito
+      </v-btn>
+    </template>
+
+    <v-container fluid>
       <v-card>
         <v-img src="../assets/previewPreventivo.gif" rounded aspect-ratio="16/9" cover></v-img>
       </v-card>
     </v-container>
 
-  <div class="ml-3 mr-3 mt-3 mb-3">
-    <p class="text-light-blue font-weight-medium mt-5 mb-5">Compila i campi sottostanti indicando la tua esigenza.
-      Saremo
-      lieti di
-      ricontattarti per offrirti la nostra migliore proposta </p>
-    <v-form fast-fail @submit.prevent name="contact" method="POST" ref="form" class="mt-5 mb-5">
+    <v-card class="ml-3 mr-3 mt-3 mb-3" color="light-blue-darken-4">
+      <p class="text-white font-weight-medium mt-5 mb-5 ml-3 mr-3">Compila i campi sottostanti indicando la tua esigenza.
+        Saremo lieti di ricontattarti per offrirti la nostra soluzione migliore! </p>
 
-      <v-text-field :rules="firstNameRules" density="compact" variant="underlined" prepend-inner-icon="mdi-account"
-        label="Nome o Azienda" color="light-blue" counter clearable aria-required="true" type="text" name="name"
-        v-model="name" bg-color="transparent" class="mt-5 mb-5">
-      </v-text-field>
+      <!--FORM-->
+      <v-form fast-fail @submit.prevent name="contact" method="POST" ref="form" class="mt-5 mb-5 mr-3 ml-3">
 
-      <v-text-field :rules="rules" density="compact" prepend-inner-icon="mdi-email" label="E-mail" variant="underlined"
-        color="light-blue" class="mt-5 mb-5" clearable type="email" name="email" v-model="email">
-      </v-text-field>
+        <v-text-field :rules="firstNameRules" density="compact" variant="underlined" prepend-inner-icon="mdi-account"
+          label="Nome o Azienda" color="light-blue" counter clearable aria-required="true" type="text" name="name"
+          v-model="name" bg-color="transparent" class="mt-5 mb-5">
+        </v-text-field>
 
-      <v-text-field type="text" label="Telefono" :rules="phoneRules" name="phone" class="mt-5 mb-5"
-        prepend-inner-icon="mdi-cellphone" density="compact" variant="underlined" color="light-blue" v-model="phone"
-        clearable>
+        <v-text-field :rules="rules" density="compact" prepend-inner-icon="mdi-email" label="E-mail" variant="underlined"
+          color="light-blue" class="mt-5 mb-5" clearable type="email" name="email" v-model="email">
+        </v-text-field>
 
-      </v-text-field>
+        <v-text-field type="text" label="Telefono" :rules="phoneRules" name="phone" class="mt-5 mb-5"
+          prepend-inner-icon="mdi-cellphone" density="compact" variant="underlined" color="light-blue" v-model="phone"
+          clearable>
 
-
-      <v-select prepend-inner-icon="mdi-map-marker" color="light-blue" v-model="select"
-        :hint="`${select.state}, ${select.abbr}`" :items="items" item-title="state" item-value="abbr" label="Provincia"
-        persistent-hint return-object single-line variant="underlined" class="mt-5 mb-5" type="text" name="city">
-      </v-select>
+        </v-text-field>
 
 
-      <v-textarea color="light-blue" variant="underlined" label="Inserisci qui la tua richiesta"
-        prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5 mb-5" type="text" name="message"
-        v-model="request">
-      </v-textarea>
-      <v-checkbox v-model="checkbox" :rules="isCheck" color="light-blue">
-        <template v-slot:label>
-          <div>
-            Acconsento al trattamento dei dati come specificato nell'informativa
-            <v-tooltip location="bottom" class="mt-5 mb-5">
-              <template v-slot:activator="{ props }">
-                <a class="text-decoration-none text-light-blue-darken-3" target="_blank" href="https://vuetifyjs.com"
-                  v-bind="props" @click.stop>
-                  Privacy Policy
-                </a>
-              </template>
-              Consulta l'informativa Privacy Policy
-            </v-tooltip>
-          </div>
-        </template>
-      </v-checkbox>
+        <v-select prepend-inner-icon="mdi-map-marker" color="light-blue" v-model="select"
+          :hint="`${select.state}, ${select.abbr}`" :items="items" item-title="state" item-value="abbr" label="Provincia"
+          persistent-hint return-object single-line variant="underlined" class="mt-5 mb-5" type="text" name="city">
+        </v-select>
 
 
+        <v-textarea color="light-blue" variant="underlined" label="Inserisci qui la tua richiesta"
+          prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5 mb-5" type="text" name="message"
+          v-model="request">
+        </v-textarea>
 
-      <v-spacer></v-spacer>
-      <div id="mobile-button-right">
-        <v-btn type="submit" v-on:click="addRequest()" name="invia" color="light-blue" rounded="xl" variant="outlined"
-          class="mt-5 mb-5 font-weight-medium">Invia la
-          richiesta</v-btn>
-      </div>
-    </v-form>
-  </div>
-  <Bottom />
+        <v-checkbox v-model="checkbox" :rules="isCheck" color="light-blue">
+          <template v-slot:label>
+            <div>
+              Acconsento al trattamento dei dati come specificato nell'informativa
+              <v-tooltip location="bottom" class="mt-5 mb-5">
+                <template v-slot:activator="{ props }">
+                  <a class="text-decoration-none text-light-blue" target="_blank" href="https://vuetifyjs.com"
+                    v-bind="props" @click.stop>
+                    Privacy Policy
+                  </a>
+                </template>
+                Consulta l'informativa Privacy Policy
+              </v-tooltip>
+            </div>
+          </template>
+        </v-checkbox>
+
+        <v-spacer></v-spacer>
+
+        <div class="d-flex justify-end">
+          <v-btn type="submit" v-on:click="addRequest()" name="invia" color="white" rounded="xl" variant="outlined"
+            class="mt-5 mb-5 font-weight-medium">Invia la richiesta</v-btn>
+        </div>
+      </v-form>
+    </v-card>
+  </v-dialog>
 </template>
 
-<style>
-@media screen and (max-width: 966px) {
-  #title-responsive {
-    font-size: 2em !important;
-  }
-
-  #mobile-button-right {
-    display: flex;
-    justify-content: end;
-  }
-}
-</style>
-
 <script setup>
-import TopNav from '@/components/TopNav.vue'
-import Bottom from '@/components/BottomFooter.vue';
 import firebase from '../plugins/firebase.js';
 import { setDoc, doc } from 'firebase/firestore';
 //RICORDA DI INSERIRE RECAPTCHA V3

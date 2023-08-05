@@ -136,6 +136,7 @@ export default {
   <!-- V-NAVIGATION-DRAWER -->
   <v-navigation-drawer temporary v-model="drawer" location="left" v-on:click.stop="drawer = !drawer"
     class="rounded-e-xl mt-5 h-50" aria-label="menu">
+    <on-top />
     <v-list nav aria-label="menu-item">
       <v-tabs direction="vertical" color="light-blue">
 
@@ -186,7 +187,7 @@ export default {
             v-on:click="routerPush('contatti')"><span class="text-black">Contatti</span></v-btn>
 
           <v-btn class='rounded-pill mt-2 text-light-blue' :prepend-icon='badge' variant="flat"
-            v-on:click="routerPush('preventivo')" >
+            v-on:click="routerPush('preventivo')">
             <span class="text-black">Preventivo gratuito</span>
           </v-btn>
 
@@ -198,7 +199,13 @@ export default {
 </template>
 
 <script setup>
-//
+const onTop = () => {
+  window.scroll({
+    top: 100,
+    left: 100,
+    behavior: "smooth",
+  });
+}
 </script>
 
 <style>

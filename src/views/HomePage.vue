@@ -84,11 +84,7 @@ export default {
 
   <!-- INTRO -->
 
-  <v-parallax
-    src="/src/assets/cleaning.webp"
-    height="600"
-    alt="Immagine in background"
-  >
+  <v-parallax src="/src/assets/cleaning.webp" height="600" alt="Immagine in background">
     <div class="d-flex flex-column fill-height justify-center text-white">
       <div class="text-center mt-5 mb-3 mr-5 ml-5">
         <h1 class="title-responsive">
@@ -102,14 +98,8 @@ export default {
         </p>
       </div>
       <div class="mb-5 mt-5 ml-2 text-center button-responsive">
-        <v-btn
-          prepend-icon="mdi-calendar-badge"
-          rounded="xl"
-          color="whithe"
-          variant="outlined"
-          v-on:click="routerPush('preventivo')"
-          size="large"
-        >
+        <v-btn prepend-icon="mdi-calendar-badge" rounded="xl" color="whithe" variant="outlined"
+          v-on:click="routerPush('preventivo')" size="large">
           <b>Preventivo gratuito</b>
         </v-btn>
       </div>
@@ -121,47 +111,18 @@ export default {
   <v-carousel cycle height="100" hide-delimiters :show-arrows="false">
     <v-carousel-item v-for="slide in slides" :key="slide.id" cover>
       <v-sheet color="light-blue" height="100%">
-        <div
-          class="d-flex fill-height justify-center d-flex text-center align-center"
-        >
+        <div class="d-flex fill-height justify-center d-flex text-center align-center">
           <template v-if="slide.id == 0">
-            <a
-              role="link"
-              aria-label="Le nostre marche certificate"
-              target="_blank"
-              :href="slide.link"
-              class="h-50"
-            >
-              <v-img
-                src="/src/assets/vileda.webp"
-                alt="Marchi da noi utilizzati"
-            /></a>
+            <a role="link" aria-label="Le nostre marche certificate" target="_blank" :href="slide.link" class="h-50">
+              <v-img src="/src/assets/vileda.webp" alt="Marchi da noi utilizzati" /></a>
           </template>
           <template v-if="slide.id == 1">
-            <a
-              role="link"
-              aria-label="Le nostre marche certificate"
-              target="_blank"
-              :href="slide.link"
-              class="h-50"
-            >
-              <v-img
-                src="/src/assets/marbec.webp"
-                alt="Marchi da noi utilizzati"
-            /></a>
+            <a role="link" aria-label="Le nostre marche certificate" target="_blank" :href="slide.link" class="h-50">
+              <v-img src="/src/assets/marbec.webp" alt="Marchi da noi utilizzati" /></a>
           </template>
           <template v-if="slide.id == 2">
-            <a
-              role="link"
-              aria-label="Le nostre marche certificate"
-              target="_blank"
-              :href="slide.link"
-              class="h-50"
-            >
-              <v-img
-                src="/src/assets/sutter.webp"
-                alt="Marchi da noi utilizzati"
-            /></a>
+            <a role="link" aria-label="Le nostre marche certificate" target="_blank" :href="slide.link" class="h-50">
+              <v-img src="/src/assets/sutter.webp" alt="Marchi da noi utilizzati" /></a>
           </template>
         </div>
       </v-sheet>
@@ -179,21 +140,11 @@ export default {
 
   <v-container>
     <v-row no-gutters>
-      <v-col
-        v-for="overview in overviews"
-        :key="overview.id"
-        class="d-flex flex-wrap align-center"
-      >
-        <v-card
-          class="text-h5"
-          width="auto"
-          :prepend-icon="overview.img"
-          variant="text"
-          color="light-blue"
-          id="icon-color"
-        >
+      <v-col v-for="overview in overviews" :key="overview.id" class="d-flex flex-wrap align-center">
+        <v-card class="text-h5" width="auto" :prepend-icon="overview.img" variant="text"
+          id="icon-color">
           <template v-slot:title>
-            <span class="light-blue-lighten-1">
+            <span class="text-light-blue-darken-4">
               {{ overview.title.toUpperCase() }}
             </span>
           </template>
@@ -211,72 +162,36 @@ export default {
   <!--SERVICES-->
 
   <v-container class="mt-5">
-    <h1 class="title-responsive text-start text-black">I nostri servizi</h1>
+    <h1 class="title-responsive text-start text-black">I nostri Servizi</h1>
     <h2 class="subtitle-responsive text-light-blue">
       Servizi professionali e personale altamente qualificato
     </h2>
   </v-container>
 
   <v-container class="d-flex justify-space-evently align-center flex-wrap">
-    <v-card
-      class="mx-auto mt-5 mb-5"
-      max-width="600"
-      color="light-blue"
-      v-for="service in services"
-      :key="service.id"
-    >
+    <v-card class="mx-auto mt-5 mb-5" max-width="600" color="light-blue-darken-4" v-for="service in services" :key="service.id">
       <span v-if="service.id == 0">
-        <v-img
-          src="/src/assets/pulizieCondomini.webp"
-          height="300px"
-          width="600px"
-          rounded="xl"
-          cover
-        ></v-img>
+        <v-img src="/src/assets/pulizieCondomini.webp" height="300px" width="600px" rounded="xl" cover></v-img>
       </span>
       <span v-if="service.id == 1">
-        <v-img
-          src="/src/assets/pulizieUffici.webp"
-          height="300px"
-          width="600px"
-          rounded="xl"
-          cover
-        ></v-img>
+        <v-img src="/src/assets/pulizieUffici.webp" height="300px" width="600px" rounded="xl" cover></v-img>
       </span>
       <span v-if="service.id == 2">
-        <v-img
-          src="/src/assets/pulizieProfessionali.jpg"
-          height="300px"
-          width="600px"
-          rounded="xl"
-          cover
-        ></v-img>
+        <v-img src="/src/assets/pulizieProfessionali.jpg" height="300px" width="600px" rounded="xl" cover></v-img>
       </span>
       <span v-if="service.id == 3">
-        <v-img
-          src="/src/assets/pulizieCondomini.webp"
-          height="300px"
-          width="600px"
-          rounded="xl"
-          cover
-        ></v-img>
+        <v-img src="/src/assets/moves.webp" height="300px" width="600px" rounded="xl" cover></v-img>
       </span>
 
       <v-card-item>
         <h6 class="text-light-blue-darken-5">{{ service.type }}</h6>
-        <h5 class="text-white">{{ service.title }}</h5>
+        <h5 class="text-light-blue">{{ service.title }}</h5>
         <p class="text-white">{{ service.description }}</p>
       </v-card-item>
 
       <v-card-actions>
-        <v-btn
-          append-icon="mdi-arrow-right-thin"
-          v-on:click="($event) => routerPush(service.page)"
-          rounded="xl"
-          color="text-white"
-          variant="outlined"
-          class="pl-3"
-        >
+        <v-btn append-icon="mdi-arrow-right-thin" v-on:click="routerPush(service.page)" rounded="xl"
+          color="light-blue" variant="outlined" class="pl-3">
           <b>Vai al servizio</b>
         </v-btn>
       </v-card-actions>
@@ -293,7 +208,7 @@ export default {
   <v-container class="mt-5">
     <v-row class="d-flex justify-center align-center flex-wrap">
       <v-col class="text-start" cols="auto" md="8" sm="12">
-        <h1 class="title-responsive">La nostra storia</h1>
+        <h1 class="title-responsive">La nostra Storia</h1>
         <h2 class="subtitle-responsive text-light-blue">
           20 anni di esperienza nel settore
         </h2>
@@ -304,8 +219,10 @@ export default {
         <br>
         <v-spacer></v-spacer>
         <p>
-          <b> <font color="#0398fc">Da Nonno Ernesto, al figlio Marco, e ora a sua figlia Luciana. </font></b>
-          <br> <br>
+          <span class="text-light-blue-darken-4 font-weight-bold">Da Nonno Ernesto, al figlio Marco, e ora a sua figlia Luciana.
+          </span>
+          <br>
+          <br>
           Siamo orgogliosi di offrire servizi di pulizia di alta qualità a costi
           accessibili, garantendo risultati eccezionali per i nostri clienti. Da
           quando abbiamo iniziato la nostra attività, ci siamo impegnati a
@@ -326,13 +243,7 @@ export default {
       </v-col>
 
       <v-col class="d-flex justify-center" cols="auto" md="4" sm="12">
-        <v-img
-          src="/src/assets/puliservice_logo.svg"
-          width="100%"
-          max-width="300px"
-          aspect-ratio="16/9"
-          cover
-        ></v-img>
+        <v-img src="/src/assets/puliservice_logo.svg" width="100%" max-width="300px" aspect-ratio="16/9" cover></v-img>
       </v-col>
     </v-row>
   </v-container>
@@ -342,7 +253,7 @@ export default {
   <!-- MISSION -->
 
   <v-container class="mt-3">
-    <h1 class="title-responsive">La nostra mission</h1>
+    <h1 class="title-responsive">La nostra Mission</h1>
     <h2 class="subtitle-responsive text-light-blue">
       Servizi di pulizia professionale e di alta qualità
     </h2>
@@ -351,44 +262,42 @@ export default {
   <v-container class="d-flex justify-center align-center flex-wrap mb-5">
     <p>
       Attraverso un
-      <span class="text-light-blue">approccio orientato al cliente</span>, ci
+      <span class="text-light-blue-darken-4">approccio orientato al cliente</span>, ci
       dedichiamo a comprendere le specifiche esigenze e le preferenze di ogni
       singolo cliente, al fine di offrire
-      <span class="text-light-blue">soluzioni personalizzate</span> e risultati
-      eccezionali. <br />
-      La nostra mission si basa sui seguenti <b>principi fondamentali</b>:
-      <br /><br />
-      <b>&#x2022; Eccellenza</b>: Miriamo all'eccellenza in tutto ciò che
+      <span class="text-light-blue-darken-4">soluzioni personalizzate</span> e risultati
+      eccezionali. <br>
+      La nostra mission si basa sui seguenti <span class="text-light-blue"><strong>principi fondamentali</strong></span>:
+      <br><br>
+      &#x2022;<span class="text-light-blue"><strong> Eccellenza</strong></span>: Miriamo all'eccellenza in tutto ciò che
       facciamo, impegnandoci a offrire
-      <span class="text-light-blue">servizi di pulizia impeccabili</span> e
-      <span class="text-light-blue">risultati di qualità superiore</span>.
-      <br /><br />
-      <b>&#x2022; Affidabilità</b>: Siamo un
-      <span class="text-light-blue">team affidabile e responsabile</span>,
+      <span class="text-light-blue-darken-4">servizi di pulizia impeccabili</span> e
+      <span class="text-light-blue-darken-4">risultati di qualità superiore</span>.
+      <br>
+      &#x2022;<span class="text-light-blue"><strong> Affidabilità</strong></span>: Siamo un
+      <span class="text-light-blue-darken-4">team affidabile e responsabile</span>,
       rispettando sempre gli impegni presi con i nostri clienti. Puntualità,
-      professionalità e dedizione sono valori chiave per noi. <br /><br />
-      <b>&#x2022; Personalizzazione</b>: Ogni cliente è unico, pertanto
+      professionalità e dedizione sono valori chiave per noi. <br>
+      &#x2022;<span class="text-light-blue"><strong> Personalizzazione</strong></span>: Ogni cliente è unico, pertanto
       adottiamo un
-      <span class="text-light-blue">approccio personalizzato</span>, ascoltando
+      <span class="text-light-blue-darken-4">approccio personalizzato</span>, ascoltando
       attentamente le esigenze e le preferenze di ciascuno per fornire servizi
-      su misura che soddisfino le sue specifiche necessità. <br /><br />
-      <b>&#x2022; Sostenibilità</b>: Siamo impegnati a svolgere il nostro lavoro
+      su misura che soddisfino le sue specifiche necessità. <br>
+      &#x2022;<span class="text-light-blue"><strong> Sostenibilità</strong></span>: Siamo impegnati a svolgere il nostro lavoro
       in modo responsabile dal punto di vista ambientale, utilizzando
-      <span class="text-light-blue">prodotti eco-friendly</span> e adottando
-      <span class="text-light-blue">pratiche sostenibili</span> per ridurre
-      l'impatto ambientale delle nostre attività. <br /><br />
-      <b>&#x2022; Soddisfazione del cliente</b>: La soddisfazione dei nostri
+      <span class="text-light-blue-darken-4">prodotti eco-friendly</span> e adottando
+      <span class="text-light-blue-darken-4">pratiche sostenibili</span> per ridurre
+      l'impatto ambientale delle nostre attività. <br>
+      &#x2022;<span class="text-light-blue"><strong> Soddisfazione del cliente</strong></span>: La soddisfazione dei nostri
       clienti è la nostra priorità assoluta. Ci impegniamo a superare le
       aspettative dei nostri clienti, offrendo un
-      <span class="text-light-blue"
-        >servizio di pulizia di qualità superiore</span
-      >
-      e garantendo la loro piena soddisfazione. <br /><br />
-      La nostra mission è guidata da una <b>passione per l'eccellenza</b> e un
-      impegno costante nell'offrire <b>servizi di pulizia professionali</b> che
+      <span class="text-light-blue-darken-4">servizio di pulizia di qualità superiore</span>
+      e garantendo la loro piena soddisfazione. <br><br>
+      La nostra <span class="text-light-blue-darken-4"><strong>mission</strong></span> è guidata da una <span class="text-light-blue-darken-4"><strong>passione per l'eccellenza</strong></span> e un
+      impegno costante nell'offrire <span class="text-light-blue-darken-4"><strong>servizi di pulizia professionali</strong></span> che
       lascino un'impronta positiva nei luoghi che serviamo. Siamo determinati a
-      diventare il <b>partner di fiducia</b> per le esigenze di pulizia dei
-      nostri clienti, offrendo <b>risultati impeccabili</b> e creando ambienti
+      diventare il <span class="text-light-blue-darken-4"><strong>partner di fiducia</strong></span> per le esigenze di pulizia dei
+      nostri clienti, offrendo <span class="text-light-blue-darken-4"><strong>risultati impeccabili</strong></span> e creando ambienti
       puliti, sani e piacevoli in cui vivere e lavorare.
     </p>
   </v-container>
@@ -403,7 +312,7 @@ import CallToAction from "@/components/CallToAction.vue";
 
 <style>
 #icon-color i.v-icon.v-icon {
-  color: #039be5;
+  color: #01579B;
 }
 
 @media screen and (max-width: 966px) {
