@@ -202,7 +202,7 @@ export default {
 const onTop = () => {
   window.scroll({
     top: 0,
-    left: 100,
+    left: 0,
     behavior: "smooth",
   });
 }
