@@ -162,7 +162,10 @@ export default {
       </v-col>
 
       <v-col class="d-flex justify-center" cols="auto" md="4" style="margin-bottom: 0; padding-bottom: 0;">
-        <v-img src="/src/assets/luciana.png" width="100%" max-width="400px" aspect-ratio="16/9" cover></v-img>
+        <v-card color="light-blue-darken-4">
+          <div id="circle"></div>
+          <v-img src="/src/assets/luciana.png" width="100%" max-width="400px" aspect-ratio="16/9" cover></v-img>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
@@ -182,38 +185,42 @@ export default {
 
   <v-container class="d-flex justify-center align-center flex-wrap">
     <p>
-      <b>&#x2022; Qualità</b>: Siamo fermamente impegnati a offrire
-      <span class="text-light-blue">servizi di pulizia di alta qualità</span>.
+      &#x2022;<span class="text-light-blue"><strong> Qualità</strong></span>: Siamo fermamente impegnati a offrire
+      <span class="text-light-blue-darken-4">servizi di pulizia di alta qualità</span>.
       Ci sforziamo di superare le aspettative dei nostri clienti, garantendo
       risultati impeccabili e prestazioni di livello superiore. La qualità è per
-      noi un impegno costante e una priorità assoluta. <br /><br />
-      <b>&#x2022; Affidabilità</b>: La nostra reputazione si basa sulla
-      <span class="text-light-blue">fiducia e sull'affidabilità</span>. Siamo
+      noi un impegno costante e una priorità assoluta. <br><br>
+      &#x2022;<span class="text-light-blue"><strong> Affidabilità</strong></span>: La nostra reputazione si basa sulla
+      <span class="text-light-blue-darken-4">fiducia e sull'affidabilità</span>. Siamo
       sempre puntuali e rispettiamo gli impegni presi con i nostri clienti. La
       puntualità, la professionalità e la coerenza sono i pilastri su cui
-      costruiamo rapporti di lunga durata con i nostri clienti. <br /><br />
-      <b>&#x2022; Etica</b>: Agiamo sempre in modo etico e responsabile. Siamo
+      costruiamo rapporti di lunga durata con i nostri clienti. <br><br>
+      &#x2022;<span class="text-light-blue"><strong> Etica</strong></span>: Agiamo sempre in modo etico e responsabile.
+      Siamo
       guidati dai principi dell'integrità, dell'onestà e della trasparenza in
       tutte le nostre interazioni e operazioni. Rispettiamo la privacy dei
       nostri clienti e
-      <span class="text-light-blue">trattiamo le informazioni sensibili con la massima riservatezza</span>. <br /><br />
-      <b>&#x2022; Teamwork</b>: Il nostro successo dipende dalla forza del
+      <span class="text-light-blue-darken-4">trattiamo le informazioni sensibili con la massima riservatezza</span>.
+      <br><br>
+      &#x2022;<span class="text-light-blue"><strong> Teamwork</strong></span>: Il nostro successo dipende dalla forza del
       nostro team. Favoriamo un ambiente di lavoro collaborativo, in cui
-      <span class="text-light-blue">ogni membro del team viene valorizzato</span>
+      <span class="text-light-blue-darken-4">ogni membro del team viene valorizzato</span>
       e incoraggiato a contribuire con le proprie competenze e prospettive.
       Siamo un'impresa che
-      <span class="text-light-blue">crede nel valore delle persone</span> e nel
-      potere del lavoro di squadra. <br /><br />
-      <b>&#x2022; Responsabilità sociale</b>: Siamo consapevoli del nostro ruolo
+      <span class="text-light-blue-darken-4">crede nel valore delle persone</span> e nel
+      potere del lavoro di squadra. <br><br>
+      &#x2022;<span class="text-light-blue"><strong> Responsabilità sociale</strong></span>: Siamo consapevoli del nostro
+      ruolo
       nella società e dell'impatto che le nostre attività possono avere
       sull'ambiente e sulla comunità. Ci impegniamo a operare in modo
       sostenibile, utilizzando
-      <span class="text-light-blue">prodotti eco-friendly</span> e adottando
+      <span class="text-light-blue-darken-4">prodotti eco-friendly</span> e adottando
       pratiche che riducano
-      <span class="text-light-blue">l'impatto ambientale</span>. Sosteniamo
+      <span class="text-light-blue-darken-4">l'impatto ambientale</span>. Sosteniamo
       anche iniziative e cause sociali che contribuiscono al benessere della
-      comunità. <br /><br />
-      Siamo <b>orgogliosi dei nostri valori</b> e lavoriamo instancabilmente per
+      comunità. <br><br>
+      Siamo <span class="font-weight-bold text-light-blue-darken-4"><strong>orgogliosi dei nostri valori</strong></span> e
+      lavoriamo instancabilmente per
       mantenerli vivi in ogni aspetto del nostro lavoro.
     </p>
   </v-container>
@@ -229,7 +236,7 @@ import Bottom from "@/components/BottomFooter.vue";
 import CallToAction from "@/components/CallToAction.vue";
 </script>
 
-<style>
+<style scoped>
 @media screen and (max-width: 966px) {
 
   .title-responsive {
@@ -242,4 +249,14 @@ import CallToAction from "@/components/CallToAction.vue";
     max-width: 344px !important;
   }
 }
+
+  #circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: #03A9F4;
+    left: -30px;
+    top: -30px;
+  }
 </style>

@@ -136,6 +136,8 @@ export default {
   <!-- V-NAVIGATION-DRAWER -->
   <v-navigation-drawer temporary v-model="drawer" location="left" v-on:click.stop="drawer = !drawer"
     class="rounded-e-xl mt-5 h-50" aria-label="menu">
+    <!--SCROLL UP-->
+    <span v-on:load="onTop"></span>
 
     <v-list nav aria-label="menu-item">
       <v-tabs direction="vertical" color="light-blue">
@@ -195,14 +197,14 @@ export default {
 
       </v-tabs>
     </v-list>
-    <on-top />
+
   </v-navigation-drawer>
 </template>
 
 <script setup>
-const onTop = () => {
-  window.scrollTo(0,0);
-}
+const onTop = setTimeout(() => {
+  window.scrollTo(-100, -100);
+}, 1000);
 </script>
 
 <style>

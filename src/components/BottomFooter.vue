@@ -58,9 +58,9 @@ export default {
 
       <div class="d-flex flex-column align-center">
         <div class="d-flex flex-row">
-          <v-btn icon="mdi-facebook" color="light-blue" variant="text" size="medium" role="link" href="#" target="_blank"
+          <v-btn icon="mdi-facebook" color="light-blue" size="small" role="link" href="https://www.facebook.com/impresadipulizieLucianaRosati/" target="_blank"
             class="ma-2 pa-2"></v-btn>
-          <v-btn icon="mdi-google-maps" color="light-blue" variant="text" size="medium" role="link" href="#" target="_blank"
+          <v-btn icon="mdi-google-maps" color="light-blue" size="small" role="link" href="https://goo.gl/maps/DD7JXHidro1wLhvz7" target="_blank"
             class="ma-2 pa-2"></v-btn>
         </div>
       </div>

@@ -310,7 +310,7 @@ import Bottom from "@/components/BottomFooter.vue";
 import CallToAction from "@/components/CallToAction.vue";
 </script>
 
-<style>
+<style scoped>
 #icon-color i.v-icon.v-icon {
   color: #01579B;
 }
