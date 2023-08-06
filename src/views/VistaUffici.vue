@@ -18,11 +18,11 @@ export default {
       <div class="d-flex flex-column fill-height justify-center text-white">
         <div class="text-center mt-5 mb-3 mr-5 ml-5">
           <h1 class="title-responsive text-light-blue">
-            Pulizia uffici </h1>
+            Pulizie uffici </h1>
         </div>
         <div class="ma-5 text-center">
           <p class="subtitle-responsive font-weight-bold text-light-blue-darken-4">
-            Una buona pulizia migliorando la produttività dei dipendenti e il
+            Una buona pulizia migliora la produttività dei dipendenti e il
             benessere di tutti
           </p>
         </div>

@@ -2,10 +2,10 @@
 export default {
   data() {
     return {
-      tab: 'Mappa',
+      tab: 'Contatti',
       arraydiOggetti: [
-        { id: 0, title: 'Mappa', icon: 'mdi-google-maps' },
-        { id: 1, title: 'Contatti', icon: 'mdi-information-outline' },
+      { id: 0, title: 'Contatti', icon: 'mdi-information-outline' },
+        { id: 1, title: 'Mappa', icon: 'mdi-google-maps' }
       ],
     }
   },
@@ -15,7 +15,7 @@ export default {
 <template>
   <TopNav />
 
-  <v-card variant="outlined" color="white">
+  <v-card variant="outlined" color="white" class="mt-3">
     <v-card-title class="text-start d-flex justify-start py-6 text-black">
       <h1 class="font-weight-bold text-h2 title-responsive">
         Contatti
@@ -42,16 +42,16 @@ export default {
 
     <v-container class="d-flex justify-center">
       <v-card width="800" height="400" class="d-flex align-center justify-space-evenly" color="black">
-        <v-img height="800" src="../assets/backgroundDesign.png" cover>
+        <v-img height="800" src="../assets/backgroundDesign.webp" cover>
           <v-window v-model="tab">
             <v-window-item v-for="oggetti in arraydiOggetti" :key="oggetti.id" :value="oggetti.title">
 
               <span v-if="oggetti.id === 0">
-                <ComponentOne />
+                <ContactInfo />
               </span>
 
               <span v-if="oggetti.id === 1">
-                <ComponentTwo />
+                <ContactMaps />
               </span>
 
             </v-window-item>
@@ -82,8 +82,8 @@ export default {
 </style>
 
 <script setup>
-import ComponentOne from '@/components/ContactMaps.vue';
-import ComponentTwo from '@/components/ContactInfo.vue';
+import ContactMaps from '@/components/ContactMaps.vue';
+import ContactInfo from '@/components/ContactInfo.vue';
 import TopNav from '@/components/TopNav.vue';
 import Bottom from '@/components/BottomFooter.vue'
 </script>

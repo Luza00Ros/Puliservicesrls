@@ -36,68 +36,76 @@ export default {
     <h2 class="subtitle-responsive text-light-blue">
       Una storia che risale a pi&ugrave; di 20 anni fà...
     </h2>
-    <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae hic recusandae veniam sint iusto
-      non, quisquam saepe? Saepe facilis nisi alias, sequi debitis eum sit culpa obcaecati ipsa. Est, qui.</p>
   </v-container>
 
   <v-spacer></v-spacer>
 
   <!-- CAROUSEL -->
 
-  <v-carousel cycle hide-delimiters :show-arrows="false">
-    <v-carousel-item v-for="slide in slides" :key="slide.id" cover>
-      <v-sheet color="light-blue" height="100%">
-        <div class="d-flex flex-wrap fill-height justify-center d-flex text-center align-center">
+  <v-container>
+    <v-carousel hide-delimiters show-arrows="true">
+      <template v-slot:prev="{ props }">
+      <v-btn icon="mdi-arrow-left-bold-circle" size="medium" variant="elevated" color="light-blue" @click="props.onClick"></v-btn>
+    </template>
+    <template v-slot:next="{ props }">
+      <v-btn icon="mdi-arrow-right-bold-circle" variant="elevated" size="medium" color="light-blue" @click="props.onClick"></v-btn>
+    </template>
+      <v-carousel-item v-for="slide in slides" :key="slide.id" cover>
+        <v-sheet color="trasparent" height="100%">
+          <div class="d-flex flex-wrap fill-height justify-center d-flex text-center align-center">
 
-          <template v-if="slide.id == 0">
-            <v-card class="mx-auto card-width" max-width="600px">
-              <v-img src="/src/assets/cleaning.webp" height="250px" cover />
-              <v-card-title class="text-start">
-                {{ slide.title }}
-              </v-card-title>
-              <v-card-subtitle class="text-start">
-                {{ slide.subtitle }}
-              </v-card-subtitle>
-              <v-card-text class="text-start">
-                {{ slide.text }}
-              </v-card-text>
-            </v-card>
-          </template>
+            <!--RICORDA CHE UNA VOLTA INSERITE LE IMMAGINI ANREBBERO CALIBRATE-->
 
-          <template v-if="slide.id == 1">
-            <v-card class="mx-auto card-width" max-width="600px">
-              <v-img src="/src/assets/cleaning.webp" height="250px" cover />
-              <v-card-title class="text-start">
-                {{ slide.title }}
-              </v-card-title>
-              <v-card-subtitle class="text-start">
-                {{ slide.subtitle }}
-              </v-card-subtitle>
-              <v-card-text class="text-start">
-                {{ slide.text }}
-              </v-card-text>
-            </v-card>
-          </template>
+            <template v-if="slide.id == 0">
+              <v-card class="mx-auto card-width" color="light-blue-darken-4">
+                <v-img src="../assets/cleaning.webp" height="300px" cover />
+                <v-card-title class="text-start text-h5">
+                  {{ slide.title }}
+                </v-card-title>
+                <v-card-subtitle class="text-start text-light-blue text-h6">
+                  {{ slide.subtitle }}
+                </v-card-subtitle>
+                <v-card-text class="text-start">
+                  {{ slide.text }}
+                </v-card-text>
+              </v-card>
+            </template>
 
-          <template v-if="slide.id == 2">
-            <v-card class="mx-auto card-width" max-width="600px">
-              <v-img src="/src/assets/cleaning.webp" height="250px" cover />
-              <v-card-title class="text-start">
-                {{ slide.title }}
-              </v-card-title>
-              <v-card-subtitle class="text-start">
-                {{ slide.subtitle }}
-              </v-card-subtitle>
-              <v-card-text class="text-start">
-                {{ slide.text }}
-              </v-card-text>
-            </v-card>
-          </template>
+            <template v-if="slide.id == 1">
+              <v-card class="mx-auto card-width" color="light-blue-darken-4">
+                <v-img src="../assets/cleaning.webp" height="300px" cover />
+                <v-card-title class="text-start text-h5">
+                  {{ slide.title }}
+                </v-card-title>
+                <v-card-subtitle class="text-start text-light-blue text-h6">
+                  {{ slide.subtitle }}
+                </v-card-subtitle>
+                <v-card-text class="text-start">
+                  {{ slide.text }}
+                </v-card-text>
+              </v-card>
+            </template>
 
-        </div>
-      </v-sheet>
-    </v-carousel-item>
-  </v-carousel>
+            <template v-if="slide.id == 2">
+              <v-card class="mx-auto card-width" color="light-blue-darken-4">
+                <v-img src="../assets/cleaning.webp" height="300px" cover />
+                <v-card-title class="text-start text-h5">
+                  {{ slide.title }}
+                </v-card-title>
+                <v-card-subtitle class="text-start text-light-blue text-h6">
+                  {{ slide.subtitle }}
+                </v-card-subtitle>
+                <v-card-text class="text-start">
+                  {{ slide.text }}
+                </v-card-text>
+              </v-card>
+            </template>
+
+          </div>
+        </v-sheet>
+      </v-carousel-item>
+    </v-carousel>
+  </v-container>
 
   <v-spacer></v-spacer>
 
@@ -170,8 +178,6 @@ export default {
     </v-row>
   </v-container>
 
-  <CallToAction />
-
   <v-spacer></v-spacer>
 
   <!-- VALUES -->
@@ -227,6 +233,16 @@ export default {
 
   <v-spacer></v-spacer>
 
+  <!--CALL TO ACTION-->
+
+  <v-container>
+    <CallToAction />
+  </v-container>
+
+  <v-spacer></v-spacer>
+
+  <!--FOOTER-->
+
   <Bottom />
 </template>
 
@@ -250,13 +266,13 @@ import CallToAction from "@/components/CallToAction.vue";
   }
 }
 
-  #circle {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    background-color: #03A9F4;
-    left: -30px;
-    top: -30px;
-  }
+#circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: #03A9F4;
+  left: -30px;
+  top: -30px;
+}
 </style>

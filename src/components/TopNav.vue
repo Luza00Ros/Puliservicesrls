@@ -14,7 +14,7 @@ export default {
       servizi: [
         { id: 0, title: 'Giardinaggio', route: 'giardinaggio', icon: 'mdi-shovel' },
         { id: 1, title: 'Piccole manutenzioni', route: 'manutenzioni', icon: 'mdi-account-hard-hat-outline' },
-        { id: 2, title: 'Piccoli traslochi', route: 'traslochi', icon: 'mdi-human-dolly' },
+        { id: 2, title: 'Facchinaggio', route: 'traslochi', icon: 'mdi-human-dolly' },
       ],
       menuClosed: 'mdi-menu',
       menuOpen: 'mdi-menu-open',
@@ -22,7 +22,7 @@ export default {
       arrowDown: 'mdi-chevron-double-down',
       arrowUp: 'mdi-chevron-double-up',
       home: 'mdi-home',
-      chisiamo: 'mdi-account-hard-hat-outline',
+      chisiamo: 'mdi-human-greeting',
       clean: 'mdi-spray-bottle',
       service: 'mdi-account-wrench',
       contacts: 'mdi-human-greeting-proximity',

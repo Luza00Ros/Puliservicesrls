@@ -176,7 +176,9 @@ export default {
 </script>
 
 <template>
+
   <!--DIALOG-->
+
   <v-dialog v-model="dialog" width="auto">
 
     <template v-slot:activator="{ props }">
@@ -192,10 +194,11 @@ export default {
     </v-container>
 
     <v-card class="ml-3 mr-3 mt-3 mb-3" color="light-blue-darken-4">
-      <p class="text-white font-weight-medium mt-5 mb-5 ml-3 mr-3">Compila i campi sottostanti indicando la tua esigenza.
+      <p class="text-light-blue font-weight-medium mt-5 mb-5 ml-3 mr-3">Compila i campi sottostanti indicando la tua esigenza.
         Saremo lieti di ricontattarti per offrirti la nostra soluzione migliore! </p>
 
       <!--FORM-->
+
       <v-form fast-fail @submit.prevent name="contact" method="POST" ref="form" class="mt-5 mb-5 mr-3 ml-3">
 
         <v-text-field :rules="firstNameRules" density="compact" variant="underlined" prepend-inner-icon="mdi-account"

@@ -177,14 +177,18 @@ export default {
 <template>
   <TopNav />
 
-  <v-container fluid>
-      <v-card>
-        <v-img src="../assets/previewPreventivo.gif" rounded aspect-ratio="16/9" cover></v-img>
-      </v-card>
-    </v-container>
+  <v-parallax src="../assets/callToActionBg.webp" height="400" alt="Immagine in background">
+      <div class="d-flex flex-column fill-height justify-center text-white">
+        <div class="text-center mt-5 mb-3 mr-5 ml-5">
+          <h1 class="title-responsive">
+            Richiedi subito il tuo preventivo gratuito
+          </h1>
+        </div>
+      </div>
+    </v-parallax>
 
   <div class="ml-3 mr-3 mt-3 mb-3">
-    <p class="text-light-blue font-weight-medium mt-5 mb-5">Compila i campi sottostanti indicando la tua esigenza.
+    <p class="text-light-blue-darken-3 font-weight-medium mt-5 mb-5">Compila i campi sottostanti indicando la tua esigenza.
       Saremo
       lieti di
       ricontattarti per offrirti la nostra migliore proposta </p>
@@ -222,7 +226,7 @@ export default {
             Acconsento al trattamento dei dati come specificato nell'informativa
             <v-tooltip location="bottom" class="mt-5 mb-5">
               <template v-slot:activator="{ props }">
-                <a class="text-decoration-none text-light-blue-darken-3" target="_blank" href="https://vuetifyjs.com"
+                <a class="text-decoration-none text-light-blue" target="_blank" href="https://vuetifyjs.com"
                   v-bind="props" @click.stop>
                   Privacy Policy
                 </a>
@@ -246,10 +250,12 @@ export default {
   <Bottom />
 </template>
 
-<style>
+<style scoped>
 @media screen and (max-width: 966px) {
-  #title-responsive {
-    font-size: 2em !important;
+  .title-responsive {
+    font-size: 3em !important;
+    text-align: start;
+    line-height: normal;
   }
 
   #mobile-button-right {
