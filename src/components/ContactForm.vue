@@ -176,14 +176,13 @@ export default {
 </script>
 
 <template>
-
   <!--DIALOG-->
 
   <v-dialog v-model="dialog" width="auto">
 
     <template v-slot:activator="{ props }">
       <v-btn color="light-blue-darken-4" rounded v-bind="props">
-        Preventivo gratuito
+        Preventivo
       </v-btn>
     </template>
 

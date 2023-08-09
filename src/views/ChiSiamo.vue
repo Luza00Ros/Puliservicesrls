@@ -30,98 +30,108 @@ export default {
 <template>
   <TopNav />
 
-  <!--STORY-->
-  <v-container class="mt-3">
-    <h1 class="title-responsive">La nostra storia</h1>
-    <h2 class="subtitle-responsive text-light-blue">
-      Una storia che risale a pi&ugrave; di 20 anni fà...
-    </h2>
-  </v-container>
+  <!--INTRO-->
+    <v-parallax src="/src/assets/story.webp" height="600" alt="Immagine in background">
+    <div class="d-flex flex-column fill-height justify-center text-white">
+      <div class="text-center text-light-blue mt-5 mb-3 mr-5 ml-5">
+        <h1 class="title-responsive">
+          La nostra Storia
+        </h1>
+      </div>
+      <div class="ma-5 text-center">
+        <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
+          Una storia che risale a più di 20 anni f&agrave;
+        </p>
+      </div>
+    </div>
+  </v-parallax>
 
   <v-spacer></v-spacer>
 
   <!-- CAROUSEL -->
 
-  <v-container>
-    <v-carousel hide-delimiters show-arrows="true">
-      <template v-slot:prev="{ props }">
-      <v-btn icon="mdi-arrow-left-bold-circle" size="medium" variant="elevated" color="light-blue" @click="props.onClick"></v-btn>
+  <v-carousel cycle hide-delimiters :show-arrows="false">
+
+    <template v-slot:prev="{ props }">
+      <v-btn icon="mdi-arrow-left-bold-circle" variant="elevated" color="light-blue-darken-4"
+        @click="props.onClick"></v-btn>
     </template>
+
     <template v-slot:next="{ props }">
-      <v-btn icon="mdi-arrow-right-bold-circle" variant="elevated" size="medium" color="light-blue" @click="props.onClick"></v-btn>
+      <v-btn icon="mdi-arrow-right-bold-circle" variant="elevated" color="light-blue-darken-4"
+        @click="props.onClick"></v-btn>
     </template>
-      <v-carousel-item v-for="slide in slides" :key="slide.id" cover>
+
+    <v-carousel-item v-for="slide in slides" :key="slide.id" cover>
+      <v-container>
         <v-sheet color="trasparent" height="100%">
-          <div class="d-flex flex-wrap fill-height justify-center d-flex text-center align-center">
 
-            <!--RICORDA CHE UNA VOLTA INSERITE LE IMMAGINI ANREBBERO CALIBRATE-->
+          <!--RICORDA CHE UNA VOLTA INSERITE LE IMMAGINI ANDREBBERO CALIBRATE-->
 
-            <template v-if="slide.id == 0">
-              <v-card class="mx-auto card-width" color="light-blue-darken-4">
-                <v-img src="../assets/cleaning.webp" height="300px" cover />
-                <v-card-title class="text-start text-h5">
-                  {{ slide.title }}
-                </v-card-title>
-                <v-card-subtitle class="text-start text-light-blue text-h6">
-                  {{ slide.subtitle }}
-                </v-card-subtitle>
-                <v-card-text class="text-start">
-                  {{ slide.text }}
-                </v-card-text>
-              </v-card>
-            </template>
+          <template v-if="slide.id == 0">
+            <v-card class="mx-auto card-width" color="light-blue-darken-4">
+              <v-img src="../assets/cleaning.webp" height="200px" cover />
+              <v-card-title class="text-start text-h5">
+                <h5> {{ slide.title }}</h5>
+              </v-card-title>
+              <v-card-subtitle class="text-start text-light-blue text-h6">
+                <h6>{{ slide.subtitle }}</h6>
+              </v-card-subtitle>
+              <v-card-text class="text-start">
+                <p>{{ slide.text }}</p>
+              </v-card-text>
+            </v-card>
+          </template>
 
-            <template v-if="slide.id == 1">
-              <v-card class="mx-auto card-width" color="light-blue-darken-4">
-                <v-img src="../assets/cleaning.webp" height="300px" cover />
-                <v-card-title class="text-start text-h5">
-                  {{ slide.title }}
-                </v-card-title>
-                <v-card-subtitle class="text-start text-light-blue text-h6">
-                  {{ slide.subtitle }}
-                </v-card-subtitle>
-                <v-card-text class="text-start">
-                  {{ slide.text }}
-                </v-card-text>
-              </v-card>
-            </template>
+          <template v-if="slide.id == 1">
+            <v-card class="mx-auto card-width" color="light-blue-darken-4">
+              <v-img src="../assets/cleaning.webp" height="200px" cover />
+              <v-card-title class="text-start text-h5">
+                <h5>{{ slide.title }}</h5>
+              </v-card-title>
+              <v-card-subtitle class="text-start text-light-blue text-h6">
+                <h6>{{ slide.subtitle }}</h6>
+              </v-card-subtitle>
+              <v-card-text class="text-start">
+                <p>{{ slide.text }}</p>
+              </v-card-text>
+            </v-card>
+          </template>
 
-            <template v-if="slide.id == 2">
-              <v-card class="mx-auto card-width" color="light-blue-darken-4">
-                <v-img src="../assets/cleaning.webp" height="300px" cover />
-                <v-card-title class="text-start text-h5">
-                  {{ slide.title }}
-                </v-card-title>
-                <v-card-subtitle class="text-start text-light-blue text-h6">
-                  {{ slide.subtitle }}
-                </v-card-subtitle>
-                <v-card-text class="text-start">
-                  {{ slide.text }}
-                </v-card-text>
-              </v-card>
-            </template>
+          <template v-if="slide.id == 2">
+            <v-card class="mx-auto card-width" color="light-blue-darken-4">
+              <v-img src="../assets/cleaning.webp" height="200px" cover />
+              <v-card-title class="text-start text-h5">
+                <h5>{{ slide.title }}</h5>
+              </v-card-title>
+              <v-card-subtitle class="text-start text-light-blue text-h6">
+                <h6>{{ slide.subtitle }}</h6>
+              </v-card-subtitle>
+              <v-card-text class="text-start">
+                <p>{{ slide.text }}</p>
+              </v-card-text>
+            </v-card>
+          </template>
 
-          </div>
         </v-sheet>
-      </v-carousel-item>
-    </v-carousel>
-  </v-container>
-
-  <v-spacer></v-spacer>
+      </v-container>
+    </v-carousel-item>
+  </v-carousel>
 
   <!--WHO IS LUCIANA?-->
 
-  <v-container class="mt-5" style="margin-bottom: 0;">
-    <v-row class="d-flex justify-center align-center flex-wrap">
+  <v-container>
+    <h1 class="text-start title-responsive">Chi &egrave; Luciana?</h1>
+    <h2 class="text-start text-light-blue subtitle-responsive">
+      Imprenditrice per passione
+    </h2>
+  </v-container>
+
+  <v-container>
+    <v-row class="d-flex justify-center align-center flex-wrap-reverse">
       <v-col class="text-start" cols="auto" md="8" sm="12" style="margin-bottom: 0; padding-bottom: 0;">
-        <h1 class="title-responsive">Chi è Luciana?</h1>
-        <h2 class="subtitle-responsive text-light-blue">
-          Imprenditrice per passione
-        </h2>
-        <br>
         <p>
-          Sono una ragazza <span class="text-light-blue font-weight-bold">umile</span>,
-          <span class="text-light-blue font-weight-bold">determinata </span>
+          Sono una ragazza <span class="text-light-blue-darken-4">umile, determinata</span>
           e con una grande voglia di lavorare, anche se sono ancora molto
           giovane. Sono orgogliosa di aver preso in mano l'azienda di famiglia e di poter contribuire al suo
           successo.
@@ -130,40 +140,24 @@ export default {
         <p>
           Fin da piccola, ho sempre ammirato il duro lavoro dei miei genitori e
           di mio nonno nell'azienda.
-          <br>
           Ho trascorso molte ore osservandoli e imparando tutto ciò che potevo.
-          <br>
-          La mia passione per l’azienda è cresciuta di pari passo con me, e ho
+          La mia <span class="text-light-blue-darken-4 font-weight-bold">passione</span> per l’azienda è cresciuta di pari
+          passo con me, e ho
           sviluppato una forte determinazione nel voler far crescere l'azienda e
           portarla a nuovi livelli.
-          <br>
-          Nonostante la mia giovane età, mi impegno a imparare continuamente e a
-          migliorare le mie competenze. <br>
+        </p>
+        <br>
+        <p>Nonostante la mia giovane età, mi impegno a <span class="text-light-blue-darken-4">imparare
+            continuamente</span> e a
+          <span class="text-light-blue-darken-4">migliorare le mie competenze</span>. <br>
           Sono consapevole che ci sono ancora molte cose da imparare, ma sono pronta ad affrontare le sfide
-          che si presentano lungo il percorso. <br>
-        </p>
-        <v-spacer />
-        <br>
-        <p>
-          La mia
-          <span class="text-light-blue font-weight-bold">umiltà</span>
-          mi spinge a ascoltare le idee e le opinioni degli altri membri del team, riconoscendo
-          il valore dell'esperienza e della diversità di prospettive. Sono aperta a nuove idee e sono disposta
-          a mettermi in gioco, anche se ciò significa prendere decisioni difficili o affrontare situazioni
-          complesse.
-        </p>
-        <br>
-        <p>
-          La mia
-          <span class="text-light-blue font-weight-bold">determinazione</span>
-          mi spinge a lavorare duramente ogni giorno, cercando nuove opportunità di
-          crescita e innovazione per l'azienda. Non mi arrendo di fronte alle difficoltà, ma cerco soluzioni
-          creative e mi impegno per superare gli ostacoli.
+          che si presentano lungo il percorso.
         </p>
         <br>
         <p>
           Essere al comando dell'azienda di famiglia è un grande onore per me, ma è anche una responsabilità
-          che prendo molto seriamente. Sono orgogliosa dei risultati che abbiamo ottenuto finora.
+          che prendo molto seriamente. Sono <span class="text-light-blue-darken-4">orgogliosa</span> dei risultati che
+          abbiamo ottenuto finora.
           Tuttavia, non mi accontento mai e continuo a lavorare con impegno e passione per raggiungere nuovi
           traguardi e garantire un futuro prospero per l'azienda che amo.
         </p>
@@ -235,9 +229,7 @@ export default {
 
   <!--CALL TO ACTION-->
 
-  <v-container>
-    <CallToAction />
-  </v-container>
+  <CallToAction />
 
   <v-spacer></v-spacer>
 
@@ -261,6 +253,11 @@ import CallToAction from "@/components/CallToAction.vue";
     line-height: normal;
   }
 
+  .subtitle-responsive {
+    font-size: 2em !important;
+    text-align: start;
+  }
+
   .card-width {
     max-width: 344px !important;
   }
@@ -274,5 +271,4 @@ import CallToAction from "@/components/CallToAction.vue";
   background-color: #03A9F4;
   left: -30px;
   top: -30px;
-}
-</style>
+}</style>

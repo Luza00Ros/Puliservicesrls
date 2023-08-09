@@ -32,7 +32,7 @@ export default {
   <v-container id="responsive-aligment" fluid
     class="d-flex flex-row flex-wrap align-start justify-space-evenly bg-light-blue-darken-4">
     <v-sheet class="ma-2 pa-2 bg-light-blue-darken-4">
-      <v-img src="../assets/puliservice_logo.svg" width="100" height="100"></v-img>
+      <v-img src="../assets/puliservice_logo.svg" width="65" height="65"></v-img>
     </v-sheet>
 
     <v-sheet class="ma-2 pa-2 bg-light-blue-darken-4">
@@ -67,7 +67,7 @@ export default {
 
       <div>
         <v-btn rounded="xl" variant="outlined" color="white" prepend-icon="mdi-human-greeting-proximity"
-          size="small" v-on:click="routerPush('contatti')">Contatti</v-btn>
+          size="small" v-on:click="routerPush('contatti')">Scopri di pi&ugrave;</v-btn>
       </div>
 
     </v-sheet>
@@ -92,14 +92,11 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 @media screen and (max-width: 900px) {
   #responsive-aligment {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: start;
-    justify-content: center;
+    display: flex !important;
+    flex-wrap: wrap-reverse !important;
   }
 }
 

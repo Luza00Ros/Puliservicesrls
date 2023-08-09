@@ -4,7 +4,7 @@ export default {
     return {
       tab: 'Contatti',
       arraydiOggetti: [
-      { id: 0, title: 'Contatti', icon: 'mdi-information-outline' },
+        { id: 0, title: 'Contatti', icon: 'mdi-information-outline' },
         { id: 1, title: 'Mappa', icon: 'mdi-google-maps' }
       ],
     }
@@ -15,19 +15,30 @@ export default {
 <template>
   <TopNav />
 
-  <v-card variant="outlined" color="white" class="mt-3">
-    <v-card-title class="text-start d-flex justify-start py-6 text-black">
-      <h1 class="font-weight-bold text-h2 title-responsive">
-        Contatti
-      </h1>
-    </v-card-title>
+    <!--INTRO-->
 
-    <v-card-text class="text-start justify-center text-light-blue">
-      <h3 class="subtitle-responsive">I nostri riferimenti</h3>
-    </v-card-text>
+    <v-parallax src="../assets/contactbackground.webp" height="600" alt="Immagine in background">
+    <div class="d-flex flex-column fill-height justify-center text-white">
+      <div class="text-center text-light-blue mt-5 mb-3 mr-5 ml-5">
+        <h1 class="title-responsive">
+          Contatti
+        </h1>
+      </div>
+      <div class="ma-5 text-center">
+        <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
+          I nostri riferimenti
+        </p>
+      </div>
+    </div>
+  </v-parallax>
+
+  <v-spacer />
+
+  <!--CONTACT-->
+
+  <v-card variant="outlined" color="white" class="mt-3">
 
     <v-tabs v-model="tab" grow>
-
       <div class="d-flex align-center justify-center text-black" style="width: 100%;">
         <v-tab v-for="oggetti in arraydiOggetti" :key="oggetti.id" :value="oggetti.title" color="light-blue">
           <div class="d-flex flex-column align-center">
@@ -73,6 +84,7 @@ export default {
     text-align: start;
     line-height: normal;
   }
+
   .subtitle-responsive {
     font-size: 2em !important;
     text-align: start;

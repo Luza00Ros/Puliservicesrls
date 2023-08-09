@@ -1,8 +1,7 @@
-## Descrivete le vostre modifiche
+## Descrivi le modifiche che hai effettuato
 
 ## Numero e link del ticket di emissione
 
-## Lista di controllo prima di richiedere una revisione
+## Lista di controllo
 - [ ] Ho eseguito un'auto-revisione del mio codice
 - [ ] Se si tratta di una funzionalità fondamentale, ho aggiunto test approfonditi.
-- [ ] Farà parte di un aggiornamento del prodotto? Se sì, descrivete l'aggiornamento.

@@ -20,11 +20,11 @@ export default {
 </script>
 
 <template>
-  <v-container fluid width="800" height="400" class="d-flex flex-row flex-wrap bg-transparent">
+  <v-container fluid width="800" height="400" class="d-flex flex-column flex-wrap align-start bg-transparent">
 
     <v-sheet class="bg-transparent">
       <div class="mb-2">
-        <strong>Informazioni di contatto</strong>
+        <h6>Informazioni di contatto</h6>
       </div>
       <v-timeline side="end">
 
@@ -41,11 +41,8 @@ export default {
       </v-timeline>
     </v-sheet>
 
-    <v-sheet class="ma-1 pa-1 bg-transparent">
-      <div class="mt-5">
-        <strong>Social</strong>
-      </div>
-      <div id="social" class="d-flex flex-column">
+    <v-sheet class="ma-1 mt-5 pa-1 bg-transparent">
+      <div id="social" class="d-flex flex-row">
         <div class="mr-5 mt-3 mar">
           <v-btn size="x-small" icon="mdi-facebook" color="light-blue-darken-4" role="link" :href="facebookLink"
             target="_blank"></v-btn>
