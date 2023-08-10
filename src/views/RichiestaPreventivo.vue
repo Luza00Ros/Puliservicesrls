@@ -1,4 +1,5 @@
 <script>
+import emailjs from 'emailjs-com';
 export default {
   data() {
     return {
@@ -135,6 +136,9 @@ export default {
       phone: '',
       request: '',
       today: new Date(),
+      serviceID: 'service_ug7ho6h',
+      templateID: 'preventivo',
+      userID: 'NeJd-ufoJ2ewLG9eJ',
     }
   },
   methods: {
@@ -162,14 +166,20 @@ export default {
     // Convalido i dati prima di reindirizzare l'utente
     onRedirect: function (name, email, phone, request, checkbox) {
       if (name != '' && email != '' && phone != '' && request != '' && checkbox != false) {
-        console.log(name);
-        console.log(email);
-        console.log(phone);
-        console.log(request);
-        console.log(checkbox);
+        this.sendEmail();
         return this.$router.push('redirect');
       }
-    }
+    },
+
+    // Notifica via email la nuova richiesta di preventivo (Emailjs)
+    sendEmail() {
+        emailjs.sendForm(this.serviceID, this.templateID, 'form', this.userID, {
+          name: this.name,
+          email: this.email,
+          phone: this.phone,
+          message: this.request
+        });
+    },
   }
 }
 </script>
@@ -220,7 +230,7 @@ export default {
         </v-select>
 
         <v-textarea color="light-blue" variant="underlined" label="Inserisci qui la tua richiesta"
-          prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5 mb-5" type="text" name="message"
+          prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5 mb-5" type="text" name="request"
           v-model="request">
         </v-textarea>
         <v-checkbox v-model="checkbox" :rules="isCheck" color="light-blue">
