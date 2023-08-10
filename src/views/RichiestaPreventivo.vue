@@ -176,89 +176,95 @@ export default {
 
 <template>
   <TopNav />
-  <div>
-    <v-parallax src="/src/assets/callToActionBg.webp" height="200">
 
-      <div class="d-flex flex-column fill-height justify-center align-start text-white">
+  <v-parallax src="../assets/backgroundPreventivo.webp" height="600" alt="Immagine in background">
+    <div class="d-flex flex-column fill-height justify-center text-white">
 
-        <div class="mr-3 ml-3 mt-5 mb-5">
-          <h1 id="title-responsive">
-            Richiedi subito il tuo preventivo gratuito
-          </h1>
+      <div class="text-center mt-5 mb-3 mr-5 ml-5 text-light-blue">
+        <h1 class="title-responsive">
+          Richiedi subito il tuo preventivo gratuito
+        </h1>
+      </div>
+      <div class="ma-5 text-center">
+        <p class="subtitle-responsive font-weight-bold text-light-blue-darken-4">
+          Compila i campi sottostanti indicando la tua richiesta.
+          Saremo lieti di ricontattarti per offrirti la nostra migliore proposta
+        </p>
+      </div>
+
+    </div>
+  </v-parallax>
+
+  <v-container>
+    <div class="ml-3 mr-3 mt-3 mb-3">
+      <v-form fast-fail @submit.prevent name="contact" method="POST" ref="form" class="mt-5 mb-5">
+
+        <v-text-field :rules="firstNameRules" density="compact" variant="underlined" prepend-inner-icon="mdi-account"
+          label="Nome o Azienda" color="light-blue" counter clearable aria-required="true" type="text" name="name"
+          v-model="name" bg-color="transparent" class="mt-5 mb-5">
+        </v-text-field>
+
+        <v-text-field :rules="rules" density="compact" prepend-inner-icon="mdi-email" label="E-mail" variant="underlined"
+          color="light-blue" class="mt-5 mb-5" clearable type="email" name="email" v-model="email">
+        </v-text-field>
+
+        <v-text-field type="text" label="Telefono" :rules="phoneRules" name="phone" class="mt-5 mb-5"
+          prepend-inner-icon="mdi-cellphone" density="compact" variant="underlined" color="light-blue" v-model="phone"
+          clearable>
+
+        </v-text-field>
+
+        <v-select prepend-inner-icon="mdi-map-marker" color="light-blue" v-model="select"
+          :hint="`${select.state}, ${select.abbr}`" :items="items" item-title="state" item-value="abbr" label="Provincia"
+          persistent-hint return-object single-line variant="underlined" class="mt-5 mb-5" type="text" name="city">
+        </v-select>
+
+        <v-textarea color="light-blue" variant="underlined" label="Inserisci qui la tua richiesta"
+          prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5 mb-5" type="text" name="message"
+          v-model="request">
+        </v-textarea>
+        <v-checkbox v-model="checkbox" :rules="isCheck" color="light-blue">
+          <template v-slot:label>
+            <div>
+              Acconsento al trattamento dei dati come specificato nell'informativa
+              <v-tooltip location="bottom" class="mt-5 mb-5">
+                <template v-slot:activator="{ props }">
+                  <a class="text-decoration-none text-light-blue" target="_blank" href="https://vuetifyjs.com"
+                    v-bind="props" @click.stop>
+                    Privacy Policy
+                  </a>
+                </template>
+                Consulta l'informativa Privacy Policy
+              </v-tooltip>
+            </div>
+          </template>
+        </v-checkbox>
+
+        <v-spacer></v-spacer>
+
+        <div id="mobile-button-right">
+          <v-btn type="submit" v-on:click="addRequest()" name="invia" color="light-blue" rounded="xl" variant="outlined"
+            class="mt-5 mb-5 font-weight-medium">Invia la
+            richiesta</v-btn>
         </div>
+      </v-form>
+    </div>
+  </v-container>
 
-      </div>
-
-    </v-parallax>
-  </div>
-
-  <div class="ml-3 mr-3 mt-3 mb-3">
-    <p class="text-light-blue font-weight-medium mt-5 mb-5">Compila i campi sottostanti indicando la tua esigenza.
-      Saremo
-      lieti di
-      ricontattarti per offrirti la nostra migliore proposta </p>
-    <v-form fast-fail @submit.prevent name="contact" method="POST" ref="form" class="mt-5 mb-5">
-
-      <v-text-field :rules="firstNameRules" density="compact" variant="underlined" prepend-inner-icon="mdi-account"
-        label="Nome o Azienda" color="light-blue" counter clearable aria-required="true" type="text" name="name"
-        v-model="name" bg-color="transparent" class="mt-5 mb-5">
-      </v-text-field>
-
-      <v-text-field :rules="rules" density="compact" prepend-inner-icon="mdi-email" label="E-mail" variant="underlined"
-        color="light-blue" class="mt-5 mb-5" clearable type="email" name="email" v-model="email">
-      </v-text-field>
-
-      <v-text-field type="text" label="Telefono" :rules="phoneRules" name="phone" class="mt-5 mb-5"
-        prepend-inner-icon="mdi-cellphone" density="compact" variant="underlined" color="light-blue" v-model="phone"
-        clearable>
-
-      </v-text-field>
-
-
-      <v-select prepend-inner-icon="mdi-map-marker" color="light-blue" v-model="select"
-        :hint="`${select.state}, ${select.abbr}`" :items="items" item-title="state" item-value="abbr" label="Provincia"
-        persistent-hint return-object single-line variant="underlined" class="mt-5 mb-5" type="text" name="city">
-      </v-select>
-
-
-      <v-textarea color="light-blue" variant="underlined" label="Inserisci qui la tua richiesta"
-        prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5 mb-5" type="text" name="message"
-        v-model="request">
-      </v-textarea>
-      <v-checkbox v-model="checkbox" :rules="isCheck" color="light-blue">
-        <template v-slot:label>
-          <div>
-            Acconsento al trattamento dei dati come specificato nell'informativa
-            <v-tooltip location="bottom" class="mt-5 mb-5">
-              <template v-slot:activator="{ props }">
-                <a class="text-decoration-none text-light-blue-darken-3" target="_blank" href="https://vuetifyjs.com"
-                  v-bind="props" @click.stop>
-                  Privacy Policy
-                </a>
-              </template>
-              Consulta l'informativa Privacy Policy
-            </v-tooltip>
-          </div>
-        </template>
-      </v-checkbox>
-
-
-
-      <v-spacer></v-spacer>
-      <div id="mobile-button-right">
-        <v-btn type="submit" v-on:click="addRequest()" name="invia" color="light-blue" rounded="xl" variant="tonal"
-          class="mt-5 mb-5 font-weight-medium">Invia la
-          richiesta</v-btn>
-      </div>
-    </v-form>
-  </div>
   <Bottom />
 </template>
 
-<style>
+<style scoped>
 @media screen and (max-width: 966px) {
-  #title-responsive {
+  .title-responsive {
+    font-size: 3em !important;
+    text-align: start;
+    line-height: normal;
+  }
+
+  .subtitle-responsive {
     font-size: 2em !important;
+    text-align: start;
   }
 
   #mobile-button-right {

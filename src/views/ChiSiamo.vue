@@ -8,159 +8,169 @@ export default {
           title: "Slide 1",
           subtitle: "Subtitle slide 1",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-          source: "/src/assets/vileda.webp",
         },
         {
           id: 1,
           title: "Slide 2",
           subtitle: "Subtitle slide 2",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-          source: "/src/assets/marbec.webp",
         },
         {
           id: 2,
           title: "Slide 3",
           subtitle: "Subtitle slide 3",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-          source: "/src/assets/sutter.webp",
         },
       ],
     };
-  },
+  }
 };
 </script>
 
 <template>
   <TopNav />
 
-  <!--STORY-->
-  <v-container class="mt-3">
-    <h1 class="title-responsive">La nostra storia</h1>
-    <h2 class="subtitle-responsive text-light-blue">
-      Una storia che risale a pi&ugrave; di 20 anni fà...
-    </h2>
-    <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae hic recusandae veniam sint iusto non, quisquam saepe? Saepe facilis nisi alias, sequi debitis eum sit culpa obcaecati ipsa. Est, qui.</p>
-  </v-container>
+  <!--INTRO-->
+    <v-parallax src="/src/assets/story.webp" height="600" alt="Immagine in background">
+    <div class="d-flex flex-column fill-height justify-center text-white">
+      <div class="text-center text-light-blue mt-5 mb-3 mr-5 ml-5">
+        <h1 class="title-responsive">
+          La nostra Storia
+        </h1>
+      </div>
+      <div class="ma-5 text-center">
+        <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
+          Una storia che risale a più di 20 anni f&agrave;
+        </p>
+      </div>
+    </div>
+  </v-parallax>
 
   <v-spacer></v-spacer>
 
   <!-- CAROUSEL -->
 
   <v-carousel cycle hide-delimiters :show-arrows="false">
+
+    <template v-slot:prev="{ props }">
+      <v-btn icon="mdi-arrow-left-bold-circle" variant="elevated" color="light-blue-darken-4"
+        @click="props.onClick"></v-btn>
+    </template>
+
+    <template v-slot:next="{ props }">
+      <v-btn icon="mdi-arrow-right-bold-circle" variant="elevated" color="light-blue-darken-4"
+        @click="props.onClick"></v-btn>
+    </template>
+
     <v-carousel-item v-for="slide in slides" :key="slide.id" cover>
-      <v-sheet color="light-blue" height="100%">
-        <div class="d-flex flex-wrap fill-height justify-center d-flex text-center align-center">
+      <v-container>
+        <v-sheet color="trasparent" height="100%">
+
+          <!--RICORDA CHE UNA VOLTA INSERITE LE IMMAGINI ANDREBBERO CALIBRATE-->
 
           <template v-if="slide.id == 0">
-            <v-card class="mx-auto card-width" max-width="600px">
-              <v-img src="/src/assets/cleaning.webp" height="250px" cover />
-              <v-card-title class="text-start">
-                {{ slide.title }}
+            <v-card class="mx-auto card-width" color="light-blue-darken-4">
+              <v-img src="../assets/cleaning.webp" height="200px" cover />
+              <v-card-title class="text-start text-h5">
+                <h5> {{ slide.title }}</h5>
               </v-card-title>
-              <v-card-subtitle class="text-start">
-                {{ slide.subtitle }}
+              <v-card-subtitle class="text-start text-light-blue text-h6">
+                <h6>{{ slide.subtitle }}</h6>
               </v-card-subtitle>
               <v-card-text class="text-start">
-                {{ slide.text }}
+                <p>{{ slide.text }}</p>
               </v-card-text>
             </v-card>
           </template>
 
           <template v-if="slide.id == 1">
-            <v-card class="mx-auto card-width" max-width="600px">
-              <v-img src="/src/assets/cleaning.webp" height="250px" cover />
-              <v-card-title class="text-start">
-                {{ slide.title }}
+            <v-card class="mx-auto card-width" color="light-blue-darken-4">
+              <v-img src="../assets/cleaning.webp" height="200px" cover />
+              <v-card-title class="text-start text-h5">
+                <h5>{{ slide.title }}</h5>
               </v-card-title>
-              <v-card-subtitle class="text-start">
-                {{ slide.subtitle }}
+              <v-card-subtitle class="text-start text-light-blue text-h6">
+                <h6>{{ slide.subtitle }}</h6>
               </v-card-subtitle>
               <v-card-text class="text-start">
-                {{ slide.text }}
+                <p>{{ slide.text }}</p>
               </v-card-text>
             </v-card>
           </template>
 
           <template v-if="slide.id == 2">
-            <v-card class="mx-auto card-width" max-width="600px">
-              <v-img src="/src/assets/cleaning.webp" height="250px" cover />
-              <v-card-title class="text-start">
-                {{ slide.title }}
+            <v-card class="mx-auto card-width" color="light-blue-darken-4">
+              <v-img src="../assets/cleaning.webp" height="200px" cover />
+              <v-card-title class="text-start text-h5">
+                <h5>{{ slide.title }}</h5>
               </v-card-title>
-              <v-card-subtitle class="text-start">
-                {{ slide.subtitle }}
+              <v-card-subtitle class="text-start text-light-blue text-h6">
+                <h6>{{ slide.subtitle }}</h6>
               </v-card-subtitle>
               <v-card-text class="text-start">
-                {{ slide.text }}
+                <p>{{ slide.text }}</p>
               </v-card-text>
             </v-card>
           </template>
 
-        </div>
-      </v-sheet>
+        </v-sheet>
+      </v-container>
     </v-carousel-item>
   </v-carousel>
 
-  <v-spacer></v-spacer>
-
   <!--WHO IS LUCIANA?-->
 
-  <v-container class="mt-5" style="margin-bottom: 0;">
-    <v-row class="d-flex justify-center align-center flex-wrap">
+  <v-container>
+    <h1 class="text-start title-responsive">Chi &egrave; Luciana?</h1>
+    <h2 class="text-start text-light-blue subtitle-responsive">
+      Imprenditrice per passione
+    </h2>
+  </v-container>
+
+  <v-container>
+    <v-row class="d-flex justify-center align-center flex-wrap-reverse">
       <v-col class="text-start" cols="auto" md="8" sm="12" style="margin-bottom: 0; padding-bottom: 0;">
-        <h1 class="title-responsive">Chi è Luciana?</h1>
-        <h2 class="subtitle-responsive text-light-blue">
-          Imprenditrice per passione
-        </h2>
         <p>
-        Sono una ragazza <b> <font color="#0398fc">umile</font></b>, <b> <font color="#0398fc">determinata </font></b> e con una grande voglia di lavorare, anche se sono ancora molto
-        giovane. Sono orgogliosa di aver preso in mano l'azienda di famiglia e di poter contribuire al suo
-        successo.
+          Sono una ragazza <span class="text-light-blue-darken-4">umile, determinata</span>
+          e con una grande voglia di lavorare, anche se sono ancora molto
+          giovane. Sono orgogliosa di aver preso in mano l'azienda di famiglia e di poter contribuire al suo
+          successo.
         </p>
-        <br /><br />
+        <br>
         <p>
           Fin da piccola, ho sempre ammirato il duro lavoro dei miei genitori e
-          di mio nonno nell'azienda. <br />
+          di mio nonno nell'azienda.
           Ho trascorso molte ore osservandoli e imparando tutto ciò che potevo.
-          <br />
-          La mia passione per l’azienda è cresciuta di pari passo con me, e ho
+          La mia <span class="text-light-blue-darken-4 font-weight-bold">passione</span> per l’azienda è cresciuta di pari
+          passo con me, e ho
           sviluppato una forte determinazione nel voler far crescere l'azienda e
-          portarla a nuovi livelli. <br />
-          Nonostante la mia giovane età, mi impegno a imparare continuamente e a
-          migliorare le mie competenze. <br /> <br>
+          portarla a nuovi livelli.
+        </p>
+        <br>
+        <p>Nonostante la mia giovane età, mi impegno a <span class="text-light-blue-darken-4">imparare
+            continuamente</span> e a
+          <span class="text-light-blue-darken-4">migliorare le mie competenze</span>. <br>
           Sono consapevole che ci sono ancora molte cose da imparare, ma sono pronta ad affrontare le sfide
-          che si presentano lungo il percorso. <br>
+          che si presentano lungo il percorso.
         </p>
-        <v-spacer></v-spacer>
-        <br><br>
-        <p>
-          La mia <b><font color="#0398fc">umiltà</font></b> mi spinge a ascoltare le idee e le opinioni degli altri membri del team, riconoscendo
-          il valore dell'esperienza e della diversità di prospettive. Sono aperta a nuove idee e sono disposta
-           a mettermi in gioco, anche se ciò significa prendere decisioni difficili o affrontare situazioni
-           complesse.
-        </p>
-        <br><br>
-        <p>
-          La mia <b><font color="#0398fc">determinazione</font></b> mi spinge a lavorare duramente ogni giorno, cercando nuove opportunità di
-          crescita e innovazione per l'azienda. Non mi arrendo di fronte alle difficoltà, ma cerco soluzioni
-          creative e mi impegno per superare gli ostacoli.
-        </p>
-        <br><br>
+        <br>
         <p>
           Essere al comando dell'azienda di famiglia è un grande onore per me, ma è anche una responsabilità
-          che prendo molto seriamente. Sono orgogliosa dei risultati che abbiamo ottenuto finora.
+          che prendo molto seriamente. Sono <span class="text-light-blue-darken-4">orgogliosa</span> dei risultati che
+          abbiamo ottenuto finora.
           Tuttavia, non mi accontento mai e continuo a lavorare con impegno e passione per raggiungere nuovi
           traguardi e garantire un futuro prospero per l'azienda che amo.
         </p>
       </v-col>
 
       <v-col class="d-flex justify-center" cols="auto" md="4" style="margin-bottom: 0; padding-bottom: 0;">
-        <v-img src="/src/assets/luciana.png" width="100%" max-width="400px" aspect-ratio="16/9" cover></v-img>
+        <v-card color="light-blue-darken-4">
+          <div id="circle"></div>
+          <v-img src="/src/assets/luciana.png" width="100%" max-width="400px" aspect-ratio="16/9" cover></v-img>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
-
-  <CallToAction />
 
   <v-spacer></v-spacer>
 
@@ -175,43 +185,55 @@ export default {
 
   <v-container class="d-flex justify-center align-center flex-wrap">
     <p>
-      <b>&#x2022; Qualità</b>: Siamo fermamente impegnati a offrire
-      <span class="text-light-blue">servizi di pulizia di alta qualità</span>.
+      &#x2022;<span class="text-light-blue"><strong> Qualità</strong></span>: Siamo fermamente impegnati a offrire
+      <span class="text-light-blue-darken-4">servizi di pulizia di alta qualità</span>.
       Ci sforziamo di superare le aspettative dei nostri clienti, garantendo
       risultati impeccabili e prestazioni di livello superiore. La qualità è per
-      noi un impegno costante e una priorità assoluta. <br /><br />
-      <b>&#x2022; Affidabilità</b>: La nostra reputazione si basa sulla
-      <span class="text-light-blue">fiducia e sull'affidabilità</span>. Siamo
+      noi un impegno costante e una priorità assoluta. <br><br>
+      &#x2022;<span class="text-light-blue"><strong> Affidabilità</strong></span>: La nostra reputazione si basa sulla
+      <span class="text-light-blue-darken-4">fiducia e sull'affidabilità</span>. Siamo
       sempre puntuali e rispettiamo gli impegni presi con i nostri clienti. La
       puntualità, la professionalità e la coerenza sono i pilastri su cui
-      costruiamo rapporti di lunga durata con i nostri clienti. <br /><br />
-      <b>&#x2022; Etica</b>: Agiamo sempre in modo etico e responsabile. Siamo
+      costruiamo rapporti di lunga durata con i nostri clienti. <br><br>
+      &#x2022;<span class="text-light-blue"><strong> Etica</strong></span>: Agiamo sempre in modo etico e responsabile.
+      Siamo
       guidati dai principi dell'integrità, dell'onestà e della trasparenza in
       tutte le nostre interazioni e operazioni. Rispettiamo la privacy dei
       nostri clienti e
-      <span class="text-light-blue">trattiamo le informazioni sensibili con la massima riservatezza</span>. <br /><br />
-      <b>&#x2022; Teamwork</b>: Il nostro successo dipende dalla forza del
+      <span class="text-light-blue-darken-4">trattiamo le informazioni sensibili con la massima riservatezza</span>.
+      <br><br>
+      &#x2022;<span class="text-light-blue"><strong> Teamwork</strong></span>: Il nostro successo dipende dalla forza del
       nostro team. Favoriamo un ambiente di lavoro collaborativo, in cui
-      <span class="text-light-blue">ogni membro del team viene valorizzato</span>
+      <span class="text-light-blue-darken-4">ogni membro del team viene valorizzato</span>
       e incoraggiato a contribuire con le proprie competenze e prospettive.
       Siamo un'impresa che
-      <span class="text-light-blue">crede nel valore delle persone</span> e nel
-      potere del lavoro di squadra. <br /><br />
-      <b>&#x2022; Responsabilità sociale</b>: Siamo consapevoli del nostro ruolo
+      <span class="text-light-blue-darken-4">crede nel valore delle persone</span> e nel
+      potere del lavoro di squadra. <br><br>
+      &#x2022;<span class="text-light-blue"><strong> Responsabilità sociale</strong></span>: Siamo consapevoli del nostro
+      ruolo
       nella società e dell'impatto che le nostre attività possono avere
       sull'ambiente e sulla comunità. Ci impegniamo a operare in modo
       sostenibile, utilizzando
-      <span class="text-light-blue">prodotti eco-friendly</span> e adottando
+      <span class="text-light-blue-darken-4">prodotti eco-friendly</span> e adottando
       pratiche che riducano
-      <span class="text-light-blue">l'impatto ambientale</span>. Sosteniamo
+      <span class="text-light-blue-darken-4">l'impatto ambientale</span>. Sosteniamo
       anche iniziative e cause sociali che contribuiscono al benessere della
-      comunità. <br /><br />
-      Siamo <b>orgogliosi dei nostri valori</b> e lavoriamo instancabilmente per
+      comunità. <br><br>
+      Siamo <span class="font-weight-bold text-light-blue-darken-4"><strong>orgogliosi dei nostri valori</strong></span> e
+      lavoriamo instancabilmente per
       mantenerli vivi in ogni aspetto del nostro lavoro.
     </p>
   </v-container>
 
   <v-spacer></v-spacer>
+
+  <!--CALL TO ACTION-->
+
+  <CallToAction />
+
+  <v-spacer></v-spacer>
+
+  <!--FOOTER-->
 
   <Bottom />
 </template>
@@ -222,7 +244,7 @@ import Bottom from "@/components/BottomFooter.vue";
 import CallToAction from "@/components/CallToAction.vue";
 </script>
 
-<style>
+<style scoped>
 @media screen and (max-width: 966px) {
 
   .title-responsive {
@@ -231,8 +253,22 @@ import CallToAction from "@/components/CallToAction.vue";
     line-height: normal;
   }
 
+  .subtitle-responsive {
+    font-size: 2em !important;
+    text-align: start;
+  }
+
   .card-width {
     max-width: 344px !important;
   }
 }
-</style>
+
+#circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: #03A9F4;
+  left: -30px;
+  top: -30px;
+}</style>

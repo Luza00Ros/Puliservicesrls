@@ -12,7 +12,7 @@ export default {
   <v-parallax src="/src/assets/callToActionBg.webp" height="600" alt="Chiamata all'azione richiesta preventivo">
     <div class="d-flex flex-column fill-height justify-center">
       <div class="text-center mt-5 mb-3 mr-5 ml-5">
-        <h1 class="title-responsive text-white">Scopri i nostri servizi di qualit&agrave;</h1>
+        <h1 class="title-responsive text-white">Prova i nostri servizi di qualit&agrave;</h1>
       </div>
       <div class="ma-3 ma-5 text-center">
         <p class="subtitle-responsive font-weight-bold text-white">Il nostro team sarà
