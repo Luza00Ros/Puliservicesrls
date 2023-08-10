@@ -4,11 +4,11 @@ export default {
     return {
       services: [
         { id: 0, title: 'Pulizia delle aree comuni interne', text: 'Il personale effettua le pulizie delle aree comuni interne, come i corridoi e le scale. Questo può includere la rimozione della polvere e dei detriti, la pulizia dei pavimenti, la lucidatura delle ringhiere, la pulizia dei corrimano e la pulizia dei tappeti o delle moquette se presenti.', icon: 'mdi-numeric-1' },
-        { id: 1, title: 'Pulizia degli ingressi e delle hall', text: "Queste aree vengono pulite e igienizzate accuratamente, compresa la pulizia dei pavimenti, la rimozione delle impronte digitali dalle superfici, la pulizia dei vetri delle porte e delle finestre, se presenti, e l'eventuale aggiunta di piante o decorazioni per migliorare l'aspetto.", icon: 'mdi-numeric-2' },
+        { id: 1, title: 'Pulizia degli ingressi e delle hall', text: "Queste aree vengono pulite e igienizzate accuratamente, compresa la pulizia dei pavimenti, la rimozione delle impronte digitali dalle superfici, la pulizia dei vetri delle porte e delle finestre.", icon: 'mdi-numeric-2' },
         { id: 2, title: 'Pulizia degli ascensori', text: "Le pareti, il pavimento e gli interni dell'ascensore sono puliti e igienizzati regolarmente. Inoltre, gli specchi all'interno dell'ascensore vengono puliti per mantenerli lucidi e senza macchie.", icon: 'mdi-numeric-3' },
         { id: 3, title: 'Pulizia dei garage', text: "La pulizia del garage può includere la rimozione dei rifiuti, la pulizia dei pavimenti, la pulizia delle pareti e la gestione della polvere e dei detriti accumulati.", icon: 'mdi-numeric-4' },
         { id: 4, title: 'Pulizia delle aree esterne', text: "Le aree esterne come cortili, giardini o spazi verdi circostanti l'edificio vengono anch'esse pulite e mantenute. Questo può includere la pulizia delle aree pavimentate, la rimozione delle foglie, la pulizia dei bidoni della spazzatura esterni e la manutenzione delle aree verdi.", redirect: 'Scopri di più', icon: 'mdi-numeric-5' },
-        { id: 5, title: 'Manutenzione generale', text: "Oltre alla pulizia, il personale addetto alle pulizie svolge anche compiti di manutenzione generale, come la segnalazione di guasti o danni alle strutture, la sostituzione delle lampadine o l'assistenza nel mantenimento dell'ordine e dell'aspetto generale dell'edificio.", icon: 'mdi-numeric-6' },
+        { id: 5, title: 'Manutenzione generale', text: "Oltre alla pulizia, il personale addetto alle pulizie svolge anche compiti di manutenzione generale, come la segnalazione di guasti o danni alle strutture, la sostituzione delle lampadine o l'assistenza nel mantenimento dell'ordine e dell'aspetto generale dell'edificio.", redirect: 'Scopri di più', icon: 'mdi-numeric-6' },
         { id: 6, title: 'Pulizia dei bidoni dell’immondizia', text: "Il personale può programmare una pulizia periodica dei bidoni dell'immondizia in base alle esigenze del cliente. Può essere stabilita una pianificazione settimanale, quindicinale o mensile, a seconda delle necessità. E’ possibile anche occuparsi solo della gestione dei bidoni dell’immondizia.", icon: 'mdi-numeric-7' },
       ],
     }
@@ -61,6 +61,14 @@ export default {
             <div class="button-right">
               <v-btn rounded="xl" color="light-blue" append-icon="mdi-arrow-right-thin" variant="outlined"
                 class="mt-2 mb-3" v-on:click="routerPush('giardinaggio')">
+                {{ service.redirect }}
+              </v-btn>
+            </div>
+          </span>
+          <span v-if="service.id === 5">
+            <div class="button-right">
+              <v-btn rounded="xl" color="light-blue" append-icon="mdi-arrow-right-thin" variant="outlined"
+                class="mt-2 mb-3" v-on:click="routerPush('manutenzioni')">
                 {{ service.redirect }}
               </v-btn>
             </div>

@@ -4,7 +4,7 @@ export default {
     return {
       services: [
         { id: 0, title: 'Rimozione di oggetti e mobili', text: "Prima di iniziare la pulizia straordinaria, è consigliabile rimuovere oggetti personali, mobili e altri oggetti che possono ostacolare il processo di pulizia. Questo permette di accedere a tutte le aree dell'appartamento in modo più efficace.", icon: 'mdi-numeric-1' },
-        { id: 1, title: 'Pulizia degli infissi e degli elettrodomestici', text: "Gli infissi, come porte, finestre, cornici e maniglie, vengono puliti accuratamente per rimuovere polvere, sporco e impronte. Gli elettrodomestici, come il forno, il frigorifero, la lavatrice e la lavastoviglie, dovrebbero vengono puliti sia internamente che esternamente. Utilizziamo detergenti appropriati per eliminare macchie e odori.", icon: 'mdi-numeric-2' },
+        { id: 1, title: 'Pulizia degli infissi e degli elettrodomestici', text: "Gli infissi, come porte, finestre, cornici e maniglie, vengono puliti accuratamente per rimuovere polvere, sporco e impronte. Gli elettrodomestici, come il forno, il frigorifero, la lavatrice e la lavastoviglie, vengono puliti sia internamente che esternamente. Utilizziamo detergenti appropriati per eliminare macchie e odori.", icon: 'mdi-numeric-2' },
         { id: 2, title: 'Pulizia approfondita dei pavimenti', text: "I pavimenti richiedono una pulizia approfondita per rimuovere sporco, polvere e macchie. A seconda del tipo di pavimento presente, utilizziamo metodi specifici come l'aspirapolvere, il lavaggio a secco o umido, o l'utilizzo di prodotti specifici per la pulizia dei pavimenti.", icon: 'mdi-numeric-3' },
         { id: 3, title: 'Pulizia dei bagni', text: "I bagni richiedono particolare attenzione nella pulizia straordinaria. Puliamo a fondo il lavandino, il WC, la vasca o la doccia, gli specchi, le piastrelle e i pavimenti. Utilizziamo detergenti sgrassanti e disinfettanti per garantire una pulizia completa e igienica.", icon: 'mdi-numeric-4' },
         { id: 4, title: 'Pulizia della cucina', text: "La cucina è un'altra area che richiede una pulizia approfondita. Puliamo i ripiani, i mobili, il lavello, i fornelli, il forno, la cappa e i pavimenti. Rimuoviamo eventuali residui di cibo, grasso e macchie utilizzando detergenti sgrassanti e disinfettanti.", icon: 'mdi-numeric-5' },
@@ -60,7 +60,7 @@ export default {
   <!-- ALLERT -->
 
   <v-container>
-    <v-alert variant="tonal" density="compact" type="info" text="Si utilizzano strumenti e prodotti appropriati per garantire una
+    <v-alert variant="tonal" density="compact" type="info" text="Utilizziamo strumenti e prodotti appropriati per garantire una
     pulizia efficace ed evitare danni alle superfici.">
     </v-alert>
   </v-container>
@@ -90,6 +90,7 @@ export default {
 
 
 <script setup>
+import CallToAction from "@/components/CallToAction.vue";
 import TopNav from "@/components/TopNav.vue";
 import Bottom from "@/components/BottomFooter.vue";
 </script>

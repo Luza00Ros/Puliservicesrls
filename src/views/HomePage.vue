@@ -3,17 +3,9 @@ export default {
   data() {
     return {
       slides: [
-        {
-          id: 0,
-          name: "Vileda Professional",
-          link: "https://www.vileda-professional.it/",
-        },
+        { id: 0, name: "Vileda Professional", link: "https://www.vileda-professional.it/" },
         { id: 1, name: "Marbec", link: "https://www.marbec.it/" },
-        {
-          id: 2,
-          name: "Sutter Professional",
-          link: "https://www.sutterprofessional.it/",
-        },
+        { id: 2, name: "Sutter Professional", link: "https://www.sutterprofessional.it/" },
       ],
       overviews: [
         {
@@ -180,6 +172,16 @@ export default {
 
   <v-spacer></v-spacer>
 
+
+    <!--GOOGLE-->
+    <v-contaier>
+    <div style="border: 1px solid red; height: 150px;">
+      GOOGLE REVIEW
+    </div>
+  </v-contaier>
+
+  <v-spacer></v-spacer>
+
     <!-- OVERVIEW -->
 
   <v-container>
@@ -245,41 +247,34 @@ export default {
       <span class="text-light-blue-darken-4">approccio orientato al cliente</span>, ci
       dedichiamo a comprendere le specifiche esigenze e le preferenze di ogni
       singolo cliente, al fine di offrire
-      <span class="text-light-blue-darken-4">soluzioni personalizzate</span> e risultati
-      eccezionali. <br>
+      <span class="text-light-blue-darken-4">soluzioni personalizzate.</span>
+      <br>
       La nostra mission si basa sui seguenti <span class="text-light-blue"><strong>principi fondamentali</strong></span>:
       <br><br>
       &#x2022;<span class="text-light-blue"><strong> Eccellenza</strong></span>: Miriamo all'eccellenza in tutto ciò che
       facciamo, impegnandoci a offrire
-      <span class="text-light-blue-darken-4">servizi di pulizia impeccabili</span> e
-      <span class="text-light-blue-darken-4">risultati di qualità superiore</span>.
+      <span class="text-light-blue-darken-4">servizi di pulizia impeccabili</span>.
       <br><br>
       &#x2022;<span class="text-light-blue"><strong> Affidabilità</strong></span>: Siamo un
-      <span class="text-light-blue-darken-4">team affidabile e responsabile</span>,
-      rispettando sempre gli impegni presi con i nostri clienti. Puntualità,
-      professionalità e dedizione sono valori chiave per noi. <br><br>
+      <span class="text-light-blue-darken-4">team affidabile e responsabile</span>. I valori chiave per noi sono: Puntualità,
+      professionalità e dedizione. <br><br>
       &#x2022;<span class="text-light-blue"><strong> Personalizzazione</strong></span>: Ogni cliente è unico, pertanto
-      adottiamo un
-      <span class="text-light-blue-darken-4">approccio personalizzato</span>, ascoltando
-      attentamente le esigenze e le preferenze di ciascuno per fornire servizi
-      su misura che soddisfino le sue specifiche necessità. <br><br>
+      adottiamo un <span class="text-light-blue-darken-4">approccio personalizzato</span>.
+      <br><br>
       &#x2022;<span class="text-light-blue"><strong> Sostenibilità</strong></span>: Siamo impegnati a svolgere il nostro
       lavoro
-      in modo responsabile dal punto di vista ambientale, utilizzando
+      in modo responsabile dal punto di vista ambientale, utilizziamo
       <span class="text-light-blue-darken-4">prodotti eco-friendly</span> e adottando
       <span class="text-light-blue-darken-4">pratiche sostenibili</span> per ridurre
-      l'impatto ambientale delle nostre attività. <br><br>
+      l'impatto ambientale. <br><br>
       &#x2022;<span class="text-light-blue"><strong> Soddisfazione del cliente</strong></span>: La soddisfazione dei
       nostri
-      clienti è la nostra priorità assoluta. Ci impegniamo a superare le
-      aspettative dei nostri clienti, offrendo un
-      <span class="text-light-blue-darken-4">servizio di pulizia di qualità superiore</span>
-      e garantendo la loro piena soddisfazione. <br><br>
+      clienti è la nostra priorità assoluta. Ci impegniamo a
+      <span class="text-light-blue-darken-4">soddisfare le aspettative dei nostri clienti</span>.<br><br>
       La nostra <span class="text-light-blue-darken-4"><strong>mission</strong></span> è guidata da una <span
         class="text-light-blue-darken-4"><strong>passione per l'eccellenza</strong></span> e un
       impegno costante nell'offrire <span class="text-light-blue-darken-4"><strong>servizi di pulizia
-          professionali</strong></span> che
-      lascino un'impronta positiva nei luoghi che serviamo. Siamo determinati a
+          professionali</strong></span>. Siamo determinati a
       diventare il <span class="text-light-blue-darken-4"><strong>partner di fiducia</strong></span> per le esigenze di
       pulizia dei
       nostri clienti, offrendo <span class="text-light-blue-darken-4"><strong>risultati impeccabili</strong></span> e
@@ -287,6 +282,13 @@ export default {
       puliti, sani e piacevoli in cui vivere e lavorare.
     </p>
   </v-container>
+
+  <!--FACEBOOK-->
+  <v-contaier>
+    <div style="border: 1px solid red; height: 150px;">
+      FACEBOOK REVIEW
+    </div>
+  </v-contaier>
 
   <v-spacer></v-spacer>
 

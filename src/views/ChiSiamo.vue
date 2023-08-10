@@ -3,12 +3,7 @@ export default {
   data() {
     return {
       slides: [
-        {
-          id: 0,
-          title: "Slide 1",
-          subtitle: "Subtitle slide 1",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-        },
+        { id: 0, title: "Slide 1", subtitle: "Subtitle slide 1", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?", },
         {
           id: 1,
           title: "Slide 2",
@@ -70,7 +65,7 @@ export default {
 
           <template v-if="slide.id == 0">
             <v-card class="mx-auto card-width" color="light-blue-darken-4">
-              <v-img src="../assets/cleaning.webp" height="200px" cover />
+              <v-img src="../assets/cleaning.webp" height="200px" width="0px" cover />
               <v-card-title class="text-start text-h5">
                 <h5> {{ slide.title }}</h5>
               </v-card-title>
@@ -143,8 +138,7 @@ export default {
           Ho trascorso molte ore osservandoli e imparando tutto ciò che potevo.
           La mia <span class="text-light-blue-darken-4 font-weight-bold">passione</span> per l’azienda è cresciuta di pari
           passo con me, e ho
-          sviluppato una forte determinazione nel voler far crescere l'azienda e
-          portarla a nuovi livelli.
+          sviluppato una forte determinazione nel voler far crescere l'azienda.
         </p>
         <br>
         <p>Nonostante la mia giovane età, mi impegno a <span class="text-light-blue-darken-4">imparare
@@ -187,15 +181,14 @@ export default {
     <p>
       &#x2022;<span class="text-light-blue"><strong> Qualità</strong></span>: Siamo fermamente impegnati a offrire
       <span class="text-light-blue-darken-4">servizi di pulizia di alta qualità</span>.
-      Ci sforziamo di superare le aspettative dei nostri clienti, garantendo
-      risultati impeccabili e prestazioni di livello superiore. La qualità è per
+      Ci sforziamo di soddisfare le aspettative dei nostri clienti, garantendo
+      risultati impeccabili. La qualità è per
       noi un impegno costante e una priorità assoluta. <br><br>
       &#x2022;<span class="text-light-blue"><strong> Affidabilità</strong></span>: La nostra reputazione si basa sulla
-      <span class="text-light-blue-darken-4">fiducia e sull'affidabilità</span>. Siamo
-      sempre puntuali e rispettiamo gli impegni presi con i nostri clienti. La
+      <span class="text-light-blue-darken-4">fiducia e sull'affidabilità</span>. Rispettiamo gli impegni presi con i nostri clienti. La
       puntualità, la professionalità e la coerenza sono i pilastri su cui
-      costruiamo rapporti di lunga durata con i nostri clienti. <br><br>
-      &#x2022;<span class="text-light-blue"><strong> Etica</strong></span>: Agiamo sempre in modo etico e responsabile.
+      costruiamo rapporti duraturi con i nostri clienti. <br><br>
+      &#x2022;<span class="text-light-blue"><strong> Etica</strong></span>: Agiamo sempre in modo etico.
       Siamo
       guidati dai principi dell'integrità, dell'onestà e della trasparenza in
       tutte le nostre interazioni e operazioni. Rispettiamo la privacy dei

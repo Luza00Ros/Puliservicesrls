@@ -3,7 +3,7 @@ export default {
   data() {
     return {
       services: [
-        { id: 0, title: 'Carico e scarico', text: "Ci assumiamo la responsabilità di caricare e scaricare merci e oggetti da veicoli container, magazzini o aree di stoccaggio.", icon: "mdi-numeric-1" },
+        { id: 0, title: 'Carico e scarico', text: "Ci assumiamo la responsabilità di caricare e scaricare merci e oggetti da veicoli, magazzini o aree di stoccaggio.", icon: "mdi-numeric-1" },
         { id: 1, title: 'Movimentazione di merci', text: "Ci occupiamo della movimentazione interna di merci o materiali all'interno di un edificio o di una struttura. Questo può includere la distribuzione delle merci da un'area di stoccaggio a scaffali.", icon: "mdi-numeric-2" },
         { id: 2, title: 'Trasporto di oggetti', text: "Ci occupiamo del trasporto di oggetti o merci tra diverse destinazioni. Utilizziamo veicoli appositi, come furgoni o camion, per spostare attrezzature da un luogo all'altro.", icon: "mdi-numeric-3" },
         { id: 3, title: 'Imballaggio', text: "Siamo responsabili dell'imballaggio e del confezionamento degli oggetti.", icon: "mdi-numeric-4" },
