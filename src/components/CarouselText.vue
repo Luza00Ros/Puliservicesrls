@@ -26,7 +26,7 @@ export default {
 
 <template>
   <div class="d-flex flex-row flex-wrap align-center justify-center">
-    <v-card id="icon-color" :prepend-icon="currentIcon" variant="flat">
+    <v-card id="icon-color" :prepend-icon="currentIcon" variant="flat" height="100%">
 
       <template v-slot:title>
         <div class="text-h6 font-weight-regular justify-space-between">
@@ -58,6 +58,7 @@ export default {
               azienda o un organizzazione, offriamo un sistema completo e <span class="text-light-blue-darken-4">user-friendly</span> per gestire le tue prenotazioni in
               modo efficiente.</p>
           </v-card-text>
+            <GoogleCalendar></GoogleCalendar>
         </v-window-item>
       </v-window>
 
@@ -73,6 +74,10 @@ export default {
     </v-card>
   </div>
 </template>
+
+<script setup>
+import GoogleCalendar from './GoogleCalendar.vue';
+</script>
 
 <style>
 #icon-color i.v-icon.v-icon {

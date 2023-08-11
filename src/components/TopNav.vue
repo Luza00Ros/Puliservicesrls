@@ -149,10 +149,10 @@ export default {
           <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="home" variant="text"
             v-on:click="routerPush('/')"><span class="text-white"><strong>Home</strong></span></v-btn>
 
-            <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="chisiamo" variant="text"
+          <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="chisiamo" variant="text"
             v-on:click="routerPush('chisiamo')"><span class="text-white"><strong>Chi siamo</strong></span></v-btn>
 
-            <v-menu transition="slide-y-transition">
+          <v-menu transition="slide-y-transition">
             <template v-slot:activator="{ props }">
               <v-btn class="rounded-pill mt-2 text-light-blue" variant="text" :prepend-icon="clean"
                 v-on:click="arrowZero = !arrowZero" :append-icon="changeArrowZero()" v-bind="props">
@@ -163,9 +163,9 @@ export default {
             <v-list class="rounded-lg bg-light-blue-darken-4">
               <v-list-item v-for="pulizia in pulizie" :key="pulizia.id">
                 <v-list-item-title class="d-flex flex-column">
-                  <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="pulizia.icon"
-                    variant="text" stacked v-on:click="routerPush(pulizia.route)">
-                    <span class="text-white"><strong>{{pulizia.title}}</strong></span>
+                  <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="pulizia.icon" variant="text" stacked
+                    v-on:click="routerPush(pulizia.route)">
+                    <span class="text-white"><strong>{{ pulizia.title }}</strong></span>
                   </v-btn>
                 </v-list-item-title>
               </v-list-item>
@@ -183,9 +183,9 @@ export default {
             <v-list class="rounded-lg bg-light-blue-darken-4">
               <v-list-item v-for="servizio in servizi" :key="servizio.id">
                 <v-list-item-title class="d-flex flex-column">
-                  <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="servizio.icon"
-                    variant="text" stacked v-on:click="routerPush(servizio.route)">
-                    <span class="text-white"><strong>{{servizio.title}}</strong></span>
+                  <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="servizio.icon" variant="text" stacked
+                    v-on:click="routerPush(servizio.route)">
+                    <span class="text-white"><strong>{{ servizio.title }}</strong></span>
                   </v-btn>
                 </v-list-item-title>
               </v-list-item>
