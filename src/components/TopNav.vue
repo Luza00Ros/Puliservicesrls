@@ -147,16 +147,16 @@ export default {
 
 
           <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="home" variant="text"
-            v-on:click="routerPush('/')"><span class="text-white">Home</span></v-btn>
+            v-on:click="routerPush('/')"><span class="text-white"><strong>Home</strong></span></v-btn>
 
             <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="chisiamo" variant="text"
-            v-on:click="routerPush('chisiamo')"><span class="text-white">Chi siamo</span></v-btn>
+            v-on:click="routerPush('chisiamo')"><span class="text-white"><strong>Chi siamo</strong></span></v-btn>
 
             <v-menu transition="slide-y-transition">
             <template v-slot:activator="{ props }">
               <v-btn class="rounded-pill mt-2 text-light-blue" variant="text" :prepend-icon="clean"
                 v-on:click="arrowZero = !arrowZero" :append-icon="changeArrowZero()" v-bind="props">
-                <span class="text-white">Pulizie</span>
+                <span class="text-white"><strong>Pulizie</strong></span>
               </v-btn>
             </template>
 
@@ -165,7 +165,7 @@ export default {
                 <v-list-item-title class="d-flex flex-column">
                   <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="pulizia.icon"
                     variant="text" stacked v-on:click="routerPush(pulizia.route)">
-                    <span class="text-white">{{pulizia.title}}</span>
+                    <span class="text-white"><strong>{{pulizia.title}}</strong></span>
                   </v-btn>
                 </v-list-item-title>
               </v-list-item>
@@ -176,7 +176,7 @@ export default {
             <template v-slot:activator="{ props }">
               <v-btn class="rounded-pill mt-2 text-light-blue" variant="text" :prepend-icon="service"
                 v-on:click="arrowOne = !arrowOne" :append-icon="changeArrowOne()" v-bind="props">
-                <span class="text-white">Servizi</span>
+                <span class="text-white"><strong>Servizi</strong></span>
               </v-btn>
             </template>
 
@@ -185,7 +185,7 @@ export default {
                 <v-list-item-title class="d-flex flex-column">
                   <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="servizio.icon"
                     variant="text" stacked v-on:click="routerPush(servizio.route)">
-                    <span class="text-white">{{servizio.title}}</span>
+                    <span class="text-white"><strong>{{servizio.title}}</strong></span>
                   </v-btn>
                 </v-list-item-title>
               </v-list-item>
@@ -193,11 +193,11 @@ export default {
           </v-menu>
 
           <v-btn class="rounded-pill mt-2 text-light-blue" variant="text" :prepend-icon="contacts"
-            v-on:click="routerPush('contatti')"><span class="text-white">Contatti</span></v-btn>
+            v-on:click="routerPush('contatti')"><span class="text-white"><strong>Contatti</strong></span></v-btn>
 
           <v-btn class='rounded-pill mt-2 text-light-blue' :prepend-icon='badge' variant="outlined"
             v-on:click="routerPush('preventivo')">
-            <span class="text-white">Preventivo gratuito</span>
+            <span class="text-white"><strong>Preventivo gratuito</strong></span>
           </v-btn>
 
 

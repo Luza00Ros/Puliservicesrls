@@ -3,9 +3,8 @@ export default {
   data() {
     return {
       step: 1,
-      googleReview: 'https://goo.gl/maps/t3MKXaHWWyNipvS5A',
       reviewers: [
-        { id: 1, name: 'Davide', img: "https://lh3.googleusercontent.com/a/AAcHTte0EiU4lOU02jSmN8iLBY2dvYaniIiPQNBJODoeM4yIpg=w36-h36-p-rp-mo-ba4-br100", date: '11 luglio 2023', text: "Mi hanno fornito un servizio eccellente e di alta qualità. Ho avuto il piacere di usufruire dei loro servizi e sono rimasto estremamente soddisfatto dell'esperienza. Consiglio vivamente Puliservice SRLS a chiunque abbia bisogno di servizi di pulizia affidabili e di qualità.", stars: 5 },
+        { id: 1, name: 'Davide', img: "https://lh3.googleusercontent.com/a/AAcHTte0EiU4lOU02jSmN8iLBY2dvYaniIiPQNBJODoeM4yIpg=w36-h36-p-rp-mo-ba4-br100", link: 'https://goo.gl/maps/wBn1juZZXNec75mP9', date: '11 luglio 2023', text: "Mi hanno fornito un servizio eccellente e di alta qualità. Ho avuto il piacere di usufruire dei loro servizi e sono rimasto estremamente soddisfatto dell'esperienza. Consiglio vivamente Puliservice SRLS a chiunque abbia bisogno di servizi di pulizia affidabili e di qualità.", stars: 5 },
       ],
     }
   },
@@ -38,6 +37,16 @@ export default {
         }
       });
       return image;
+    },
+
+    currentLink() {
+      let link = '';
+      this.reviewers.forEach(review => {
+        if (this.step === review.id) {
+          link = review.link;
+        }
+      });
+      return link;
     },
 
     currentDate() {
@@ -96,7 +105,7 @@ export default {
                 class="icon-color-stars"></v-rating>
 
               <p>{{ currentText }}</p>
-              <a class="link" :href="googleReview" target="_blank">Guarda su Google Maps</a>
+              <a class="link" :href="currentLink" target="_blank">Guarda su Google Maps</a>
 
             </v-card-text>
           </v-window-item>

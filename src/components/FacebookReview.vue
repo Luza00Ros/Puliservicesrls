@@ -3,10 +3,9 @@ export default {
   data() {
     return {
       step: 1,
-      facebookReview: 'https://www.facebook.com/impresadipulizieLucianaRosati/reviews',
       reviewers: [
-        { id: 1, name: 'Federica', img: "https://scontent.ffco2-1.fna.fbcdn.net/v/t39.30808-6/306088155_5591230310937462_6714571267359550297_n.jpg?_nc_cat=107&cb=99be929b-3346023f&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=MlMr6DDg6OMAX_hDEAw&_nc_ht=scontent.ffco2-1.fna&oh=00_AfDv1-G2rWukltZ-er53sDTMLceR8v4tKJeRDGT5QxnDEw&oe=64DB2106", date: '24 marzo 2020', text: "Impresa professionale e competente, altamente consigliata!", stars: 5 },
-        { id: 2, name: 'Pasquale', img: "https://scontent.ffco2-1.fna.fbcdn.net/v/t1.6435-9/174486806_10222429668003896_3683473978883899829_n.jpg?_nc_cat=109&cb=99be929b-3346023f&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=JOeyJWO5UX4AX-Kqla9&_nc_ht=scontent.ffco2-1.fna&oh=00_AfDNnkFAwKdp5nbPxdUysBnTSqIEScQjv7qtMPO2Q__khg&oe=64FDA4AD", date: '4 maggio 2020', text: "serietà nel lavoro che svolge", stars: 5 },
+        { id: 1, name: 'Federica', img: "https://scontent.ffco2-1.fna.fbcdn.net/v/t39.30808-6/306088155_5591230310937462_6714571267359550297_n.jpg?_nc_cat=107&cb=99be929b-3346023f&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=MlMr6DDg6OMAX_hDEAw&_nc_ht=scontent.ffco2-1.fna&oh=00_AfDv1-G2rWukltZ-er53sDTMLceR8v4tKJeRDGT5QxnDEw&oe=64DB2106", link: 'https://m.facebook.com/story.php?story_fbid=pfbid0w9hiviPafsagaSx1pgcSXa3d5BMQ3sUubSXbZQCicDW5LPtoTdwdDGahoQBg7Hul&id=100001516460545', date: '24 marzo 2020', text: "Impresa professionale e competente, altamente consigliata!👆🏼", stars: 5 },
+        { id: 2, name: 'Pasquale', img: "https://scontent.ffco2-1.fna.fbcdn.net/v/t1.6435-9/174486806_10222429668003896_3683473978883899829_n.jpg?_nc_cat=109&cb=99be929b-3346023f&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=JOeyJWO5UX4AX-Kqla9&_nc_ht=scontent.ffco2-1.fna&oh=00_AfDNnkFAwKdp5nbPxdUysBnTSqIEScQjv7qtMPO2Q__khg&oe=64FDA4AD", link: 'https://m.facebook.com/story.php?story_fbid=pfbid02wusnYpSZZPogRA6wPCe9m5nVbmScTfNEyYvugCxdVrGqxgasG8kbQRuY3fGmyPffl&id=1634642801', date: '4 maggio 2020', text: "serietà nel lavoro che svolge", stars: 5 },
       ],
     }
   },
@@ -29,6 +28,16 @@ export default {
         }
       });
       return text;
+    },
+
+    currentLink() {
+      let link = '';
+      this.reviewers.forEach(review => {
+        if(this.step == review.id) {
+          link = review.link;
+        }
+      });
+      return link;
     },
 
     currentImage() {
@@ -96,7 +105,7 @@ export default {
                 class="icon-color-stars"></v-rating>
 
               <p>{{ currentText }}</p>
-              <a class="link" :href="facebookReview" target="_blank">Guarda su facebook</a>
+              <a class="link" :href="currentLink" target="_blank">Guarda su facebook</a>
 
             </v-card-text>
           </v-window-item>
@@ -119,7 +128,7 @@ export default {
                 class="icon-color-stars"></v-rating>
 
               <p>{{ currentText }}</p>
-              <a class="link" :href="facebookReview" target="_blank">Guarda su facebook</a>
+              <a class="link" :href="currentLink" target="_blank">Guarda su facebook</a>
 
             </v-card-text>
           </v-window-item>
