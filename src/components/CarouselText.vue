@@ -30,7 +30,7 @@ export default {
 
       <template v-slot:title>
         <div class="text-h6 font-weight-regular justify-space-between">
-          <h5 class="text-light-blue-darken-4">{{ currentTitle }}</h5>
+          <h6 class="text-light-blue-darken-4">{{ currentTitle }}</h6>
         </div>
       </template>
 

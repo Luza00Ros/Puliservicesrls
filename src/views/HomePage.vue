@@ -173,20 +173,10 @@ export default {
   <v-spacer></v-spacer>
 
 
-    <!--GOOGLE-->
-    <v-contaier>
-    <div style="border: 1px solid red; height: 150px;">
-      GOOGLE REVIEW
-    </div>
-  </v-contaier>
+  <!--GOOGLE REVIEW-->
+  <GoogleReview />
 
   <v-spacer></v-spacer>
-
-    <!-- OVERVIEW -->
-
-  <v-container>
-    <CarouselText />
-  </v-container>
 
   <!--SERVICES-->
 
@@ -232,6 +222,14 @@ export default {
 
   <v-spacer></v-spacer>
 
+  <!-- OVERVIEW -->
+
+  <v-container>
+    <CarouselText />
+  </v-container>
+
+  <v-spacer></v-spacer>
+
   <!-- MISSION -->
 
   <v-container class="mt-3">
@@ -256,7 +254,8 @@ export default {
       <span class="text-light-blue-darken-4">servizi di pulizia impeccabili</span>.
       <br><br>
       &#x2022;<span class="text-light-blue"><strong> Affidabilità</strong></span>: Siamo un
-      <span class="text-light-blue-darken-4">team affidabile e responsabile</span>. I valori chiave per noi sono: Puntualità,
+      <span class="text-light-blue-darken-4">team affidabile e responsabile</span>. I valori chiave per noi sono:
+      Puntualità,
       professionalità e dedizione. <br><br>
       &#x2022;<span class="text-light-blue"><strong> Personalizzazione</strong></span>: Ogni cliente è unico, pertanto
       adottiamo un <span class="text-light-blue-darken-4">approccio personalizzato</span>.
@@ -283,17 +282,12 @@ export default {
     </p>
   </v-container>
 
-  <!--FACEBOOK-->
-  <v-contaier>
-    <div style="border: 1px solid red; height: 150px;">
-      FACEBOOK REVIEW
-    </div>
-  </v-contaier>
+  <!--FACEBOOK REVIEW-->
+  <FacebookReview />
 
   <v-spacer></v-spacer>
 
   <!--CALL TO ACTION-->
-
   <CallToAction />
 
   <v-spacer></v-spacer>
@@ -302,6 +296,8 @@ export default {
 </template>
 
 <script setup>
+import GoogleReview from '@/components/GoogleReview.vue';
+import FacebookReview from '@/components/FacebookReview.vue'
 import CarouselText from '@/components/CarouselText.vue'
 import TopNav from "@/components/TopNav.vue";
 import Bottom from "@/components/BottomFooter.vue";
