@@ -3,7 +3,7 @@ export default {
   data() {
     return {
       tab: 'Contatti',
-      arraydiOggetti: [
+      infos: [
         { id: 0, title: 'Contatti', icon: 'mdi-information-outline' },
         { id: 1, title: 'Mappa', icon: 'mdi-google-maps' }
       ],
@@ -40,11 +40,11 @@ export default {
 
     <v-tabs v-model="tab" grow>
       <div class="d-flex align-center justify-center text-black" style="width: 100%;">
-        <v-tab v-for="oggetti in arraydiOggetti" :key="oggetti.id" :value="oggetti.title" color="light-blue">
+        <v-tab v-for="info in infos" :key="info.id" :value="info.title" color="light-blue">
           <div class="d-flex flex-column align-center">
-            <v-icon :icon="oggetti.icon"></v-icon>
+            <v-icon :icon="info.icon"></v-icon>
             <v-spacer></v-spacer>
-            <span class="text-caption font-weight-bold">{{ oggetti.title }}</span>
+            <span class="text-caption font-weight-bold">{{ info.title }}</span>
           </div>
         </v-tab>
       </div>
@@ -55,13 +55,13 @@ export default {
       <v-card width="800" height="400" class="d-flex align-center justify-space-evenly" color="black">
         <v-img height="800" src="../assets/backgroundDesign.webp" cover>
           <v-window v-model="tab">
-            <v-window-item v-for="oggetti in arraydiOggetti" :key="oggetti.id" :value="oggetti.title">
+            <v-window-item v-for="info in infos" :key="info.id" :value="info.title">
 
-              <span v-if="oggetti.id === 0">
+              <span v-if="info.id === 0">
                 <ContactInfo />
               </span>
 
-              <span v-if="oggetti.id === 1">
+              <span v-if="info.id === 1">
                 <ContactMaps />
               </span>
 

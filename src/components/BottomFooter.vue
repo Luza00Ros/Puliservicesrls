@@ -77,7 +77,7 @@ export default {
         Domande frequenti
       </div>
 
-      <div style="max-width: 441px;">
+      <div>
         <v-expansion-panels variant="accordion">
           <v-expansion-panel color="light-blue" v-for="faq in faqs" :key="faq.id" :title="faq.request" :text="faq.answer">
           </v-expansion-panel>
@@ -87,8 +87,7 @@ export default {
 
   </v-container>
   <div class="px-4 py-2 bg-light-blue text-center w-100">
-    &copy; {{ new Date().getFullYear() }} <strong>Puliservice S.r.l.s di Luciana Rosati</strong> - Tutti i diritti
-    riservati
+    &copy; {{ new Date().getFullYear() }} <strong>Puliservice Srls di Luciana Rosati</strong> | Sede legale: Piazzale Budapest 9, 85100, PZ | P.IVA: 02082240769 | URI: PZ | REA: 205849
   </div>
 </template>
 

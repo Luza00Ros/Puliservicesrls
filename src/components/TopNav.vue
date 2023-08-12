@@ -5,6 +5,7 @@ export default {
       drawer: false,
       arrowZero: false,
       arrowOne: false,
+      calendarReference: "https://calendar.app.google/TnEMSnYqn94RzMvT6",
       pulizie: [
         { id: 0, title: 'Uffici', route: 'uffici', icon: 'mdi-office-building' },
         { id: 1, title: 'Condomini', route: 'condomini', icon: 'mdi-warehouse' },
@@ -19,6 +20,7 @@ export default {
       menuClosed: 'mdi-menu',
       menuOpen: 'mdi-menu-open',
       badge: 'mdi-calendar-badge',
+      advice: 'mdi-laptop-account',
       arrowDown: 'mdi-chevron-double-down',
       arrowUp: 'mdi-chevron-double-up',
       home: 'mdi-home',
@@ -135,7 +137,7 @@ export default {
 
   <!-- V-NAVIGATION-DRAWER -->
   <v-navigation-drawer temporary v-model="drawer" location="right" v-on:click.stop="drawer = !drawer"
-    class="rounded-s-xl mt-5 h-50 bg-light-blue-darken-4" aria-label="menu">
+    class="rounded-s-xl mt-1 h-50 bg-light-blue-darken-4" aria-label="menu">
 
     <!--SCROLL UP-->
     <span v-on:load="onTop"></span>
@@ -146,15 +148,15 @@ export default {
         <div class="d-flex flex-column justify-start align-end">
 
 
-          <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="home" variant="text"
+          <v-btn class="rounded-pill mt-5 text-light-blue" :prepend-icon="home" variant="text"
             v-on:click="routerPush('/')"><span class="text-white"><strong>Home</strong></span></v-btn>
 
-          <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="chisiamo" variant="text"
+          <v-btn class="rounded-pill mt-5 text-light-blue" :prepend-icon="chisiamo" variant="text"
             v-on:click="routerPush('chisiamo')"><span class="text-white"><strong>Chi siamo</strong></span></v-btn>
 
           <v-menu transition="slide-y-transition">
             <template v-slot:activator="{ props }">
-              <v-btn class="rounded-pill mt-2 text-light-blue" variant="text" :prepend-icon="clean"
+              <v-btn class="rounded-pill mt-5 text-light-blue" variant="text" :prepend-icon="clean"
                 v-on:click="arrowZero = !arrowZero" :append-icon="changeArrowZero()" v-bind="props">
                 <span class="text-white"><strong>Pulizie</strong></span>
               </v-btn>
@@ -174,7 +176,7 @@ export default {
 
           <v-menu transition="slide-y-transition">
             <template v-slot:activator="{ props }">
-              <v-btn class="rounded-pill mt-2 text-light-blue" variant="text" :prepend-icon="service"
+              <v-btn class="rounded-pill mt-5 text-light-blue" variant="text" :prepend-icon="service"
                 v-on:click="arrowOne = !arrowOne" :append-icon="changeArrowOne()" v-bind="props">
                 <span class="text-white"><strong>Servizi</strong></span>
               </v-btn>
@@ -192,14 +194,20 @@ export default {
             </v-list>
           </v-menu>
 
-          <v-btn class="rounded-pill mt-2 text-light-blue" variant="text" :prepend-icon="contacts"
+          <v-btn class="rounded-pill mt-5 mb-5 text-light-blue" variant="text" :prepend-icon="contacts"
             v-on:click="routerPush('contatti')"><span class="text-white"><strong>Contatti</strong></span></v-btn>
 
-          <v-btn class='rounded-pill mt-2 text-light-blue' :prepend-icon='badge' variant="outlined"
+          <hr style="padding-right: 100%;">
+
+          <v-btn class='rounded-pill mt-3 text-light-blue' :prepend-icon='badge' variant="text"
             v-on:click="routerPush('preventivo')">
             <span class="text-white"><strong>Preventivo gratuito</strong></span>
           </v-btn>
 
+          <v-btn class='rounded-pill mt-3 text-light-blue' :prepend-icon='advice' variant="text"
+            role="link" :href="calendarReference" target="_blank">
+            <span class="text-white"><strong>Consulenza gratuita</strong></span>
+          </v-btn>
 
         </div>
 

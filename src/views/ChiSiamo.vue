@@ -1,32 +1,64 @@
 <script>
 export default {
-  data() {
-    return {
-      slides: [
-        { id: 0, title: "Slide 1", subtitle: "Subtitle slide 1", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?", },
-        {
-          id: 1,
-          title: "Slide 2",
-          subtitle: "Subtitle slide 2",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-        },
-        {
-          id: 2,
-          title: "Slide 3",
-          subtitle: "Subtitle slide 3",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-        },
-      ],
-    };
+  data: () => ({
+    step: 1,
+    cards: [
+      { id: 1, title: 'Title 1', subtitle: 'Subtitle 1', text: 'lorem ipsum dolor... 1', image: 'src/assets/cleaningOffice.webp' },
+      { id: 2, title: 'Title 2', subtitle: 'Subtitle 2', text: 'lorem ipsum dolor... 2', image: 'src/assets/cleaninghome.webp' },
+      { id: 3, title: 'Title 3', subtitle: 'Subtitle 3', text: 'lorem ipsum dolor... 3', image: 'src/assets/cleaningOffice.webp' }
+    ]
+  }),
+
+  computed: {
+    currentTitle() {
+      let title = '';
+      this.cards.forEach(card => {
+        if (this.step == card.id) {
+          title = card.title;
+        }
+      });
+      return title;
+    },
+
+    currentSubtitle() {
+      let subtitle = '';
+      this.cards.forEach(card => {
+        if (this.step == card.id) {
+          subtitle = card.subtitle;
+        }
+      });
+      return subtitle;
+    },
+
+
+    currentText() {
+      let text = '';
+      this.cards.forEach(card => {
+        if (this.step == card.id) {
+          text = card.text;
+        }
+      });
+      return text;
+    },
+
+    currentImage() {
+      let image = '';
+      this.cards.forEach(card => {
+        if (this.step == card.id) {
+          image = card.image;
+        }
+      });
+      return image;
+    }
   }
-};
+}
 </script>
 
 <template>
   <TopNav />
 
   <!--INTRO-->
-    <v-parallax src="/src/assets/story.webp" height="600" alt="Immagine in background">
+  <v-parallax src="/src/assets/story.webp" height="600" alt="Immagine in background">
     <div class="d-flex flex-column fill-height justify-center text-white">
       <div class="text-center text-light-blue mt-5 mb-3 mr-5 ml-5">
         <h1 class="title-responsive">
@@ -45,73 +77,58 @@ export default {
 
   <!-- CAROUSEL -->
 
-  <v-carousel cycle hide-delimiters :show-arrows="false">
+  <v-container>
+    <div class="d-flex flex-row flex-wrap align-center justify-center">
+      <v-card id="icon-color" variant="flat" height="100%">
 
-    <template v-slot:prev="{ props }">
-      <v-btn icon="mdi-arrow-left-bold-circle" variant="elevated" color="light-blue-darken-4"
-        @click="props.onClick"></v-btn>
-    </template>
+        <v-img :src="currentImage" max-height="600" cover />
 
-    <template v-slot:next="{ props }">
-      <v-btn icon="mdi-arrow-right-bold-circle" variant="elevated" color="light-blue-darken-4"
-        @click="props.onClick"></v-btn>
-    </template>
+        <template v-slot:title>
+          <div class="text-h6 font-weight-regular justify-start">
+            <h6 class="text-light-blue-darken-4">{{ currentTitle }}</h6>
+          </div>
+        </template>
 
-    <v-carousel-item v-for="slide in slides" :key="slide.id" cover>
-      <v-container>
-        <v-sheet color="trasparent" height="100%">
+        <template v-slot:subtitle>
+          <div class="text-h6 font-weight-regular justify-start">
+            {{ currentSubtitle }}
+          </div>
+        </template>
 
-          <!--RICORDA CHE UNA VOLTA INSERITE LE IMMAGINI ANDREBBERO CALIBRATE-->
+        <v-window v-model="step">
+          <v-window-item :value="1">
+            <v-card-text>
+              <p>{{ currentText }}</p>
+            </v-card-text>
+          </v-window-item>
 
-          <template v-if="slide.id == 0">
-            <v-card class="mx-auto card-width" color="light-blue-darken-4">
-              <v-img src="../assets/cleaning.webp" height="200px" width="0px" cover />
-              <v-card-title class="text-start text-h5">
-                <h5> {{ slide.title }}</h5>
-              </v-card-title>
-              <v-card-subtitle class="text-start text-light-blue text-h6">
-                <h6>{{ slide.subtitle }}</h6>
-              </v-card-subtitle>
-              <v-card-text class="text-start">
-                <p>{{ slide.text }}</p>
-              </v-card-text>
-            </v-card>
-          </template>
+          <v-window-item :value="2">
+            <v-card-text>
+              <p>{{ currentText }}</p>
+            </v-card-text>
+          </v-window-item>
 
-          <template v-if="slide.id == 1">
-            <v-card class="mx-auto card-width" color="light-blue-darken-4">
-              <v-img src="../assets/cleaning.webp" height="200px" cover />
-              <v-card-title class="text-start text-h5">
-                <h5>{{ slide.title }}</h5>
-              </v-card-title>
-              <v-card-subtitle class="text-start text-light-blue text-h6">
-                <h6>{{ slide.subtitle }}</h6>
-              </v-card-subtitle>
-              <v-card-text class="text-start">
-                <p>{{ slide.text }}</p>
-              </v-card-text>
-            </v-card>
-          </template>
+          <v-window-item :value="3">
+            <v-card-text>
+              <p>{{ currentText }}</p>
+            </v-card-text>
+          </v-window-item>
+        </v-window>
 
-          <template v-if="slide.id == 2">
-            <v-card class="mx-auto card-width" color="light-blue-darken-4">
-              <v-img src="../assets/cleaning.webp" height="200px" cover />
-              <v-card-title class="text-start text-h5">
-                <h5>{{ slide.title }}</h5>
-              </v-card-title>
-              <v-card-subtitle class="text-start text-light-blue text-h6">
-                <h6>{{ slide.subtitle }}</h6>
-              </v-card-subtitle>
-              <v-card-text class="text-start">
-                <p>{{ slide.text }}</p>
-              </v-card-text>
-            </v-card>
-          </template>
+        <v-card-actions>
+          <v-btn v-if="step > 1" color="light-blue-darken-4" rounded="xl" variant="text" @click="step--"
+            icon="mdi-arrow-left-thin">
+          </v-btn>
+          <v-spacer></v-spacer>
+          <v-btn v-if="step < 3" color="light-blue-darken-4" variant="text" rounded="xl" @click="step++"
+            icon="mdi-arrow-right-thin">
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </div>
+  </v-container>
 
-        </v-sheet>
-      </v-container>
-    </v-carousel-item>
-  </v-carousel>
+  <v-spacer />
 
   <!--WHO IS LUCIANA?-->
 
@@ -185,7 +202,8 @@ export default {
       risultati impeccabili. La qualità è per
       noi un impegno costante e una priorità assoluta. <br><br>
       &#x2022;<span class="text-light-blue"><strong> Affidabilità</strong></span>: La nostra reputazione si basa sulla
-      <span class="text-light-blue-darken-4">fiducia e sull'affidabilità</span>. Rispettiamo gli impegni presi con i nostri clienti. La
+      <span class="text-light-blue-darken-4">fiducia e sull'affidabilità</span>. Rispettiamo gli impegni presi con i
+      nostri clienti. La
       puntualità, la professionalità e la coerenza sono i pilastri su cui
       costruiamo rapporti duraturi con i nostri clienti. <br><br>
       &#x2022;<span class="text-light-blue"><strong> Etica</strong></span>: Agiamo sempre in modo etico.
@@ -264,4 +282,5 @@ import CallToAction from "@/components/CallToAction.vue";
   background-color: #03A9F4;
   left: -30px;
   top: -30px;
-}</style>
+}
+</style>

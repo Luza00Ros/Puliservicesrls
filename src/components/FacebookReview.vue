@@ -104,8 +104,8 @@ export default {
               <v-rating :model-value="currentStars" color="amber" density="compact" half-increments readonly size="small"
                 class="icon-color-stars"></v-rating>
 
-              <p>{{ currentText }}</p>
-              <a class="link" :href="currentLink" target="_blank">Guarda su facebook</a>
+              <p class="mb-2">{{ currentText }}</p>
+              <a class="link" :href="currentLink" target="_blank">Guarda su Facebook</a>
 
             </v-card-text>
           </v-window-item>
@@ -127,8 +127,8 @@ export default {
               <v-rating :model-value="currentStars" color="amber" density="compact" half-increments readonly size="small"
                 class="icon-color-stars"></v-rating>
 
-              <p>{{ currentText }}</p>
-              <a class="link" :href="currentLink" target="_blank">Guarda su facebook</a>
+              <p class="mb-2">{{ currentText }}</p>
+              <a class="link" :href="currentLink" target="_blank">Guarda su Facebook</a>
 
             </v-card-text>
           </v-window-item>

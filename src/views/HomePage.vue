@@ -61,6 +61,11 @@ export default {
           page: "traslochi",
         },
       ],
+      contacts: [
+        { id: 0, title: 'Telefono', icon: 'mdi-phone', value: 'tel:+393484231742', text: '348 42 31 742'},
+        { id: 1, title: 'Email', icon: 'mdi-email-arrow-right', value: 'mailto:adv.puliservicesrls@gmail.com', text: 'adv.puliservicesrls@gmail.com'},
+        { id: 2, title: 'Indirizzo', icon: 'mdi-routes', value: 'https://www.google.com/maps/place/Puliservice+di+Rosati+Luciana+S.r.l.s/@40.6452666,15.795948,13.83z/data=!4m6!3m5!1s0x1338e3f913de7987:0x8cd71f33b2e9ab4e!8m2!3d40.641837!4d15.802794!16s%2Fg%2F11kpsn4z6d?entry=tts&shorturl=1', text: 'Piazzale Budapest 9, 85100, PZ'},
+      ],
     };
   },
   methods: {
@@ -72,6 +77,14 @@ export default {
 </script>
 
 <template>
+
+  <!--CONTACT-->
+
+  <div class="px-4 py-2 bg-light-blue text-center w-100 top-responsive hidden-display">
+    <span v-for="contact in contacts" :key="contact.id">
+       <v-btn class="text-caption" rounded="xl" variant="text" role="link" :href="contact.value" target="_blank" :prepend-icon="contact.icon">{{ contact.title }}: <a :href="contact.value" style="text-decoration: none;" target="_blank" class="text-light-blue-darken-4">{{ contact.text }}</a></v-btn>
+    </span>
+  </div>
   <TopNav />
 
   <!-- INTRO -->
@@ -305,6 +318,12 @@ import CallToAction from "@/components/CallToAction.vue";
 </script>
 
 <style scoped>
+@media screen and (max-width: 281px) {
+  .hidden-display {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 966px) {
   .title-responsive {
     font-size: 3em !important;
@@ -328,6 +347,13 @@ import CallToAction from "@/components/CallToAction.vue";
     text-align: start;
     align-items: start;
     justify-items: start;
+  }
+
+  .top-responsive {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
   }
 }
 </style>
