@@ -1,38 +1,36 @@
+Segnalazione bug
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+Titolo: Inserisci un titolo
+Rapporto: Crea un rapporto per aiutarci a migliorare
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Descrivi il bug**
+Una descrizione chiara e concisa di quale sia il bug.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+**In che situazione il bug si presenta**
+Passaggi per riprodurre il comportamento del bug (es):
+1. Vai a '...'
+2. Fare clic su '....'
+3. Scorri verso il basso fino a '....'
+4. Vedi l'errore
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+**Comportamento atteso**
+Una descrizione chiara e concisa di ciò che ti aspettavi che accadesse.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Schermate**
+Se applicabile, aggiungi screenshot per aiutare a spiegare il tuo problema.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+**Desktop (compilare le seguenti informazioni):**
+ - Sistema operativo: [ad es. iOS]
+ - Browser [ad es. cromato, safari]
+ - Versione [ad es. 22]
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+**Smartphone (compilare le seguenti informazioni):**
+ - Dispositivo: [ad es. iPhone6]
+ - Sistema operativo: [ad es. iOS 8.1]
+ - Browser [ad es. browser stock, safari]
+ - Versione [ad es. 22]
 
-**Additional context**
-Add any other context about the problem here.
+**Informazioni aggiuntive**
+Aggiungi qualsiasi altra informazione sul problema qui.

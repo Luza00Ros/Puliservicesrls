@@ -1,21 +1,15 @@
-# Security Policy
+# Politica di Sicurezza
 
-## Supported Versions
+## Segnalazione delle Vulnerabilità
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Se scopri una vulnerabilità di sicurezza nel nostro progetto, ti preghiamo di comunicarcelo immediatamente. Siamo impegnati a mantenere il nostro progetto sicuro per tutti gli utenti e apprezziamo il tuo aiuto nel rendere il nostro software più sicuro.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+Per segnalare una vulnerabilità, ti preghiamo di inviare un'email a adv.puliservicesrls@gmail.com e includere i seguenti dettagli:
 
-## Reporting a Vulnerability
+- Descrizione dettagliata della vulnerabilità.
+- I passaggi per riprodurre la vulnerabilità.
+- Versioni del software in cui è stata riscontrata la vulnerabilità.
 
-Use this section to tell people how to report a vulnerability.
+Ti impegni a non divulgare pubblicamente la vulnerabilità prima che sia stata risolta. Ti terremo informato sugli sviluppi e lavoreremo insieme per risolvere il problema nel minor tempo possibile.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Ringraziamo tutti coloro che segnalano vulnerabilità responsabilmente e contribuiscono a migliorare la sicurezza del nostro progetto. 
