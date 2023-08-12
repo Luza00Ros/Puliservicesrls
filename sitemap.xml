@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--Home Page-->
+  <url>
+    <loc>https://puliservicesrls-4246e.firebaseapp.com/</loc>
+    <lastmod>2023-08-12</lastmod>
+  </url>
+  <!--Chi Siamo-->
+  <url>
+    <loc>https://puliservicesrls-4246e.firebaseapp.com/chisiamo/</loc>
+    <lastmod>2023-08-12</lastmod>
+  </url>
+  <!--PULIZIE-->
+  <!--Pulizie Uffici-->
+  <url>
+    <loc>https://puliservicesrls-4246e.firebaseapp.com/uffici/</loc>
+    <lastmod>2023-08-12</lastmod>
+  </url>
+  <!--Pulizie Condomini-->
+  <url>
+    <loc>https://puliservicesrls-4246e.firebaseapp.com/condomini/</loc>
+    <lastmod>2023-08-12</lastmod>
+  </url>
+  <!--Pulizie Appartamenti-->
+  <url>
+    <loc>https://puliservicesrls-4246e.firebaseapp.com/appartamenti/</loc>
+    <lastmod>2023-08-12</lastmod>
+  </url>
+  <!--Pulizie Negozi-->
+  <url>
+    <loc>https://puliservicesrls-4246e.firebaseapp.com/negozi/</loc>
+    <latmod>2023-08-12</lastmod>
+  <url>
+  <!--SERVIZI-->
+  <!--Giardinaggio-->
+  <url>
+    <loc>https://puliservicesrls-4246e.firebaseapp.com/giardinaggio/</loc>
+    <lastmod>2023-08-12</lastmod>
+  </url>
+  <!--Piccole Manutenzioni-->
+  <url>
+    <loc>https://puliservicesrls-4246e.firebaseapp.com/manutenzioni/<loc>
+    <lastmod>2023-08-12</lastmod>
+  </url>
+  <!--Facchinaggio-->
+  <url>
+    <loc>https://puliservicesrls-4246e.firebaseapp.com/traslochi/<loc>
+    <lastmod>2023-08-12</lastmod>
+  </url>
+  <!--Contatti-->
+  <url>
+    <loc>https://puliservicesrls-4246e.firebaseapp.com/contatti/<loc>
+    <lastmod>2023-08-12</lastmod>
+  </url>
+  <!--Preventivo-->
+  <url>
+    <loc>https://puliservicesrls-4246e.firebaseapp.com/preventivo/</loc>
+    <lastmod>2023-08-12</lastmod>
+  </url>
+</urlset>

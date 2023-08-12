@@ -53,12 +53,12 @@ export default {
 
         <v-window-item :value="3">
           <v-card-text>
-            <p>Il nostro <span class="text-light-blue-darken-4">servizio di gestione delle prenotazioni</span> in calendario è progettato per semplificare e ottimizzare
+            <p class="mb-5">Il nostro <span class="text-light-blue-darken-4">servizio di gestione delle prenotazioni</span> in calendario è progettato per semplificare e ottimizzare
               il processo di programmazione e pianificazione delle attività. Sia che tu sia un professionista autonomo, un
               azienda o un organizzazione, offriamo un sistema completo e <span class="text-light-blue-darken-4">user-friendly</span> per gestire le tue prenotazioni in
               modo efficiente.</p>
+              <GoogleCalendar />
           </v-card-text>
-            <GoogleCalendar></GoogleCalendar>
         </v-window-item>
       </v-window>
 
