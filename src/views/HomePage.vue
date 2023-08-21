@@ -201,21 +201,21 @@ export default {
   </v-container>
 
   <v-container class="d-flex justify-space-evently align-center flex-wrap">
-    <v-card class="mx-auto mt-5 mb-5" max-width="600" variant="flat" color="white" v-for="service in services"
+    <v-card class="mx-auto mt-5 mb-5" max-width="700" variant="flat" color="white" v-for="service in services"
       :key="service.id">
       <span v-if="service.id == 0">
-        <v-img src="../assets/illustration/bestPlace_illustration.svg" height="300px" width="600px" rounded="xl"
+        <v-img src="../assets/illustration/bestPlace_illustration.svg" width="600" rounded="xl"
           cover></v-img>
       </span>
       <span v-if="service.id == 1">
-        <v-img src="../assets/illustration/office_illustration.svg" height="300px" width="400px" rounded="xl"
+        <v-img src="../assets/illustration/office_illustration.svg" width="600" rounded="xl"
           cover></v-img>
       </span>
       <span v-if="service.id == 2">
-        <v-img src="../assets/illustration/shop_illustration.svg" height="300px" width="400px" rounded="xl" cover></v-img>
+        <v-img src="../assets/illustration/shop_illustration.svg" width="600" rounded="xl" cover></v-img>
       </span>
       <span v-if="service.id == 3">
-        <v-img src="../assets/illustration/delivery_illustration.svg" height="300px" width="600px" rounded="xl"
+        <v-img src="../assets/illustration/delivery_illustration.svg" width="600" rounded="xl"
           cover></v-img>
       </span>
 
