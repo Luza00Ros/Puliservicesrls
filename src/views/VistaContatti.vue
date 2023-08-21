@@ -53,7 +53,7 @@ export default {
     </v-tabs>
 
     <v-container class="d-flex justify-center">
-      <v-card width="800" height="400" class="d-flex align-center justify-space-evenly" color="black">
+      <v-card width="100%" height="400" class="d-flex align-center justify-space-evenly" color="black">
         <v-img height="800" src="../assets/backgroundDesign.webp" cover>
           <v-window v-model="tab">
             <v-window-item v-for="info in infos" :key="info.id" :value="info.title">
@@ -71,13 +71,19 @@ export default {
         </v-img>
       </v-card>
     </v-container>
-
   </v-card>
+
+  <v-spacer></v-spacer>
+
+  <v-container>
+    <GoogleCalendar />
+  </v-container>
 
   <Bottom />
 </template>
 
 <script setup>
+import GoogleCalendar from '@/components/GoogleCalendar.vue';
 import ContactMaps from '@/components/ContactMaps.vue';
 import ContactInfo from '@/components/ContactInfo.vue';
 import TopNav from '@/components/TopNav.vue';

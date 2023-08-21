@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <v-container fluid width="800" height="400" class="d-flex flex-column flex-wrap align-start bg-transparent">
+  <v-container fluid height="400" class="d-flex flex-column flex-wrap align-start bg-transparent">
 
     <v-sheet class="bg-transparent">
       <div class="mb-2">
