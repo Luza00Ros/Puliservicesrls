@@ -68,7 +68,7 @@ export default {
         {
           id: 5,
           request: "Offrite preventivi gratuiti?",
-          answer: "Si, certamente, pui richiedere il tuo preventivo gratuito",
+          answer: "Si, certamente, pui richiedere il tuo preventivo gratuito nella sezione 'contatti'",
         },
 
         {
