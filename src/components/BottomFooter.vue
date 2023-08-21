@@ -1,4 +1,5 @@
 <script>
+
 export default {
   data() {
     return {
@@ -33,53 +34,53 @@ export default {
           id: 0,
           request: "Da quanto tempo operate nel settore delle pulizie?",
           answer:
-            "Offriamo servizi di pulizie professionali da più di 20 anni.",
+            "Offriamo servizi di pulizie professionali da più di 20 anni",
         },
         {
           id: 1,
           request:
-            "Se stipulo un contratto per il servizio di pulizia i detergenti, le attrezzature li fornite voi?",
+            "Se stipulo un contratto per il servizio di pulizia i detergenti e le attrezzature li fornite voi?",
           answer:
-            "Sì, la nostra impresa di pulizie fornisce prodotti di pulizie professionali e le attrezzature necessarie.",
+            "Sì, la nostra impresa di pulizie fornisce prodotti di pulizie professionali e le attrezzature necessarie",
         },
 
         {
           id: 2,
           request:
-            "Se stipulo un contratto annuale per il servizio di pulizia durante il mese estivo quando l azienda è chiusa venite lo stesso a pulire i locali? ",
+            "Se stipulo un contratto annuale per il servizio di pulizia durante il mese estivo quando l'azienda è chiusa venite lo stesso a pulire i locali? ",
           answer:
-            "Se il contratto stipulato non prevede le pulizie nel periodo estivo il servizio sarà sospeso, in caso contrario la pulizia sarà effettuata regolarmente.",
+            "Se il contratto stipulato non prevede le pulizie nel periodo estivo il servizio sarà sospeso, in caso contrario la pulizia sarà effettuata regolarmente",
         },
         {
           id: 3,
           request: "Prevedete una durata minima contrattuale?",
           answer:
-            "No, concordiamo con te la durata del contratto secondo le tue necessità.",
+            "No, concordiamo con te la durata del contratto secondo le tue necessità",
         },
 
         {
           id: 4,
           request: "Offrite servizi di pronto intervento?",
           answer:
-            "Si, può contattarci tramite telefono al seguente numero: 348 42 31 742, oppure tramite email, al seguente indirzzo email: adv.puliservicesrls@gmail.com",
+            "Si, puoi contattarci al numero 348 42 31 742",
         },
 
         {
           id: 5,
           request: "Offrite preventivi gratuiti?",
-          answer: "Si, certamente, segua il seguente link: ",
+          answer: "Si, certamente, pui richiedere il tuo preventivo gratuito",
         },
 
         {
           id: 6,
           request: "Dove offrite i vostri servizi di pulizia?",
           answer:
-            "Principalmente lavoriamo su Potenza, ma svolgiamo anche lavori part time nei dintorni di Potenza. Contattaci subito per un preventivo gratuito e senza impegno!",
+            "Principalmente lavoriamo su Potenza, ma svolgiamo anche lavori part-time nei dintorni di Potenza. Contattaci subito per un preventivo gratuito e senza impegno!",
         },
         {
           id: 7,
           request: "Quali metodi di pagamento accettate?",
-          answer: "Si accettano pagamenti tramite bonifico bancario. ",
+          answer: "Accettiamo pagamenti tramite bonifico bancario",
         },
       ],
     };
@@ -172,8 +173,7 @@ export default {
             v-for="faq in faqs"
             :key="faq.id"
             :title="faq.request"
-            :text="faq.answer"
-          >
+            :text="faq.answer">
           </v-expansion-panel>
         </v-expansion-panels>
       </div>
@@ -188,20 +188,3 @@ export default {
 </template>
 
 
-<<<<<<< HEAD
-=======
-.v-expansion-panel-text__wrapper {
-  color: #03a9f4;
-}
-
-#link {
-  text-decoration: none;
-  color: #ffff;
-}
-
-#link:hover {
-  color: #03a9f4;
-  text-decoration: underline;
-}
-</style>
->>>>>>> dfe33ab16635ff32862466785d96acf4203f9c65
