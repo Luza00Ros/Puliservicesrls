@@ -153,10 +153,6 @@ export default {
     <v-row class="d-flex justify-center align-center flex-wrap-reverse">
       <v-col class="text-start" cols="auto" md="8" sm="12">
         <p>
-          Benvenuti sulla home page della nostra rinomata impresa di pulizie.
-        </p>
-        <br>
-        <p>
           <span class="text-light-blue-darken-4 font-weight-bold">Da Nonno Ernesto, al figlio Marco, e ora a sua figlia
             Luciana.
           </span>
