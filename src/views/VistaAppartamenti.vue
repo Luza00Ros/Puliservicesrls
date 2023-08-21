@@ -20,26 +20,27 @@ export default {
 <template>
   <TopNav />
 
-  <!--INTRO-->
-
-  <v-parallax src="/src/assets/cleaninghome.webp" height="600" alt="Immagine in background">
-    <div class="d-flex flex-column fill-height justify-center text-white">
-      <div class="text-center text-light-blue mt-5 mb-3 mr-5 ml-5">
-        <h1 class="title-responsive">
-          Pulizia Appartamenti
-        </h1>
+  <v-container fluid class="d-flex justify-center header-align-center-reverse">
+    <v-sheet>
+      <v-img max-width="800" max-height="500" src="../assets/illustration/appartment_illustration.svg"></v-img>
+    </v-sheet>
+    <v-sheet>
+      <div class="d-flex flex-column fill-height justify-center text-white">
+        <div class="text-start text-light-blue mt-5 mb-3 mr-5 ml-5">
+          <h1 class="title-responsive">
+            Pulizia Appartamenti
+          </h1>
+        </div>
+        <div class="ma-5 text-start">
+          <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
+            La pulizia straordinaria degli appartamenti è un
+            processo approfondito e dettagliato rispetto alla normale pulizia di
+            routine
+          </p>
+        </div>
       </div>
-      <div class="ma-5 text-center">
-        <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
-          La pulizia straordinaria degli appartamenti è un
-          processo approfondito e dettagliato rispetto alla normale pulizia di
-          routine
-        </p>
-      </div>
-    </div>
-  </v-parallax>
-
-  <!--TIMELINE SERVICES-->
+    </v-sheet>
+  </v-container>
 
   <v-container>
     <h6 class="text-light-blue-darken-4">Garantiamo che l'appartamento sia
@@ -57,37 +58,16 @@ export default {
     </v-timeline>
   </v-container>
 
-  <!-- ALLERT -->
-
   <v-container>
     <v-alert variant="tonal" density="compact" type="info" text="Utilizziamo strumenti e prodotti appropriati per garantire una
     pulizia efficace ed evitare danni alle superfici.">
     </v-alert>
   </v-container>
 
-  <!--CALL TO ACTION-->
-
   <CallToAction />
 
-  <!--FOOTER-->
   <Bottom />
 </template>
-
-<style scoped>
-@media screen and (max-width: 966px) {
-  .title-responsive {
-    font-size: 3em !important;
-    text-align: start;
-    line-height: normal;
-  }
-
-  .subtitle-responsive {
-    font-size: 2em !important;
-    text-align: start;
-  }
-}
-</style>
-
 
 <script setup>
 import CallToAction from "@/components/CallToAction.vue";

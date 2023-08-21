@@ -15,26 +15,27 @@ export default {
 <template>
   <TopNav />
 
-    <!--INTRO-->
-
-    <v-parallax src="../assets/contactbackground.webp" height="600" alt="Immagine in background">
-    <div class="d-flex flex-column fill-height justify-center text-white">
-      <div class="text-center text-light-blue mt-5 mb-3 mr-5 ml-5">
-        <h1 class="title-responsive">
-          Contatti
-        </h1>
+  <v-container fluid class="d-flex justify-center header-align-center-reverse">
+    <v-sheet>
+      <v-img max-width="800" max-height="500" src="../assets/illustration/contact_illustration.svg"></v-img>
+    </v-sheet>
+    <v-sheet>
+      <div class="d-flex flex-column fill-height justify-center text-white">
+        <div class="text-start text-light-blue mt-5 mb-3 mr-5 ml-5">
+          <h1 class="title-responsive">
+            Contatti
+          </h1>
+        </div>
+        <div class="ma-5 text-start">
+          <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
+            I nostri riferimenti
+          </p>
+        </div>
       </div>
-      <div class="ma-5 text-center">
-        <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
-          I nostri riferimenti
-        </p>
-      </div>
-    </div>
-  </v-parallax>
+    </v-sheet>
+  </v-container>
 
   <v-spacer />
-
-  <!--CONTACT-->
 
   <v-card variant="outlined" color="white" class="mt-3">
 
@@ -75,23 +76,6 @@ export default {
 
   <Bottom />
 </template>
-
-<style scoped>
-@media screen and (max-width: 966px) {
-
-  .title-responsive {
-    font-size: 3em !important;
-    text-align: start;
-    line-height: normal;
-  }
-
-  .subtitle-responsive {
-    font-size: 2em !important;
-    text-align: start;
-    line-height: 10px !important;
-  }
-}
-</style>
 
 <script setup>
 import ContactMaps from '@/components/ContactMaps.vue';

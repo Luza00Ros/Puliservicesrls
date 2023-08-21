@@ -19,27 +19,28 @@ export default {
 <template>
   <TopNav />
 
-  <!--INTRO-->
-
-  <v-parallax src="../assets/portierage.webp" height="600" alt="Immagine in background">
-    <div class="d-flex flex-column fill-height justify-center text-white">
-      <div class="text-center text-light-blue mt-5 mb-3 mr-5 ml-5">
+  <v-container fluid class="d-flex justify-center header-align-center-reverse">
+    <v-sheet>
+      <v-img max-width="800" max-height="500" src="../assets/illustration/delivery_illustration.svg"></v-img>
+    </v-sheet>
+    <v-sheet>
+      <div class="d-flex flex-column fill-height justify-center text-white">
+      <div class="text-start text-light-blue mt-5 mb-3 mr-5 ml-5">
         <h1 class="title-responsive">
           Facchinaggio
         </h1>
       </div>
-      <div class="ma-5 text-center">
+      <div class="ma-5 text-start">
         <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
           Il nostro servizio di facchinaggio è un servizio di supporto logistico e di
           trasporto
         </p>
       </div>
     </div>
-  </v-parallax>
+    </v-sheet>
+  </v-container>
 
   <v-spacer />
-
-  <!--TIMELINE SERVICES-->
 
   <v-container>
     <h6 class="text-light-blue-darken-4"> Coinvolge attività di movimentazione, carico, scarico e
@@ -58,43 +59,16 @@ export default {
 
   <v-spacer />
 
-  <!-- ALLERT -->
-
   <v-container>
     <v-alert variant="tonal" density="compact" type="warning" title="Nota bene"
       text="La procedura fornita è descritta in termini generali, possiamo personalizzarla e apportare variazioni in base alle specifiche esigenze e budget del cliente.">
     </v-alert>
   </v-container>
 
-  <!--CALL TO ACTION-->
-
   <CallToAction />
-
-  <!--FOOTER-->
 
   <Bottom />
 </template>
-
-<style scoped>
-@media screen and (max-width: 966px) {
-  .title-responsive {
-    font-size: 3em !important;
-    text-align: start;
-    line-height: normal;
-  }
-
-  .subtitle-responsive {
-    font-size: 2em !important;
-    text-align: start;
-  }
-
-  .button-right {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-  }
-}
-</style>
 
 <script setup>
 import CallToAction from "@/components/CallToAction.vue";

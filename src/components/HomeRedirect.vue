@@ -21,10 +21,8 @@ export default {
 </script>
 
 <template>
-  <!--HEADER-->
   <TopNav />
 
-  <!--REDIRECT-->
   <v-container class="bg-blue">
     <v-card class="position-relative">
       <v-img :width="300" aspect-ratio="16/9" cover src="../assets/puliservice.webp" class="mb-5 mt-5 ml-3" />
@@ -42,7 +40,6 @@ export default {
     </v-card>
   </v-container>
 
-  <!--FOOTER-->
   <div class="position-relative">
     <BottomFooter />
   </div>
@@ -53,9 +50,3 @@ import TopNav from './TopNav.vue';
 import BottomFooter from './BottomFooter.vue';
 </script>
 
-<style scoped>
-.position-relative {
-  position: relative;
-  top: 200px;
-}
-</style>

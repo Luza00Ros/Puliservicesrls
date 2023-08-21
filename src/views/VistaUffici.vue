@@ -22,27 +22,30 @@ export default {
 <template>
   <TopNav />
 
-  <!-- INTRO -->
-
-  <v-parallax src="../assets/cleaningOffice.webp" height="600" alt="Immagine in background">
-    <div class="d-flex flex-column fill-height justify-center text-white">
-      <div class="text-center mt-5 mb-3 mr-5 ml-5">
-        <h1 class="title-responsive text-light-blue">
-          Pulizie Uffici </h1>
+  <v-container fluid class="d-flex justify-center header-align-center-reverse">
+    <v-sheet>
+      <v-img max-width="800" max-height="500" src="../assets/illustration/office_illustration.svg"></v-img>
+    </v-sheet>
+    <v-sheet>
+      <div class="d-flex flex-column fill-height justify-center text-white">
+        <div class="text-start mt-5 mb-3 mr-5 ml-5">
+          <h1 class="title-responsive text-light-blue">
+            Pulizie Uffici </h1>
+        </div>
+        <div class="ma-5 text-start">
+          <p class="subtitle-responsive font-weight-bold text-light-blue-darken-4">
+            Una buona pulizia migliora la produttività dei dipendenti e il
+            benessere di tutti
+          </p>
+        </div>
       </div>
-      <div class="ma-5 text-center">
-        <p class="subtitle-responsive font-weight-bold text-light-blue-darken-4">
-          Una buona pulizia migliora la produttività dei dipendenti e il
-          benessere di tutti
-        </p>
-      </div>
-    </div>
-  </v-parallax>
-
-  <!--TIMELINE SERVICES-->
+    </v-sheet>
+  </v-container>
 
   <v-container>
-    <h6 class="text-light-blue-darken-4">La pulizia degli uffici &egrave; un'attività essenziale per garantire un ambiente pulito, igienico e sicuro per i clienti e il personale. Di seguito elenchiamo gli interventi di pulizia che effettuiamo negli uffici:
+    <h6 class="text-light-blue-darken-4">La pulizia degli uffici &egrave; un'attività essenziale per garantire un ambiente
+      pulito, igienico e sicuro per i clienti e il personale. Di seguito elenchiamo gli interventi di pulizia che
+      effettuiamo negli uffici:
     </h6>
     <v-timeline side="end" align="start">
       <v-timeline-item dot-color="light-blue-darken-4" v-for="service in services" :key="service.id" :icon="service.icon">
@@ -56,37 +59,16 @@ export default {
     </v-timeline>
   </v-container>
 
-  <!-- ALLERT -->
-
   <v-container>
     <v-alert variant="tonal" density="compact" type="warning" title="Nota bene" text="La frequenza delle pulizie e delle mansioni saranno prese di comune accordo con i clienti,
     rispettandone le necessità e il budget.">
     </v-alert>
   </v-container>
 
-  <!--CALL TO ACTION-->
-
   <CallToAction />
-
-  <!--FOOTER-->
 
   <Bottom />
 </template>
-
-<style scoped>
-@media screen and (max-width: 966px) {
-  .title-responsive {
-    font-size: 3em !important;
-    text-align: start;
-    line-height: normal;
-  }
-
-  .subtitle-responsive {
-    font-size: 2em !important;
-    text-align: start;
-  }
-}
-</style>
 
 <script setup>
 import TopNav from "@/components/TopNav.vue";

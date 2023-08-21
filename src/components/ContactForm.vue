@@ -190,7 +190,6 @@ export default {
 </script>
 
 <template>
-  <!--DIALOG-->
 
   <v-dialog v-model="dialog" width="auto">
 
@@ -267,6 +266,7 @@ export default {
       </v-form>
     </v-card>
   </v-dialog>
+
 </template>
 
 <script setup>

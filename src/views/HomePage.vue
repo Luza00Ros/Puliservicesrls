@@ -2,6 +2,7 @@
 export default {
   data() {
     return {
+      alert: true,
       slides: [
         { id: 0, name: "Vileda Professional", link: "https://www.vileda-professional.it/" },
         { id: 1, name: "Marbec", link: "https://www.marbec.it/" },
@@ -31,7 +32,7 @@ export default {
         {
           id: 0,
           type: "Pulizie",
-          title: "Pulizie di condomini",
+          title: "Pulizia di condomini",
           description:
             "Soluzione completa per mantenere gli spazi comuni dei condomini puliti, ordinati e accoglienti",
           page: "condomini",
@@ -39,7 +40,7 @@ export default {
         {
           id: 1,
           type: "Pulizie",
-          title: "Pulizie di uffici",
+          title: "Pulizia di uffici",
           description:
             "Il nostro servizio di pulizie di uffici è progettato per mantenere i tuoi spazi di lavoro impeccabili, organizzati e piacevoli",
           page: "uffici",
@@ -47,7 +48,7 @@ export default {
         {
           id: 2,
           type: "Pulizie",
-          title: "Pulizie professionali",
+          title: "Pulizia di negozi",
           description:
             "Con il nostro servizio di pulizia professionale per negozi, puoi contare su standard elevati e un attenzione impeccabile ai dettagli",
           page: "negozi",
@@ -62,9 +63,9 @@ export default {
         },
       ],
       contacts: [
-        { id: 0, title: 'Telefono', icon: 'mdi-phone', value: 'tel:+393484231742', text: '348 42 31 742'},
-        { id: 1, title: 'Email', icon: 'mdi-email-arrow-right', value: 'mailto:adv.puliservicesrls@gmail.com', text: 'adv.puliservicesrls@gmail.com'},
-        { id: 2, title: 'Indirizzo', icon: 'mdi-routes', value: 'https://www.google.com/maps/place/Puliservice+di+Rosati+Luciana+S.r.l.s/@40.6452666,15.795948,13.83z/data=!4m6!3m5!1s0x1338e3f913de7987:0x8cd71f33b2e9ab4e!8m2!3d40.641837!4d15.802794!16s%2Fg%2F11kpsn4z6d?entry=tts&shorturl=1', text: 'Piazzale Budapest 9, 85100, PZ'},
+        { id: 0, title: 'Telefono', icon: 'mdi-phone', value: 'tel:+393484231742', text: '348 42 31 742' },
+        { id: 1, title: 'Email', icon: 'mdi-email-arrow-right', value: 'mailto:adv.puliservicesrls@gmail.com', text: 'adv.puliservicesrls@gmail.com' },
+        { id: 2, title: 'Indirizzo', icon: 'mdi-routes', value: 'https://www.google.com/maps/place/Puliservice+di+Rosati+Luciana+S.r.l.s/@40.6452666,15.795948,13.83z/data=!4m6!3m5!1s0x1338e3f913de7987:0x8cd71f33b2e9ab4e!8m2!3d40.641837!4d15.802794!16s%2Fg%2F11kpsn4z6d?entry=tts&shorturl=1', text: 'Piazzale Budapest 9, 85100, PZ' },
       ],
     };
   },
@@ -77,41 +78,46 @@ export default {
 </script>
 
 <template>
+  <v-alert v-model="alert" border="start" variant="tonal"
+    class="bg-light-blue top-responsive hidden-display d-flex flex-row align-center justify-center">
+    <v-btn class="text-caption" rounded="xl" variant="text" role="link" :href="contact.value" target="_blank"
+      :prepend-icon="contact.icon" v-for="contact in contacts" :key="contact.id">
+      <span class="text-light-blue-darken-4">{{ contact.title }}:</span>
+      <a :href="contact.value" style="text-decoration: none;" target="_blank" class="text-white">{{ contact.text }}</a>
+    </v-btn>
+  </v-alert>
 
-  <!--CONTACT-->
-
-  <div class="px-4 py-2 bg-light-blue text-center w-100 top-responsive hidden-display">
-    <span v-for="contact in contacts" :key="contact.id">
-       <v-btn class="text-caption" rounded="xl" variant="text" role="link" :href="contact.value" target="_blank" :prepend-icon="contact.icon">{{ contact.title }}: <a :href="contact.value" style="text-decoration: none;" target="_blank" class="text-light-blue-darken-4">{{ contact.text }}</a></v-btn>
-    </span>
-  </div>
   <TopNav />
 
-  <!-- INTRO -->
+  <v-container fluid class="d-flex justify-center header-align-center">
 
-  <v-parallax src="/src/assets/cleaning.webp" height="600" alt="Immagine in background">
-    <div class="d-flex flex-column fill-height justify-center text-white">
-      <div class="text-center mt-5 mb-3 mr-5 ml-5">
-        <h1 class="title-responsive">
-          Impresa di pulizie a Potenza e provincia
-        </h1>
+    <v-sheet>
+      <div class="d-flex flex-column fill-height justify-center text-light-blue">
+        <div class="text-center mt-5 mb-3 mr-5 ml-5">
+          <h1 class="title-responsive text-start">
+            Impresa di pulizie a Potenza e provincia
+          </h1>
+        </div>
+        <div class="ma-5 text-start">
+          <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
+            Specialisti in pulizie di condomini, uffici pubblici e privati a
+            Potenza e provincia
+          </p>
+        </div>
+        <div class="mb-5 mt-5 ml-2 text-start button-responsive">
+          <v-btn prepend-icon="mdi-calendar-badge" rounded="xl" color="whithe" variant="outlined"
+            v-on:click="routerPush('preventivo')" size="large">
+            <b>Preventivo gratuito</b>
+          </v-btn>
+        </div>
       </div>
-      <div class="ma-5 text-center">
-        <p class="subtitle-responsive font-weight-bold">
-          Specialisti in pulizie di condomini, uffici pubblici e privati a
-          Potenza e provincia
-        </p>
-      </div>
-      <div class="mb-5 mt-5 ml-2 text-center button-responsive">
-        <v-btn prepend-icon="mdi-calendar-badge" rounded="xl" color="whithe" variant="outlined"
-          v-on:click="routerPush('preventivo')" size="large">
-          <b>Preventivo gratuito</b>
-        </v-btn>
-      </div>
-    </div>
-  </v-parallax>
+    </v-sheet>
 
-  <!-- CAROUSEL -->
+    <v-sheet>
+      <v-img max-width="800" max-height="500" src="../assets/illustration/home_illustration.svg"></v-img>
+    </v-sheet>
+
+  </v-container>
 
   <v-carousel cycle height="100" hide-delimiters :show-arrows="false">
     <v-carousel-item v-for="slide in slides" :key="slide.id" cover>
@@ -135,8 +141,6 @@ export default {
   </v-carousel>
 
   <v-spacer></v-spacer>
-
-  <!-- STORY -->
 
   <v-container class="mt-5">
     <h1 class="title-responsive text-start text-black">La nostra Storia</h1>
@@ -171,8 +175,8 @@ export default {
           senza compromettere la qualità dei nostri servizi.
         </p>
         <div class="button-right">
-          <v-btn color="light-blue-darken-4" variant="outlined" rounded="xl" class="pl-3"
-            append-icon="mdi-arrow-right-thin" v-on:click="routerPush('chiSiamo')">Leggi
+          <v-btn color="light-blue" variant="outlined" rounded="xl" class="pl-3" append-icon="mdi-arrow-right-thin"
+            v-on:click="routerPush('chiSiamo')">Leggi
             di pi&ugrave;</v-btn>
         </div>
       </v-col>
@@ -185,13 +189,9 @@ export default {
 
   <v-spacer></v-spacer>
 
-
-  <!--GOOGLE REVIEW-->
-  <GoogleReview />
+  <Review />
 
   <v-spacer></v-spacer>
-
-  <!--SERVICES-->
 
   <v-container class="mt-5">
     <h1 class="title-responsive text-start text-black">I nostri Servizi</h1>
@@ -201,25 +201,28 @@ export default {
   </v-container>
 
   <v-container class="d-flex justify-space-evently align-center flex-wrap">
-    <v-card class="mx-auto mt-5 mb-5" max-width="600" color="light-blue-darken-4" v-for="service in services"
+    <v-card class="mx-auto mt-5 mb-5" max-width="600" variant="flat" color="white" v-for="service in services"
       :key="service.id">
       <span v-if="service.id == 0">
-        <v-img src="/src/assets/pulizieCondomini.webp" height="300px" width="600px" rounded="xl" cover></v-img>
+        <v-img src="../assets/illustration/bestPlace_illustration.svg" height="300px" width="600px" rounded="xl"
+          cover></v-img>
       </span>
       <span v-if="service.id == 1">
-        <v-img src="/src/assets/pulizieUffici.webp" height="300px" width="600px" rounded="xl" cover></v-img>
+        <v-img src="../assets/illustration/office_illustration.svg" height="300px" width="400px" rounded="xl"
+          cover></v-img>
       </span>
       <span v-if="service.id == 2">
-        <v-img src="/src/assets/pulizieProfessionali.jpg" height="300px" width="600px" rounded="xl" cover></v-img>
+        <v-img src="../assets/illustration/shop_illustration.svg" height="300px" width="400px" rounded="xl" cover></v-img>
       </span>
       <span v-if="service.id == 3">
-        <v-img src="/src/assets/moves.webp" height="300px" width="600px" rounded="xl" cover></v-img>
+        <v-img src="../assets/illustration/delivery_illustration.svg" height="300px" width="600px" rounded="xl"
+          cover></v-img>
       </span>
 
       <v-card-item>
-        <h6 class="text-light-blue-darken-5">{{ service.type }}</h6>
+        <h6 class="text-light-blue-darken-4">{{ service.type }}</h6>
         <h5 class="text-light-blue">{{ service.title }}</h5>
-        <p class="text-white">{{ service.description }}</p>
+        <p class="text-black">{{ service.description }}</p>
       </v-card-item>
 
       <v-card-actions>
@@ -235,15 +238,11 @@ export default {
 
   <v-spacer></v-spacer>
 
-  <!-- OVERVIEW -->
-
   <v-container>
     <CarouselText />
   </v-container>
 
   <v-spacer></v-spacer>
-
-  <!-- MISSION -->
 
   <v-container class="mt-3">
     <h1 class="title-responsive">La nostra Mission</h1>
@@ -295,12 +294,8 @@ export default {
     </p>
   </v-container>
 
-  <!--FACEBOOK REVIEW-->
-  <FacebookReview />
-
   <v-spacer></v-spacer>
 
-  <!--CALL TO ACTION-->
   <CallToAction />
 
   <v-spacer></v-spacer>
@@ -309,51 +304,9 @@ export default {
 </template>
 
 <script setup>
-import GoogleReview from '@/components/GoogleReview.vue';
-import FacebookReview from '@/components/FacebookReview.vue'
+import Review from '@/components/FacebookAndGoogleReview.vue'
 import CarouselText from '@/components/CarouselText.vue'
 import TopNav from "@/components/TopNav.vue";
 import Bottom from "@/components/BottomFooter.vue";
 import CallToAction from "@/components/CallToAction.vue";
 </script>
-
-<style scoped>
-@media screen and (max-width: 281px) {
-  .hidden-display {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 966px) {
-  .title-responsive {
-    font-size: 3em !important;
-    text-align: start;
-    line-height: normal;
-  }
-
-  .subtitle-responsive {
-    font-size: 2em !important;
-    text-align: start;
-  }
-
-  .button-right {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-  }
-
-  .button-responsive {
-    display: flex;
-    text-align: start;
-    align-items: start;
-    justify-items: start;
-  }
-
-  .top-responsive {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: start;
-  }
-}
-</style>

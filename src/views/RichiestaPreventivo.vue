@@ -173,37 +173,41 @@ export default {
 
     // Notifica via email la nuova richiesta di preventivo (Emailjs)
     sendEmail() {
-        emailjs.sendForm(this.serviceID, this.templateID, 'form', this.userID, {
-          name: this.name,
-          email: this.email,
-          phone: this.phone,
-          message: this.request
-        });
+      emailjs.sendForm(this.serviceID, this.templateID, 'form', this.userID, {
+        name: this.name,
+        email: this.email,
+        phone: this.phone,
+        message: this.request
+      });
     },
   }
 }
 </script>
 
 <template>
+
   <TopNav />
 
-  <v-parallax src="../assets/backgroundPreventivo.webp" height="600" alt="Immagine in background">
-    <div class="d-flex flex-column fill-height justify-center text-white">
-
-      <div class="text-center mt-5 mb-3 mr-5 ml-5 text-light-blue">
-        <h1 class="title-responsive">
-          Richiedi subito il tuo preventivo gratuito
-        </h1>
+  <v-container fluid class="d-flex justify-center header-align-center-reverse">
+    <v-sheet>
+      <v-img max-width="800" max-height="500" src="../assets/illustration/preventive_illustration.svg"></v-img>
+    </v-sheet>
+    <v-sheet>
+      <div class="d-flex flex-column fill-height justify-center text-white">
+        <div class="text-start mt-5 mb-3 mr-5 ml-5 text-light-blue">
+          <h1 class="title-responsive">
+            Richiedi subito il tuo preventivo gratuito
+          </h1>
+        </div>
+        <div class="ma-5 text-start">
+          <p class="subtitle-responsive font-weight-bold text-light-blue-darken-4">
+            Compila i campi sottostanti indicando la tua richiesta.
+            Saremo lieti di ricontattarti per offrirti la nostra migliore proposta
+          </p>
+        </div>
       </div>
-      <div class="ma-5 text-center">
-        <p class="subtitle-responsive font-weight-bold text-light-blue-darken-4">
-          Compila i campi sottostanti indicando la tua richiesta.
-          Saremo lieti di ricontattarti per offrirti la nostra migliore proposta
-        </p>
-      </div>
-
-    </div>
-  </v-parallax>
+    </v-sheet>
+  </v-container>
 
   <v-container>
     <div class="ml-3 mr-3 mt-3 mb-3">
@@ -262,27 +266,8 @@ export default {
   </v-container>
 
   <Bottom />
+
 </template>
-
-<style scoped>
-@media screen and (max-width: 966px) {
-  .title-responsive {
-    font-size: 3em !important;
-    text-align: start;
-    line-height: normal;
-  }
-
-  .subtitle-responsive {
-    font-size: 2em !important;
-    text-align: start;
-  }
-
-  #mobile-button-right {
-    display: flex;
-    justify-content: end;
-  }
-}
-</style>
 
 <script setup>
 import TopNav from '@/components/TopNav.vue'

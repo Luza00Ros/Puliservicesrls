@@ -74,7 +74,6 @@ export default {
 }
 </script>
 
-  <!--FACEBOOK REVIEW LAYOUT-->
 <template>
   <v-container>
     <div class="d-flex flex-row flex-wrap align-center justify-start" id="align-card">
@@ -147,28 +146,3 @@ export default {
     </div>
   </v-container>
 </template>
-
-<style>
-@media screen and (max-width: 966px) {
-  #align-card {
-    display: flex;
-    justify-content: center !important;
-  }
-}
-
-.link {
-  color: #1877f2;
-}
-
-.link:after {
-  color: aliceblue;
-}
-
-.icon-color-button i.v-icon.v-icon {
-  color: #1877f2;
-}
-
-.icon-color-stars i.v-icon.v-icon {
-  color: #ffc107 !important;
-}
-</style>

@@ -30,7 +30,7 @@ export default {
 
       <template v-slot:title>
         <div class="text-h6 font-weight-regular justify-space-between">
-          <h6 class="text-light-blue-darken-4">{{ currentTitle }}</h6>
+          <h6 class="text-light-blue">{{ currentTitle }}</h6>
         </div>
       </template>
 
@@ -63,11 +63,11 @@ export default {
       </v-window>
 
       <v-card-actions>
-        <v-btn v-if="step > 1" color="light-blue-darken-4" rounded="xl" variant="outlined" @click="step--"
+        <v-btn v-if="step > 1" color="light-blue" rounded="xl" variant="outlined" @click="step--"
           icon="mdi-arrow-left-thin">
         </v-btn>
         <v-spacer></v-spacer>
-        <v-btn v-if="step < 3" color="light-blue-darken-4" variant="outlined" rounded="xl" @click="step++"
+        <v-btn v-if="step < 3" color="light-blue" variant="outlined" rounded="xl" @click="step++"
           icon="mdi-arrow-right-thin">
         </v-btn>
       </v-card-actions>
@@ -78,9 +78,3 @@ export default {
 <script setup>
 import GoogleCalendar from './GoogleCalendar.vue';
 </script>
-
-<style>
-#icon-color i.v-icon.v-icon {
-  color: #01579B;
-}
-</style>

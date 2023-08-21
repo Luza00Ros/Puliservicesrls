@@ -34,7 +34,7 @@ export default {
             <strong>{{ item.title }}</strong>
           </div>
           <div>
-            <a class="link" target="_blank" :href="item.value">{{ item.text }}</a>
+            <a class="contact-link" target="_blank" :href="item.value">{{ item.text }}</a>
           </div>
         </v-timeline-item>
 
@@ -63,39 +63,3 @@ export default {
 <script setup>
 import ContactForm from './ContactForm.vue';
 </script>
-
-<style>
-@media screen and (max-width: 966px) {
-  #social {
-    display: flex !important;
-    flex-direction: row !important;
-  }
-
-  .mar {
-    margin-top: 3px !important;
-  }
-}
-
-#circle {
-  width: 80px;
-  height: 80px;
-  background: #01579B;
-  border-radius: 50%;
-  position: relative;
-  left: 10px;
-  top: 20px;
-}
-
-.transparent {
-  color: rgba(0, 0, 0, 0);
-}
-
-.link {
-  text-decoration: none;
-  color: #01579B;
-}
-
-.link:hover {
-  color: #ffff;
-  text-decoration: underline;
-}</style>

@@ -86,30 +86,10 @@ export default {
     </v-sheet>
 
   </v-container>
+
   <div class="px-4 py-2 bg-light-blue text-center w-100">
     &copy; {{ new Date().getFullYear() }} <strong>Puliservice Srls di Luciana Rosati</strong> | Sede legale: Piazzale Budapest 9, 85100, PZ | P.IVA: 02082240769 | URI: PZ | REA: 205849
   </div>
 </template>
 
-<style scoped>
-@media screen and (max-width: 900px) {
-  #responsive-aligment {
-    display: flex !important;
-    flex-wrap: wrap-reverse !important;
-  }
-}
 
-.v-expansion-panel-text__wrapper {
-  color: #03A9F4;
-}
-
-#link {
-  text-decoration: none;
-  color: #ffff;
-}
-
-#link:hover {
-  color: #03A9F4;
-  text-decoration: underline;
-}
-</style>

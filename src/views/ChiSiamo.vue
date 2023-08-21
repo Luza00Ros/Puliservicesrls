@@ -3,9 +3,9 @@ export default {
   data: () => ({
     step: 1,
     cards: [
-      { id: 1, title: 'Title 1', subtitle: 'Subtitle 1', text: 'lorem ipsum dolor... 1', image: 'src/assets/cleaningOffice.webp' },
-      { id: 2, title: 'Title 2', subtitle: 'Subtitle 2', text: 'lorem ipsum dolor... 2', image: 'src/assets/cleaninghome.webp' },
-      { id: 3, title: 'Title 3', subtitle: 'Subtitle 3', text: 'lorem ipsum dolor... 3', image: 'src/assets/cleaningOffice.webp' }
+      { id: 1, title: 'Title 1', subtitle: 'Subtitle 1', text: 'lorem ipsum dolor... 1', image: 'src/assets/illustration/appartment_illustration.svg' },
+      { id: 2, title: 'Title 2', subtitle: 'Subtitle 2', text: 'lorem ipsum dolor... 2', image: 'src/assets/illustration/appartment_illustration.svg' },
+      { id: 3, title: 'Title 3', subtitle: 'Subtitle 3', text: 'lorem ipsum dolor... 3', image: 'src/assets/illustration/appartment_illustration.svg' }
     ]
   }),
 
@@ -55,27 +55,30 @@ export default {
 </script>
 
 <template>
+
   <TopNav />
 
-  <!--INTRO-->
-  <v-parallax src="/src/assets/story.webp" height="600" alt="Immagine in background">
-    <div class="d-flex flex-column fill-height justify-center text-white">
-      <div class="text-center text-light-blue mt-5 mb-3 mr-5 ml-5">
-        <h1 class="title-responsive">
-          La nostra Storia
-        </h1>
+  <v-container fluid class="d-flex justify-center header-align-center-reverse">
+    <v-sheet>
+      <v-img max-width="800" max-height="500" src="../assets/illustration/story_illustration.svg"></v-img>
+    </v-sheet>
+    <v-sheet>
+      <div class="d-flex flex-column fill-height justify-center text-white">
+        <div class="text-start text-light-blue mt-5 mb-3 mr-5 ml-5">
+          <h1 class="title-responsive">
+            La nostra Storia
+          </h1>
+        </div>
+        <div class="ma-5 text-start">
+          <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
+            Una storia che risale a più di 20 anni f&agrave;
+          </p>
+        </div>
       </div>
-      <div class="ma-5 text-center">
-        <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
-          Una storia che risale a più di 20 anni f&agrave;
-        </p>
-      </div>
-    </div>
-  </v-parallax>
+    </v-sheet>
+  </v-container>
 
   <v-spacer></v-spacer>
-
-  <!-- CAROUSEL -->
 
   <v-container>
     <div class="d-flex flex-row flex-wrap align-center justify-center">
@@ -85,12 +88,12 @@ export default {
 
         <template v-slot:title>
           <div class="text-h6 font-weight-regular justify-start">
-            <h6 class="text-light-blue-darken-4">{{ currentTitle }}</h6>
+            <h6 class="text-light-blue">{{ currentTitle }}</h6>
           </div>
         </template>
 
         <template v-slot:subtitle>
-          <div class="text-h6 font-weight-regular justify-start">
+          <div class="text-h6 font-weight-regular justify-start text-light-blue-darken-4">
             {{ currentSubtitle }}
           </div>
         </template>
@@ -129,8 +132,6 @@ export default {
   </v-container>
 
   <v-spacer />
-
-  <!--WHO IS LUCIANA?-->
 
   <v-container>
     <h1 class="text-start title-responsive">Chi &egrave; Luciana?</h1>
@@ -175,8 +176,8 @@ export default {
       </v-col>
 
       <v-col class="d-flex justify-center" cols="auto" md="4" style="margin-bottom: 0; padding-bottom: 0;">
-        <v-card color="light-blue-darken-4">
-          <div id="circle"></div>
+        <v-card color="light-blue-darken-4" variant="flat">
+          <div id="blue-circle"></div>
           <v-img src="/src/assets/luciana.png" width="100%" max-width="400px" aspect-ratio="16/9" cover></v-img>
         </v-card>
       </v-col>
@@ -184,8 +185,6 @@ export default {
   </v-container>
 
   <v-spacer></v-spacer>
-
-  <!-- VALUES -->
 
   <v-container class="mt-3">
     <h1 class="title-responsive">I nostri valori</h1>
@@ -238,13 +237,9 @@ export default {
 
   <v-spacer></v-spacer>
 
-  <!--CALL TO ACTION-->
-
   <CallToAction />
 
   <v-spacer></v-spacer>
-
-  <!--FOOTER-->
 
   <Bottom />
 </template>
@@ -255,32 +250,4 @@ import Bottom from "@/components/BottomFooter.vue";
 import CallToAction from "@/components/CallToAction.vue";
 </script>
 
-<style scoped>
-@media screen and (max-width: 966px) {
 
-  .title-responsive {
-    font-size: 3em !important;
-    text-align: start;
-    line-height: normal;
-  }
-
-  .subtitle-responsive {
-    font-size: 2em !important;
-    text-align: start;
-  }
-
-  .card-width {
-    max-width: 344px !important;
-  }
-}
-
-#circle {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  background-color: #03A9F4;
-  left: -30px;
-  top: -30px;
-}
-</style>
