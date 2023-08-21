@@ -145,15 +145,15 @@ export default {
 
         <div class="d-flex flex-column justify-start align-end">
 
-          <v-btn class="rounded-pill mt-5 text-light-blue-darken-4" :prepend-icon="home" variant="text"
+          <v-btn class="rounded-pill mt-2 text-light-blue-darken-4" :prepend-icon="home" variant="text"
             v-on:click="routerPush('/')"><span class="text-white"><strong>Home</strong></span></v-btn>
 
-          <v-btn class="rounded-pill mt-5 text-light-blue-darken-4" :prepend-icon="chisiamo" variant="text"
+          <v-btn class="rounded-pill mt-2 text-light-blue-darken-4" :prepend-icon="chisiamo" variant="text"
             v-on:click="routerPush('chisiamo')"><span class="text-white"><strong>Chi siamo</strong></span></v-btn>
 
           <v-menu transition="slide-y-transition">
             <template v-slot:activator="{ props }">
-              <v-btn class="rounded-pill mt-5 text-light-blue-darken-4" variant="text" :prepend-icon="clean"
+              <v-btn class="rounded-pill mt-2 text-light-blue-darken-4" variant="text" :prepend-icon="clean"
                 v-on:click="arrowZero = !arrowZero" :append-icon="changeArrowZero()" v-bind="props">
                 <span class="text-white"><strong>Pulizie</strong></span>
               </v-btn>
@@ -173,7 +173,7 @@ export default {
 
           <v-menu transition="slide-y-transition">
             <template v-slot:activator="{ props }">
-              <v-btn class="rounded-pill mt-5 text-light-blue-darken-4" variant="text" :prepend-icon="service"
+              <v-btn class="rounded-pill mt-2 text-light-blue-darken-4" variant="text" :prepend-icon="service"
                 v-on:click="arrowOne = !arrowOne" :append-icon="changeArrowOne()" v-bind="props">
                 <span class="text-white"><strong>Servizi</strong></span>
               </v-btn>
@@ -191,17 +191,17 @@ export default {
             </v-list>
           </v-menu>
 
-          <v-btn class="rounded-pill mt-5 mb-5 text-light-blue-darken-4" variant="text" :prepend-icon="contacts"
+          <v-btn class="rounded-pill mt-2 mb-5 text-light-blue-darken-4" variant="text" :prepend-icon="contacts"
             v-on:click="routerPush('contatti')"><span class="text-white"><strong>Contatti</strong></span></v-btn>
 
           <hr style="padding-right: 100%;">
 
-          <v-btn class='rounded-pill mt-3 text-light-blue-darken-4' :prepend-icon='badge' variant="text"
+          <v-btn class='rounded-pill mt-5 text-light-blue-darken-4' :prepend-icon='badge' variant="text"
             v-on:click="routerPush('preventivo')">
             <span class="text-white"><strong>Preventivo gratuito</strong></span>
           </v-btn>
 
-          <v-btn class='rounded-pill mt-3 text-light-blue-darken-4' :prepend-icon='advice' variant="text"
+          <v-btn class='rounded-pill mt-2 text-light-blue-darken-4' :prepend-icon='advice' variant="text"
             role="link" :href="calendarReference" target="_blank">
             <span class="text-white"><strong>Consulenza gratuita</strong></span>
           </v-btn>
