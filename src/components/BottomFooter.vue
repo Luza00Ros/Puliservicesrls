@@ -47,7 +47,7 @@ export default {
         {
           id: 2,
           request:
-            "Se stipulo un contratto annuale per il servizio di pulizia durante il mese estivo quando l'azienda è chiusa venite lo stesso a pulire i locali? ",
+            "Se stipulo un contratto annuale per il servizio di pulizia durante i mesi estivi quando l'azienda è chiusa venite lo stesso a pulire i locali? ",
           answer:
             "Se il contratto stipulato non prevede le pulizie nel periodo estivo il servizio sarà sospeso, in caso contrario la pulizia sarà effettuata regolarmente",
         },

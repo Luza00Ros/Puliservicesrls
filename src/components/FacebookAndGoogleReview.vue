@@ -6,7 +6,7 @@
     </h2>
   </v-container>
   <v-spacer></v-spacer>
-  <v-container class="d-flex flex-row flex-container">
+  <v-container class="d-flex flex-row flex-container align-center justify-center">
     <v-sheet>
       <FacebookReview />
     </v-sheet>

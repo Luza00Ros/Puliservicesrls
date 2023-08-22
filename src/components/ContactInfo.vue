@@ -24,7 +24,7 @@ export default {
 
     <v-sheet class="bg-transparent">
       <div class="mb-2">
-        <h6>Informazioni di contatto</h6>
+        <h6 class="text-light-blue-darken-4">Informazioni di contatto</h6>
       </div>
       <v-timeline side="end">
 
