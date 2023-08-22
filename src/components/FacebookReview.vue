@@ -4,8 +4,8 @@ export default {
     return {
       step: 1,
       reviewers: [
-        { id: 1, name: 'Federica', img: "src/assets/review/fb/fb_user0.jpg", link: 'https://m.facebook.com/story.php?story_fbid=pfbid0w9hiviPafsagaSx1pgcSXa3d5BMQ3sUubSXbZQCicDW5LPtoTdwdDGahoQBg7Hul&id=100001516460545', date: '24 marzo 2020', text: "Impresa professionale e competente, altamente consigliata!👆🏼", stars: 5 },
-        { id: 2, name: 'Pasquale', img: "src/assets/review/fb/fb_user1.jpg", link: 'https://m.facebook.com/story.php?story_fbid=pfbid02wusnYpSZZPogRA6wPCe9m5nVbmScTfNEyYvugCxdVrGqxgasG8kbQRuY3fGmyPffl&id=1634642801', date: '4 maggio 2020', text: "serietà nel lavoro che svolge", stars: 5 },
+        { id: 1, name: 'Federica', img: "https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/fb_user0.jpg?alt=media&token=74e00704-c89d-4ecc-87e4-06683467c9c1", link: 'https://m.facebook.com/story.php?story_fbid=pfbid0w9hiviPafsagaSx1pgcSXa3d5BMQ3sUubSXbZQCicDW5LPtoTdwdDGahoQBg7Hul&id=100001516460545', date: '24 marzo 2020', text: "Impresa professionale e competente, altamente consigliata!👆🏼", stars: 5 },
+        { id: 2, name: 'Pasquale', img: "https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/fb_user1.jpg?alt=media&token=3300d766-c0f7-49b0-971a-6d084af6848a", link: 'https://m.facebook.com/story.php?story_fbid=pfbid02wusnYpSZZPogRA6wPCe9m5nVbmScTfNEyYvugCxdVrGqxgasG8kbQRuY3fGmyPffl&id=1634642801', date: '4 maggio 2020', text: "serietà nel lavoro che svolge", stars: 5 },
       ],
     }
   },

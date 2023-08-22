@@ -4,7 +4,7 @@ export default {
     return {
       step: 1,
       reviewers: [
-        { id: 1, name: 'Davide', img: "src/assets/review/maps/maps_user0.png", link: 'https://goo.gl/maps/wBn1juZZXNec75mP9', date: '11 luglio 2023', text: "Mi hanno fornito un servizio eccellente e di alta qualità. Ho avuto il piacere di usufruire dei loro servizi e sono rimasto estremamente soddisfatto dell'esperienza. Consiglio vivamente Puliservice SRLS a chiunque abbia bisogno di servizi di pulizia affidabili e di qualità.", stars: 5 },
+        { id: 1, name: 'Davide', img: "https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/maps_user0.png?alt=media&token=4c896ed2-8892-4e9c-915e-25b38301f8e8", link: 'https://goo.gl/maps/wBn1juZZXNec75mP9', date: '11 luglio 2023', text: "Mi hanno fornito un servizio eccellente e di alta qualità. Ho avuto il piacere di usufruire dei loro servizi e sono rimasto estremamente soddisfatto dell'esperienza. Consiglio vivamente Puliservice SRLS a chiunque abbia bisogno di servizi di pulizia affidabili e di qualità.", stars: 5 },
       ],
     }
   },
