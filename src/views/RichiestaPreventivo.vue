@@ -215,14 +215,14 @@ export default {
 
         <v-text-field :rules="firstNameRules" density="compact" variant="underlined" prepend-inner-icon="mdi-account"
           label="Nome o Azienda" color="light-blue" counter clearable aria-required="true" type="text" name="name"
-          v-model="name" bg-color="transparent" class="mt-5 mb-5">
+          v-model="name" bg-color="transparent" class="mt-5 mb-5" autofocus>
         </v-text-field>
 
         <v-text-field :rules="rules" density="compact" prepend-inner-icon="mdi-email" label="E-mail" variant="underlined"
           color="light-blue" class="mt-5 mb-5" clearable type="email" name="email" v-model="email">
         </v-text-field>
 
-        <v-text-field type="text" label="Telefono" :rules="phoneRules" name="phone" class="mt-5 mb-5"
+        <v-text-field type="tel" label="Telefono" :rules="phoneRules" name="phone" class="mt-5 mb-5"
           prepend-inner-icon="mdi-cellphone" density="compact" variant="underlined" color="light-blue" v-model="phone"
           clearable>
 
