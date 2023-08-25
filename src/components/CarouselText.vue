@@ -26,11 +26,11 @@ export default {
 
 <template>
   <div class="d-flex flex-row flex-wrap align-center justify-center">
-    <v-card id="icon-color" :prepend-icon="currentIcon" variant="flat">
+    <v-card id="icon-color" :prepend-icon="currentIcon" variant="flat" height="100%">
 
       <template v-slot:title>
         <div class="text-h6 font-weight-regular justify-space-between">
-          <h5 class="text-light-blue-darken-4">{{ currentTitle }}</h5>
+          <h6 class="text-light-blue">{{ currentTitle }}</h6>
         </div>
       </template>
 
@@ -53,20 +53,21 @@ export default {
 
         <v-window-item :value="3">
           <v-card-text>
-            <p>Il nostro <span class="text-light-blue-darken-4">servizio di gestione delle prenotazioni</span> in calendario è progettato per semplificare e ottimizzare
+            <p class="mb-5">Il nostro <span class="text-light-blue-darken-4">servizio di gestione delle prenotazioni</span> in calendario è progettato per semplificare e ottimizzare
               il processo di programmazione e pianificazione delle attività. Sia che tu sia un professionista autonomo, un
               azienda o un organizzazione, offriamo un sistema completo e <span class="text-light-blue-darken-4">user-friendly</span> per gestire le tue prenotazioni in
               modo efficiente.</p>
+              <GoogleCalendar />
           </v-card-text>
         </v-window-item>
       </v-window>
 
       <v-card-actions>
-        <v-btn v-if="step > 1" color="light-blue-darken-4" rounded="xl" variant="outlined" @click="step--"
+        <v-btn v-if="step > 1" color="light-blue" rounded="xl" variant="outlined" @click="step--"
           icon="mdi-arrow-left-thin">
         </v-btn>
         <v-spacer></v-spacer>
-        <v-btn v-if="step < 3" color="light-blue-darken-4" variant="outlined" rounded="xl" @click="step++"
+        <v-btn v-if="step < 3" color="light-blue" variant="outlined" rounded="xl" @click="step++"
           icon="mdi-arrow-right-thin">
         </v-btn>
       </v-card-actions>
@@ -74,8 +75,6 @@ export default {
   </div>
 </template>
 
-<style>
-#icon-color i.v-icon.v-icon {
-  color: #01579B;
-}
-</style>
+<script setup>
+import GoogleCalendar from './GoogleCalendar.vue';
+</script>

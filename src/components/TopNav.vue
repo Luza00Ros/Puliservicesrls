@@ -5,6 +5,7 @@ export default {
       drawer: false,
       arrowZero: false,
       arrowOne: false,
+      calendarReference: "https://calendar.app.google/TnEMSnYqn94RzMvT6",
       pulizie: [
         { id: 0, title: 'Uffici', route: 'uffici', icon: 'mdi-office-building' },
         { id: 1, title: 'Condomini', route: 'condomini', icon: 'mdi-warehouse' },
@@ -13,12 +14,13 @@ export default {
       ],
       servizi: [
         { id: 0, title: 'Giardinaggio', route: 'giardinaggio', icon: 'mdi-shovel' },
-        { id: 1, title: 'Piccole manutenzioni', route: 'manutenzioni', icon: 'mdi-account-hard-hat-outline' },
+        { id: 1, title: 'Manutenzione generale', route: 'manutenzioni', icon: 'mdi-account-hard-hat-outline' },
         { id: 2, title: 'Facchinaggio', route: 'traslochi', icon: 'mdi-human-dolly' },
       ],
       menuClosed: 'mdi-menu',
       menuOpen: 'mdi-menu-open',
       badge: 'mdi-calendar-badge',
+      advice: 'mdi-laptop-account',
       arrowDown: 'mdi-chevron-double-down',
       arrowUp: 'mdi-chevron-double-up',
       home: 'mdi-home',
@@ -67,7 +69,6 @@ export default {
 </script>
 
 <template v-slot:header>
-  <!-- APPBAR -->
   <v-app-bar :absolute='false' :flat='true' color='white' class='d-flex justify-center align-center rounded-b-xl'>
 
     <v-img v-on:click="scrollUp" src="/src/assets/puliservice.webp" width="200" height="50" class="pa-1 ma-1"
@@ -133,39 +134,37 @@ export default {
 
   </v-app-bar>
 
-  <!-- V-NAVIGATION-DRAWER -->
   <v-navigation-drawer temporary v-model="drawer" location="right" v-on:click.stop="drawer = !drawer"
-    class="rounded-s-xl mt-5 h-50 bg-light-blue-darken-4" aria-label="menu">
+    class="rounded-s-xl mt-1 h-50 bg-light-blue" aria-label="menu">
 
-    <!--SCROLL UP-->
     <span v-on:load="onTop"></span>
 
     <v-list nav aria-label="menu-item">
-      <v-tabs direction="vertical" color="light-blue">
+      <!-- background color -->
+      <v-tabs direction="vertical">
 
         <div class="d-flex flex-column justify-start align-end">
 
+          <v-btn class="rounded-pill mt-2 text-light-blue-darken-4" :prepend-icon="home" variant="text"
+            v-on:click="routerPush('/')"><span class="text-white"><strong>Home</strong></span></v-btn>
 
-          <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="home" variant="text"
-            v-on:click="routerPush('/')"><span class="text-white">Home</span></v-btn>
+          <v-btn class="rounded-pill mt-2 text-light-blue-darken-4" :prepend-icon="chisiamo" variant="text"
+            v-on:click="routerPush('chisiamo')"><span class="text-white"><strong>Chi siamo</strong></span></v-btn>
 
-            <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="chisiamo" variant="text"
-            v-on:click="routerPush('chisiamo')"><span class="text-white">Chi siamo</span></v-btn>
-
-            <v-menu transition="slide-y-transition">
+          <v-menu transition="slide-y-transition">
             <template v-slot:activator="{ props }">
-              <v-btn class="rounded-pill mt-2 text-light-blue" variant="text" :prepend-icon="clean"
+              <v-btn class="rounded-pill mt-2 text-light-blue-darken-4" variant="text" :prepend-icon="clean"
                 v-on:click="arrowZero = !arrowZero" :append-icon="changeArrowZero()" v-bind="props">
-                <span class="text-white">Pulizie</span>
+                <span class="text-white"><strong>Pulizie</strong></span>
               </v-btn>
             </template>
 
-            <v-list class="rounded-lg bg-light-blue-darken-4">
+            <v-list class="rounded-lg bg-light-blue">
               <v-list-item v-for="pulizia in pulizie" :key="pulizia.id">
                 <v-list-item-title class="d-flex flex-column">
-                  <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="pulizia.icon"
-                    variant="text" stacked v-on:click="routerPush(pulizia.route)">
-                    <span class="text-white">{{pulizia.title}}</span>
+                  <v-btn class="rounded-pill mt-2 text-light-blue-darken-4" :prepend-icon="pulizia.icon" variant="text" stacked
+                    v-on:click="routerPush(pulizia.route)">
+                    <span class="text-white"><strong>{{ pulizia.title }}</strong></span>
                   </v-btn>
                 </v-list-item-title>
               </v-list-item>
@@ -174,32 +173,38 @@ export default {
 
           <v-menu transition="slide-y-transition">
             <template v-slot:activator="{ props }">
-              <v-btn class="rounded-pill mt-2 text-light-blue" variant="text" :prepend-icon="service"
+              <v-btn class="rounded-pill mt-2 text-light-blue-darken-4" variant="text" :prepend-icon="service"
                 v-on:click="arrowOne = !arrowOne" :append-icon="changeArrowOne()" v-bind="props">
-                <span class="text-white">Servizi</span>
+                <span class="text-white"><strong>Servizi</strong></span>
               </v-btn>
             </template>
 
-            <v-list class="rounded-lg bg-light-blue-darken-4">
+            <v-list class="rounded-lg bg-light-blue">
               <v-list-item v-for="servizio in servizi" :key="servizio.id">
                 <v-list-item-title class="d-flex flex-column">
-                  <v-btn class="rounded-pill mt-2 text-light-blue" :prepend-icon="servizio.icon"
-                    variant="text" stacked v-on:click="routerPush(servizio.route)">
-                    <span class="text-white">{{servizio.title}}</span>
+                  <v-btn class="rounded-pill mt-2 text-light-blue-darken-4" :prepend-icon="servizio.icon" variant="text" stacked
+                    v-on:click="routerPush(servizio.route)">
+                    <span class="text-white"><strong>{{ servizio.title }}</strong></span>
                   </v-btn>
                 </v-list-item-title>
               </v-list-item>
             </v-list>
           </v-menu>
 
-          <v-btn class="rounded-pill mt-2 text-light-blue" variant="text" :prepend-icon="contacts"
-            v-on:click="routerPush('contatti')"><span class="text-white">Contatti</span></v-btn>
+          <v-btn class="rounded-pill mt-2 mb-5 text-light-blue-darken-4" variant="text" :prepend-icon="contacts"
+            v-on:click="routerPush('contatti')"><span class="text-white"><strong>Contatti</strong></span></v-btn>
 
-          <v-btn class='rounded-pill mt-2 text-light-blue' :prepend-icon='badge' variant="outlined"
+          <hr style="padding-right: 100%;">
+
+          <v-btn class='rounded-pill mt-5 text-light-blue-darken-4' :prepend-icon='badge' variant="text"
             v-on:click="routerPush('preventivo')">
-            <span class="text-white">Preventivo gratuito</span>
+            <span class="text-white"><strong>Preventivo gratuito</strong></span>
           </v-btn>
 
+          <v-btn class='rounded-pill mt-2 text-light-blue-darken-4' :prepend-icon='advice' variant="text"
+            role="link" :href="calendarReference" target="_blank">
+            <span class="text-white"><strong>Consulenza gratuita</strong></span>
+          </v-btn>
 
         </div>
 
@@ -214,26 +219,3 @@ const onTop = setTimeout(() => {
   window.scrollTo(-100, -100);
 }, 0);
 </script>
-
-<style>
-/* MEDIA-DESKTOP */
-@media screen and (max-width: 966px) {
-  #disable-dk {
-    display: none !important;
-  }
-}
-
-/* MEDIA-TABLET */
-@media screen and (max-width: 1200px) {
-  #disable-btn {
-    display: none !important;
-  }
-}
-
-/* MEDIA-SMARTPHONE */
-@media screen and (min-width: 967px) {
-  #disable-mb {
-    display: none !important;
-  }
-}
-</style>

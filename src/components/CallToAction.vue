@@ -27,26 +27,3 @@ export default {
     </div>
   </v-parallax>
 </template>
-
-<style>
-@media screen and (max-width: 966px) {
-
-  .title-responsive {
-    font-size: 3em !important;
-    text-align: start;
-    line-height: normal;
-  }
-
-  .subtitle-responsive {
-    font-size: 2em !important;
-    text-align: start;
-  }
-
-  .button-responsive {
-    display: flex;
-    text-align: start;
-    align-items: start;
-    justify-items: start;
-  }
-}
-</style>

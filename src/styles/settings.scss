@@ -4,12 +4,7 @@
  * Configures SASS variables and Vuetify overwrites
  */
 
-// https://vuetifyjs.com/features/sass-variables/`
-// @use 'vuetify/settings' with (
-//   $color-pack: false
-// );
-
-@font-face {
+ @font-face {
   font-family: "Barlow";
   font-style: normal;
   font-weight: 900;
@@ -17,6 +12,103 @@
     url(https://www.mi-ke.ch/fonts/Barlow/woff2/Barlow-Black.woff2)
     format("woff2");
   font-display: swap;
+}
+
+@media screen and (max-width: 1200px) {
+  #disable-btn {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 967px) {
+  #disable-mb {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 966px) {
+  #disable-dk {
+    display: none !important;
+  }
+
+  #align-card {
+    display: flex;
+    justify-content: center !important;
+  }
+
+  #mobile-button-right {
+    display: flex;
+    justify-content: end;
+  }
+
+  #responsive-aligment {
+    display: flex !important;
+    flex-wrap: wrap-reverse !important;
+  }
+
+  #social {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  .title-responsive {
+    font-size: 3em !important;
+    text-align: start;
+    line-height: normal;
+  }
+
+  .subtitle-responsive {
+    font-size: 2em !important;
+    text-align: start;
+  }
+
+  .button-right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .button-responsive {
+    display: flex;
+    text-align: start;
+    align-items: start;
+    justify-items: start;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .top-responsive {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-align-center {
+    display: flex;
+    flex-wrap: wrap !important;
+    justify-content: center;
+  }
+
+  .header-align-center-reverse {
+    display: flex;
+    flex-wrap: wrap-reverse !important;
+    justify-content: center;
+  }
+
+  .card-width {
+    max-width: 344px !important;
+  }
+}
+
+@media screen and (max-width: 281px) {
+  .hidden-display {
+    display: none !important;
+  }
 }
 
 h1 {
@@ -47,18 +139,83 @@ p {
   font-size: 20px;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #03a9f4;
   border-radius: 1em;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #01579b;
+}
+
+#icon-color i.v-icon.v-icon {
+  color: #03a9f4;
+}
+
+#blue-circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: #03A9F4;
+  left: -30px;
+  top: -30px;
+}
+
+#link {
+  text-decoration: none;
+  color: #ffff;
+}
+
+#link:hover {
+  color: #03A9F4;
+  text-decoration: underline;
+}
+
+.v-expansion-panel-text__wrapper {
+  color: #03A9F4;
+}
+
+.link {
+  color: #1877f2;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #01579b !important;
+}
+
+.icon-color-button i.v-icon.v-icon {
+  color: #ffff;
+}
+
+.icon-color-stars i.v-icon.v-icon {
+  color: #ffc107 !important;
+}
+
+.transparent {
+  color: rgba(0, 0, 0, 0);
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #01579B;
+}
+
+.contact-link:hover {
+  color: #ffff;
+  text-decoration: underline;
+}
+
+.mar {
+  margin-top: 3px !important;
+}
+
+.position-relative {
+  position: relative;
+  top: 200px;
 }

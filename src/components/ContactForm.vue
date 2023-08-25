@@ -1,4 +1,5 @@
 <script>
+import emailjs from "emailjs-com";
 export default {
   data() {
     return {
@@ -136,6 +137,9 @@ export default {
       phone: '',
       request: '',
       today: new Date(),
+      serviceID: 'service_ug7ho6h',
+      templateID: 'preventivo',
+      userID: 'NeJd-ufoJ2ewLG9eJ',
     }
   },
   methods: {
@@ -170,13 +174,22 @@ export default {
         console.log(checkbox);
         return this.$router.push('redirect');
       }
-    }
+    },
+
+    // Notifica via email la nuova richiesta di preventivo (Emailjs)
+    sendEmail() {
+        emailjs.sendForm(this.serviceID, this.templateID, 'form', this.userID, {
+          name: this.name,
+          email: this.email,
+          phone: this.phone,
+          message: this.request
+        });
+    },
   }
 }
 </script>
 
 <template>
-  <!--DIALOG-->
 
   <v-dialog v-model="dialog" width="auto">
 
@@ -253,6 +266,7 @@ export default {
       </v-form>
     </v-card>
   </v-dialog>
+
 </template>
 
 <script setup>

@@ -65,48 +65,42 @@ di chi ha segnalato l'incidente.
 I leader della comunità si atterranno alle presenti Linee guida per l'impatto sulla comunità nel determinare
 le conseguenze di qualsiasi azione che ritengano in violazione del presente Codice di condotta:
 
-### 1. Correction
+### 1. Correzione
 
-**Community Impact**: Use of inappropriate language or other behavior deemed
-unprofessional or unwelcome in the community.
+**Impatto sulla comunità**: uso di un linguaggio inappropriato o altri comportamenti ritenuti
+poco professionale o sgradito nella comunità.
 
-**Consequence**: A private, written warning from community leaders, providing
-clarity around the nature of the violation and an explanation of why the
-behavior was inappropriate. A public apology may be requested.
+**Conseguenza**: un avvertimento privato e scritto da parte degli amministratori della comunità, che fornisce
+chiarezza circa la natura della violazione e una spiegazione del perché il comportamento era inappropriato. Potrebbero essere richieste scuse pubbliche.
 
-### 2. Warning
+### 2. Attenzione (Warning)
 
-**Community Impact**: A violation through a single incident or series
-of actions.
+**Impatto sulla comunità**: una violazione dovuta a un singolo incidente o serie di azioni.
 
-**Consequence**: A warning with consequences for continued behavior. No
-interaction with the people involved, including unsolicited interaction with
-those enforcing the Code of Conduct, for a specified period of time. This
-includes avoiding interactions in community spaces as well as external channels
-like social media. Violating these terms may lead to a temporary or
-permanent ban.
+**Conseguenza**: un avviso con conseguenze per il comportamento continuato. NO
+interazione con le persone coinvolte, inclusa l'interazione non richiesta con
+coloro che applicano il Codice di condotta, per un determinato periodo di tempo. Questo
+include evitare le interazioni negli spazi della comunità così come nei canali esterni
+come i social. La violazione di questi termini può comportare un temporaneo o
+permanente divieto.
 
-### 3. Temporary Ban
+### 3. Ban temporaneo
 
-**Community Impact**: A serious violation of community standards, including
-sustained inappropriate behavior.
+**Impatto sulla comunità**: una grave violazione degli standard della comunità, incluso comportamento inappropriato sostenuto.
 
-**Consequence**: A temporary ban from any sort of interaction or public
-communication with the community for a specified period of time. No public or
-private interaction with the people involved, including unsolicited interaction
-with those enforcing the Code of Conduct, is allowed during this period.
-Violating these terms may lead to a permanent ban.
+**Conseguenza**: un divieto temporaneo da qualsiasi tipo di interazione o pubblica
+comunicazione con la comunità per un determinato periodo di tempo. Nessun pubblico o
+interazione privata con le persone coinvolte, inclusa l'interazione non richiesta
+con coloro che applicano il Codice di condotta, è consentito durante questo periodo.
+La violazione di questi termini può comportare un divieto permanente.
 
-### 4. Permanent Ban
+### 4. Ban permanente
 
-**Community Impact**: Demonstrating a pattern of violation of community
-standards, including sustained inappropriate behavior,  harassment of an
-individual, or aggression toward or disparagement of classes of individuals.
+**Impatto sulla comunità**: dimostrazioni di violazioni delle norme standard, inclusi comportamenti inappropriati prolungati, molestie nei confronti di un individuo, o aggressione o denigrazione nei confronti di classi di individui.
 
-**Consequence**: A permanent ban from any sort of public interaction within
-the community.
+**Conseguenza**: divieto permanente di qualsiasi tipo di interazione pubblica all'interno della comunità.
 
-## Attribution
+## Attribuzione
 
 Il presente Codice di condotta è adattato dal [Contributor Covenant][homepage],
 versione 2.0, disponibile all'indirizzo

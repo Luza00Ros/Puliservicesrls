@@ -1,4 +1,5 @@
 <script>
+import emailjs from 'emailjs-com';
 export default {
   data() {
     return {
@@ -135,6 +136,9 @@ export default {
       phone: '',
       request: '',
       today: new Date(),
+      serviceID: 'service_ug7ho6h',
+      templateID: 'preventivo',
+      userID: 'NeJd-ufoJ2ewLG9eJ',
     }
   },
   methods: {
@@ -162,38 +166,48 @@ export default {
     // Convalido i dati prima di reindirizzare l'utente
     onRedirect: function (name, email, phone, request, checkbox) {
       if (name != '' && email != '' && phone != '' && request != '' && checkbox != false) {
-        console.log(name);
-        console.log(email);
-        console.log(phone);
-        console.log(request);
-        console.log(checkbox);
+        this.sendEmail();
         return this.$router.push('redirect');
       }
-    }
+    },
+
+    // Notifica via email la nuova richiesta di preventivo (Emailjs)
+    sendEmail() {
+      emailjs.sendForm(this.serviceID, this.templateID, 'form', this.userID, {
+        name: this.name,
+        email: this.email,
+        phone: this.phone,
+        message: this.request
+      });
+    },
   }
 }
 </script>
 
 <template>
+
   <TopNav />
 
-  <v-parallax src="../assets/backgroundPreventivo.webp" height="600" alt="Immagine in background">
-    <div class="d-flex flex-column fill-height justify-center text-white">
-
-      <div class="text-center mt-5 mb-3 mr-5 ml-5 text-light-blue">
-        <h1 class="title-responsive">
-          Richiedi subito il tuo preventivo gratuito
-        </h1>
+  <v-container fluid class="d-flex justify-center header-align-center-reverse">
+    <v-sheet>
+      <v-img max-width="800" max-height="500" src="../assets/illustration/preventive_illustration.svg"></v-img>
+    </v-sheet>
+    <v-sheet>
+      <div class="d-flex flex-column fill-height justify-center text-white">
+        <div class="text-start mt-5 mb-3 mr-5 ml-5 text-light-blue">
+          <h1 class="title-responsive">
+            Richiedi subito il tuo preventivo gratuito
+          </h1>
+        </div>
+        <div class="ma-5 text-start">
+          <p class="subtitle-responsive font-weight-bold text-light-blue-darken-4">
+            Compila i campi sottostanti indicando la tua richiesta.
+            Saremo lieti di ricontattarti per offrirti la nostra migliore proposta
+          </p>
+        </div>
       </div>
-      <div class="ma-5 text-center">
-        <p class="subtitle-responsive font-weight-bold text-light-blue-darken-4">
-          Compila i campi sottostanti indicando la tua richiesta.
-          Saremo lieti di ricontattarti per offrirti la nostra migliore proposta
-        </p>
-      </div>
-
-    </div>
-  </v-parallax>
+    </v-sheet>
+  </v-container>
 
   <v-container>
     <div class="ml-3 mr-3 mt-3 mb-3">
@@ -220,7 +234,7 @@ export default {
         </v-select>
 
         <v-textarea color="light-blue" variant="underlined" label="Inserisci qui la tua richiesta"
-          prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5 mb-5" type="text" name="message"
+          prepend-inner-icon="mdi-text" :rules="charset" counter clearable class="mt-5 mb-5" type="text" name="request"
           v-model="request">
         </v-textarea>
         <v-checkbox v-model="checkbox" :rules="isCheck" color="light-blue">
@@ -252,27 +266,8 @@ export default {
   </v-container>
 
   <Bottom />
+
 </template>
-
-<style scoped>
-@media screen and (max-width: 966px) {
-  .title-responsive {
-    font-size: 3em !important;
-    text-align: start;
-    line-height: normal;
-  }
-
-  .subtitle-responsive {
-    font-size: 2em !important;
-    text-align: start;
-  }
-
-  #mobile-button-right {
-    display: flex;
-    justify-content: end;
-  }
-}
-</style>
 
 <script setup>
 import TopNav from '@/components/TopNav.vue'

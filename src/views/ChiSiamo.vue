@@ -1,124 +1,137 @@
 <script>
 export default {
-  data() {
-    return {
-      slides: [
-        {
-          id: 0,
-          title: "Slide 1",
-          subtitle: "Subtitle slide 1",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-        },
-        {
-          id: 1,
-          title: "Slide 2",
-          subtitle: "Subtitle slide 2",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-        },
-        {
-          id: 2,
-          title: "Slide 3",
-          subtitle: "Subtitle slide 3",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique, harum eum quaerat eius sequi corporis omnis ut cumque eligendi, nihil placeat commodi quos praesentium nostrum minima, totam in enim?",
-        },
-      ],
-    };
+  data: () => ({
+    step: 1,
+    cards: [
+      { id: 1, title: 'Title 1', subtitle: 'Subtitle 1', text: 'lorem ipsum dolor... 1', image: 'src/assets/illustration/appartment_illustration.svg' },
+      { id: 2, title: 'Title 2', subtitle: 'Subtitle 2', text: 'lorem ipsum dolor... 2', image: 'src/assets/illustration/appartment_illustration.svg' },
+      { id: 3, title: 'Title 3', subtitle: 'Subtitle 3', text: 'lorem ipsum dolor... 3', image: 'src/assets/illustration/appartment_illustration.svg' }
+    ]
+  }),
+
+  computed: {
+    currentTitle() {
+      let title = '';
+      this.cards.forEach(card => {
+        if (this.step == card.id) {
+          title = card.title;
+        }
+      });
+      return title;
+    },
+
+    currentSubtitle() {
+      let subtitle = '';
+      this.cards.forEach(card => {
+        if (this.step == card.id) {
+          subtitle = card.subtitle;
+        }
+      });
+      return subtitle;
+    },
+
+
+    currentText() {
+      let text = '';
+      this.cards.forEach(card => {
+        if (this.step == card.id) {
+          text = card.text;
+        }
+      });
+      return text;
+    },
+
+    currentImage() {
+      let image = '';
+      this.cards.forEach(card => {
+        if (this.step == card.id) {
+          image = card.image;
+        }
+      });
+      return image;
+    }
   }
-};
+}
 </script>
 
 <template>
+
   <TopNav />
 
-  <!--INTRO-->
-    <v-parallax src="/src/assets/story.webp" height="600" alt="Immagine in background">
-    <div class="d-flex flex-column fill-height justify-center text-white">
-      <div class="text-center text-light-blue mt-5 mb-3 mr-5 ml-5">
-        <h1 class="title-responsive">
-          La nostra Storia
-        </h1>
+  <v-container fluid class="d-flex justify-center header-align-center-reverse">
+    <v-sheet>
+      <v-img max-width="800" max-height="500" src="../assets/illustration/story_illustration.svg"></v-img>
+    </v-sheet>
+    <v-sheet>
+      <div class="d-flex flex-column fill-height justify-center text-white">
+        <div class="text-start text-light-blue mt-5 mb-3 mr-5 ml-5">
+          <h1 class="title-responsive">
+            La nostra Storia
+          </h1>
+        </div>
+        <div class="ma-5 text-start">
+          <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
+            Una storia che risale a più di 20 anni f&agrave;
+          </p>
+        </div>
       </div>
-      <div class="ma-5 text-center">
-        <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
-          Una storia che risale a più di 20 anni f&agrave;
-        </p>
-      </div>
-    </div>
-  </v-parallax>
+    </v-sheet>
+  </v-container>
 
   <v-spacer></v-spacer>
 
-  <!-- CAROUSEL -->
+  <v-container>
+    <div class="d-flex flex-row flex-wrap align-center justify-center">
+      <v-card id="icon-color" variant="flat" height="100%">
 
-  <v-carousel cycle hide-delimiters :show-arrows="false">
+        <v-img :src="currentImage" max-height="600" cover />
 
-    <template v-slot:prev="{ props }">
-      <v-btn icon="mdi-arrow-left-bold-circle" variant="elevated" color="light-blue-darken-4"
-        @click="props.onClick"></v-btn>
-    </template>
+        <template v-slot:title>
+          <div class="text-h6 font-weight-regular justify-start">
+            <h6 class="text-light-blue">{{ currentTitle }}</h6>
+          </div>
+        </template>
 
-    <template v-slot:next="{ props }">
-      <v-btn icon="mdi-arrow-right-bold-circle" variant="elevated" color="light-blue-darken-4"
-        @click="props.onClick"></v-btn>
-    </template>
+        <template v-slot:subtitle>
+          <div class="text-h6 font-weight-regular justify-start text-light-blue-darken-4">
+            {{ currentSubtitle }}
+          </div>
+        </template>
 
-    <v-carousel-item v-for="slide in slides" :key="slide.id" cover>
-      <v-container>
-        <v-sheet color="trasparent" height="100%">
+        <v-window v-model="step">
+          <v-window-item :value="1">
+            <v-card-text>
+              <p>{{ currentText }}</p>
+            </v-card-text>
+          </v-window-item>
 
-          <!--RICORDA CHE UNA VOLTA INSERITE LE IMMAGINI ANDREBBERO CALIBRATE-->
+          <v-window-item :value="2">
+            <v-card-text>
+              <p>{{ currentText }}</p>
+            </v-card-text>
+          </v-window-item>
 
-          <template v-if="slide.id == 0">
-            <v-card class="mx-auto card-width" color="light-blue-darken-4">
-              <v-img src="../assets/cleaning.webp" height="200px" cover />
-              <v-card-title class="text-start text-h5">
-                <h5> {{ slide.title }}</h5>
-              </v-card-title>
-              <v-card-subtitle class="text-start text-light-blue text-h6">
-                <h6>{{ slide.subtitle }}</h6>
-              </v-card-subtitle>
-              <v-card-text class="text-start">
-                <p>{{ slide.text }}</p>
-              </v-card-text>
-            </v-card>
-          </template>
+          <v-window-item :value="3">
+            <v-card-text>
+              <p>{{ currentText }}</p>
+            </v-card-text>
+          </v-window-item>
+        </v-window>
 
-          <template v-if="slide.id == 1">
-            <v-card class="mx-auto card-width" color="light-blue-darken-4">
-              <v-img src="../assets/cleaning.webp" height="200px" cover />
-              <v-card-title class="text-start text-h5">
-                <h5>{{ slide.title }}</h5>
-              </v-card-title>
-              <v-card-subtitle class="text-start text-light-blue text-h6">
-                <h6>{{ slide.subtitle }}</h6>
-              </v-card-subtitle>
-              <v-card-text class="text-start">
-                <p>{{ slide.text }}</p>
-              </v-card-text>
-            </v-card>
-          </template>
+        <v-card-actions>
+          <v-btn v-if="step > 1" color="light-blue-darken-4" rounded="xl" variant="text" @click="step--"
+            icon="mdi-arrow-left-thin">
+          </v-btn>
+          <v-spacer></v-spacer>
+          <v-btn v-if="step < 3" color="light-blue-darken-4" variant="text" rounded="xl" @click="step++"
+            icon="mdi-arrow-right-thin">
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </div>
+  </v-container>
 
-          <template v-if="slide.id == 2">
-            <v-card class="mx-auto card-width" color="light-blue-darken-4">
-              <v-img src="../assets/cleaning.webp" height="200px" cover />
-              <v-card-title class="text-start text-h5">
-                <h5>{{ slide.title }}</h5>
-              </v-card-title>
-              <v-card-subtitle class="text-start text-light-blue text-h6">
-                <h6>{{ slide.subtitle }}</h6>
-              </v-card-subtitle>
-              <v-card-text class="text-start">
-                <p>{{ slide.text }}</p>
-              </v-card-text>
-            </v-card>
-          </template>
-
-        </v-sheet>
-      </v-container>
-    </v-carousel-item>
-  </v-carousel>
-
-  <!--WHO IS LUCIANA?-->
+  <v-spacer />
 
   <v-container>
     <h1 class="text-start title-responsive">Chi &egrave; Luciana?</h1>
@@ -143,8 +156,7 @@ export default {
           Ho trascorso molte ore osservandoli e imparando tutto ciò che potevo.
           La mia <span class="text-light-blue-darken-4 font-weight-bold">passione</span> per l’azienda è cresciuta di pari
           passo con me, e ho
-          sviluppato una forte determinazione nel voler far crescere l'azienda e
-          portarla a nuovi livelli.
+          sviluppato una forte determinazione nel voler far crescere l'azienda.
         </p>
         <br>
         <p>Nonostante la mia giovane età, mi impegno a <span class="text-light-blue-darken-4">imparare
@@ -164,8 +176,8 @@ export default {
       </v-col>
 
       <v-col class="d-flex justify-center" cols="auto" md="4" style="margin-bottom: 0; padding-bottom: 0;">
-        <v-card color="light-blue-darken-4">
-          <div id="circle"></div>
+        <v-card color="light-blue-darken-4" variant="flat">
+          <div id="blue-circle"></div>
           <v-img src="/src/assets/luciana.png" width="100%" max-width="400px" aspect-ratio="16/9" cover></v-img>
         </v-card>
       </v-col>
@@ -173,8 +185,6 @@ export default {
   </v-container>
 
   <v-spacer></v-spacer>
-
-  <!-- VALUES -->
 
   <v-container class="mt-3">
     <h1 class="title-responsive">I nostri valori</h1>
@@ -187,15 +197,15 @@ export default {
     <p>
       &#x2022;<span class="text-light-blue"><strong> Qualità</strong></span>: Siamo fermamente impegnati a offrire
       <span class="text-light-blue-darken-4">servizi di pulizia di alta qualità</span>.
-      Ci sforziamo di superare le aspettative dei nostri clienti, garantendo
-      risultati impeccabili e prestazioni di livello superiore. La qualità è per
+      Ci sforziamo di soddisfare le aspettative dei nostri clienti, garantendo
+      risultati impeccabili. La qualità è per
       noi un impegno costante e una priorità assoluta. <br><br>
       &#x2022;<span class="text-light-blue"><strong> Affidabilità</strong></span>: La nostra reputazione si basa sulla
-      <span class="text-light-blue-darken-4">fiducia e sull'affidabilità</span>. Siamo
-      sempre puntuali e rispettiamo gli impegni presi con i nostri clienti. La
+      <span class="text-light-blue-darken-4">fiducia e sull'affidabilità</span>. Rispettiamo gli impegni presi con i
+      nostri clienti. La
       puntualità, la professionalità e la coerenza sono i pilastri su cui
-      costruiamo rapporti di lunga durata con i nostri clienti. <br><br>
-      &#x2022;<span class="text-light-blue"><strong> Etica</strong></span>: Agiamo sempre in modo etico e responsabile.
+      costruiamo rapporti duraturi con i nostri clienti. <br><br>
+      &#x2022;<span class="text-light-blue"><strong> Etica</strong></span>: Agiamo sempre in modo etico.
       Siamo
       guidati dai principi dell'integrità, dell'onestà e della trasparenza in
       tutte le nostre interazioni e operazioni. Rispettiamo la privacy dei
@@ -227,13 +237,9 @@ export default {
 
   <v-spacer></v-spacer>
 
-  <!--CALL TO ACTION-->
-
   <CallToAction />
 
   <v-spacer></v-spacer>
-
-  <!--FOOTER-->
 
   <Bottom />
 </template>
@@ -244,31 +250,4 @@ import Bottom from "@/components/BottomFooter.vue";
 import CallToAction from "@/components/CallToAction.vue";
 </script>
 
-<style scoped>
-@media screen and (max-width: 966px) {
 
-  .title-responsive {
-    font-size: 3em !important;
-    text-align: start;
-    line-height: normal;
-  }
-
-  .subtitle-responsive {
-    font-size: 2em !important;
-    text-align: start;
-  }
-
-  .card-width {
-    max-width: 344px !important;
-  }
-}
-
-#circle {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  background-color: #03A9F4;
-  left: -30px;
-  top: -30px;
-}</style>
