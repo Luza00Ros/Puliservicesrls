@@ -112,7 +112,6 @@ export default {
     <div class="d-flex flex-row flex-wrap align-center justify-center">
       <v-card id="icon-color" variant="flat" height="100%">
         <v-img
-          :lazy-src="currentImage"
           :src="currentImage"
           max-height="600"
           cover
