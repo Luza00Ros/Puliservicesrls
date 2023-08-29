@@ -1,12 +1,13 @@
-Richiesta funzionalità
----
+## Richiesta funzionalità
+
 Titolo: Inserisci il titolo della funzionalità
 Descrizione: Suggerisci un'idea per questo progetto
 
 ---
 
 **La tua richiesta di funzionalità è correlata a un problema? Per favore fornisci una descrizione del problema.**
-Una descrizione chiara e concisa di quale sia il problema. 
+Una descrizione chiara e concisa di quale sia il problema.
+
 - Es. Sono sempre frustrato quando [...]
 
 **Proponi la tua soluzione**

@@ -12,7 +12,7 @@ const firebaseConfig = {
   storageBucket: "puliservicesrls-4246e.appspot.com",
   messagingSenderId: "526752361518",
   appId: "1:526752361518:web:dbe822ea617dd7827303bf",
-  measurementId: "G-6LT023J95R"
+  measurementId: "G-6LT023J95R",
 };
 
 /*const FIREBASE_CAPTCHA_CODE = '6LfMSgMnAAAAAEygEVsRmIcS9FMMbAszuuosic_I';*/
@@ -38,6 +38,6 @@ const appCheck = initializeAppCheck(firebase, {
 export default {
   db,
   app,
-  analytics
+  analytics,
   //appCheck
-}
+};
