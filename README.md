@@ -1,4 +1,4 @@
-![Logo pliservice srls](https://davidesabia.altervista.org/wp-content/uploads/2023/06/puliservice-1.png)
+![Logo pliservice srls](https://puliservicesrls-4246e.firebaseapp.com/assets/puliservice-d8cccafe.webp)
 
 ## Descrizione
 
