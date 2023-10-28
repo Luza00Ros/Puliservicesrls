@@ -2,19 +2,18 @@
 
 ## Descrizione
 
-Il progetto Puliservice SRLS è una web app che rappresenta il sito web dell'omonima impresa Puliservice SRLS. Questa innovativa applicazione è stata sviluppata con l'obiettivo di aumentare la visibilità e incrementare il fatturato dell'impresa. Puliservice SRLS è una rinomata impresa specializzata in servizi di pulizia professionale per aziende, uffici, condomini e abitazioni private. Grazie alla web app, l'impresa può finalmente mostrare al mondo la sua competenza e la qualità dei suoi servizi in modo moderno, accattivante e facilmente accessibile.
+La web app Puliservice SRLS rappresenta il sito web dell'omonima impresa Puliservice Srls. Questa applicazione è stata sviluppata con l'obiettivo di aumentare la visibilità e incrementare il fatturato dell'impresa. Puliservice Srls è una rinomata impresa specializzata in servizi di pulizia professionale per aziende, uffici, condomini e abitazioni private. Grazie alla web app, l'impresa può finalmente mostrare la sua competenza e qualità dei suoi servizi in modo moderno, accattivante e facilmente accessibile.
 
 ## Dettagli
 
-- **Informazioni Aziendali**: Il sito web offre una sezione dedicata alle informazioni aziendali, fornendo una panoramica completa sulle competenze, l'esperienza e i valori di Puliservice SRLS. Gli utenti potranno conoscere la storia dell'azienda, il suo team di professionisti qualificati e la sua missione.
-- **Servizi Professionali**: Puliservice SRLS mette a disposizione una vasta gamma di servizi di pulizia professionale, adattati alle specifiche esigenze dei clienti. Attraverso il sito web, gli utenti potranno scoprire in dettaglio i diversi servizi offerti, tra cui la pulizia di uffici, appartamenti, condomini, vetrate, pavimenti e molto altro ancora.
+- **Informazioni Aziendali**: Il sito web offre una sezione dedicata alle informazioni aziendali, fornendo una panoramica completa sulle competenze, l'esperienza e i valori di Puliservice SRLS. Gli utenti potranno conoscere la storia dell'azienda, il suo team di professionisti qualificati e la sua mission.
+- **Servizi Professionali**: Puliservice Srls mette a disposizione una vasta gamma di servizi di pulizia professionale, adattati alle specifiche esigenze dei clienti. Attraverso il sito web, gli utenti potranno scoprire in dettaglio i diversi servizi offerti, tra cui la pulizia di uffici, appartamenti, condomini, vetrate, pavimenti e molto altro ancora.
 - **Gestione delle Prenotazioni**: Grazie a un sistema di prenotazioni integrato, gli utenti potranno richiedere facilmente un preventivo gratuito per i servizi di pulizia desiderati. Attraverso un calendario interattivo, sarà possibile selezionare la data e l'orario preferiti per la pulizia, semplificando il processo di prenotazione.
-- **Galleria Fotografica**: La web app presenta una galleria fotografica che permette agli utenti di visualizzare le pulizie già effettuate da Puliservice SRLS. Le foto prima e dopo illustrano in modo tangibile l'efficacia dei servizi di pulizia, creando fiducia e trasparenza nei confronti dei potenziali clienti.
-- **Contatti e Supporto**: Il sito web offre una sezione dedicata ai contatti, fornendo informazioni di contatto dettagliate come indirizzo, numero di telefono e indirizzo email. Gli utenti potranno inoltre compilare un form di contatto per richiedere ulteriori informazioni o supporto, ricevendo una risposta tempestiva da parte del team di Puliservice SRLS.
+- **Contatti e Supporto**: Il sito web offre una sezione dedicata ai contatti, fornendo informazioni di contatto dettagliate come indirizzo, numero di telefono e indirizzo email. Gli utenti potranno inoltre compilare un form di contatto per richiedere ulteriori informazioni o supporto, ricevendo una risposta tempestiva da parte del team di Puliservice Srls.
 
 ## Vantaggi
 
-- **Aumento della Visibilità**: Grazie alla presenza online di Puliservice SRLS, l'azienda potrà raggiungere un pubblico più ampio, aumentando la sua visibilità e la consapevolezza del marchio.
+- **Aumento della Visibilità**: Grazie alla presenza online di Puliservice Srls, l'azienda potrà raggiungere un pubblico più ampio, aumentando la sua visibilità e la consapevolezza del marchio.
 - **Incremento del Fatturato**: La web app permette agli utenti di richiedere facilmente un preventivo gratuito per i servizi di pulizia desiderati. Questo agevola il processo di prenotazione e genera potenziali nuovi clienti, contribuendo all'incremento del fatturato dell'impresa.
 
 ## Caratteristiche
