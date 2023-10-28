@@ -9,7 +9,11 @@ import { createApp } from "vue";
 import { registerPlugins } from "@/plugins";
 
 const app = createApp(App);
+const firebaseAnalytics = createApp(firebase.analytics);
+const firebaseApp = createApp(firebase.app);
 
 registerPlugins(app);
+registerPlugins(firebaseAnalytics);
+registerPlugins(firebaseApp);
 
-app.use(firebase.app).use(firebase.analytics).mount("#app");
+app.mount("#app");
