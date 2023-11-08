@@ -1,6 +1,6 @@
 <script>
-
 export default {
+  name: "BottomFooter",
   data() {
     return {
       data: false,
@@ -33,8 +33,7 @@ export default {
         {
           id: 0,
           request: "Da quanto tempo operate nel settore delle pulizie?",
-          answer:
-            "Offriamo servizi di pulizie professionali da più di 20 anni",
+          answer: "Offriamo servizi di pulizie professionali da più di 20 anni",
         },
         {
           id: 1,
@@ -61,14 +60,14 @@ export default {
         {
           id: 4,
           request: "Offrite servizi di pronto intervento?",
-          answer:
-            "Si, puoi contattarci al numero 348 42 31 742",
+          answer: "Si, puoi contattarci al numero 348 42 31 742",
         },
 
         {
           id: 5,
           request: "Offrite preventivi gratuiti?",
-          answer: "Si, certamente, pui richiedere il tuo preventivo gratuito nella sezione 'contatti'",
+          answer:
+            "Si, certamente, pui richiedere il tuo preventivo gratuito nella sezione 'contatti'",
         },
 
         {
@@ -173,7 +172,8 @@ export default {
             v-for="faq in faqs"
             :key="faq.id"
             :title="faq.request"
-            :text="faq.answer">
+            :text="faq.answer"
+          >
           </v-expansion-panel>
         </v-expansion-panels>
       </div>
@@ -186,5 +186,3 @@ export default {
     Budapest 9, 85100, PZ | P.IVA: 02082240769 | URI: PZ | REA: 205849
   </div>
 </template>
-
-

@@ -12,4 +12,4 @@ Per segnalare una vulnerabilità, ti preghiamo di inviare un'email a adv.puliser
 
 Ti impegni a non divulgare pubblicamente la vulnerabilità prima che sia stata risolta. Ti terremo informato sugli sviluppi e lavoreremo insieme per risolvere il problema nel minor tempo possibile.
 
-Ringraziamo tutti coloro che segnalano vulnerabilità responsabilmente e contribuiscono a migliorare la sicurezza del nostro progetto. 
+Ringraziamo tutti coloro che segnalano vulnerabilità responsabilmente e contribuiscono a migliorare la sicurezza del nostro progetto.

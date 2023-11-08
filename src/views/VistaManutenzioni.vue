@@ -1,20 +1,37 @@
+<script>
+export default {
+  name: "VistaManutenzione",
+  components: {
+    CallToAction,
+    TopNav,
+    Bottom,
+  },
+};
+</script>
+
 <template>
   <TopNav />
 
   <v-container fluid class="d-flex justify-center header-align-center-reverse">
     <v-sheet>
-      <v-img max-width="800" max-height="500" src="../assets/illustration/mantence_illustration.svg"></v-img>
+      <v-img
+        max-width="800"
+        max-height="500"
+        src="../assets/illustration/mantence_illustration.svg"
+        lazy-src="../assets/illustration/mantence_illustration.svg"
+      ></v-img>
     </v-sheet>
     <v-sheet>
       <div class="d-flex flex-column fill-height justify-center text-white">
         <div class="text-start text-light-blue mt-5 mb-3 mr-5 ml-5">
-          <h1 class="title-responsive">
-            Manutenzione generale
-          </h1>
+          <h1 class="title-responsive">Manutenzione generale</h1>
         </div>
         <div class="ma-5 text-start">
-          <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
-            La manutenzione generale è un insieme di attività preventive e correttive
+          <p
+            class="subtitle-responsive text-light-blue-darken-4 font-weight-bold"
+          >
+            La manutenzione generale è un insieme di attività preventive e
+            correttive
           </p>
         </div>
       </div>
@@ -24,15 +41,22 @@
   <v-spacer />
 
   <v-container>
-    <h6 class="text-light-blue-darken-4"> Questo tipo di manutenzione &egrave; necessaria per preservare l'efficenza, la
-      sicurezza e le prestazioni ottimali nel corso del tempo.</h6>
+    <h6 class="text-light-blue-darken-4">
+      Questo tipo di manutenzione &egrave; necessaria per preservare
+      l'efficenza, la sicurezza e le prestazioni ottimali nel corso del tempo.
+    </h6>
   </v-container>
 
   <v-container>
-    <v-alert variant="tonal" density="compact" type="info" text="Su questa attività non è presente una lista di servizi che offriamo,
+    <v-alert
+      variant="tonal"
+      density="compact"
+      type="info"
+      text="Su questa attività non è presente una lista di servizi che offriamo,
     bensì mettiamo a disposizione il nostro numero di telefono per garantirvi un
-    pronto intervento! ">
-      <a href="tel:+393484231742" class="text-info"><br>+39 348 42 31 742</a>
+    pronto intervento! "
+    >
+      <a href="tel:+393484231742" class="text-info"><br />+39 348 42 31 742</a>
     </v-alert>
   </v-container>
 

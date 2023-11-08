@@ -17,19 +17,19 @@ comunità aperta, accogliente, diversificata, inclusiva e sana.
 Esempi di comportamenti che contribuiscono a creare un ambiente positivo per la nostra comunità
 comunità includono:
 
-* Dimostrare empatia e gentilezza verso gli altri.
-* Essere rispettosi di opinioni, punti di vista ed esperienze diverse.
-* Dare e accettare con garbo un feedback costruttivo.
-* Accettare la responsabilità e chiedere scusa a coloro che sono stati colpiti dai nostri errori, e imparare dall'esperienza.
-* Concentrarsi su ciò che è meglio non solo per noi come individui, ma per l'intera comunità nel suo complesso.
+- Dimostrare empatia e gentilezza verso gli altri.
+- Essere rispettosi di opinioni, punti di vista ed esperienze diverse.
+- Dare e accettare con garbo un feedback costruttivo.
+- Accettare la responsabilità e chiedere scusa a coloro che sono stati colpiti dai nostri errori, e imparare dall'esperienza.
+- Concentrarsi su ciò che è meglio non solo per noi come individui, ma per l'intera comunità nel suo complesso.
 
 Esempi di comportamenti inaccettabili sono:
 
-* L'uso di un linguaggio o di immagini sessualizzate e le attenzioni o le avances sessuali di qualsiasi tipo.
-* Trolling, commenti offensivi o dispregiativi e attacchi personali o politici.
-* Molestie pubbliche o private.
-* Pubblicazione di informazioni private altrui, come l'indirizzo fisico o di posta elettronica, indirizzo e-mail, senza il loro esplicito consenso.
-* Altri comportamenti che potrebbero ragionevolmente essere considerati inappropriati in un contesto professionale.
+- L'uso di un linguaggio o di immagini sessualizzate e le attenzioni o le avances sessuali di qualsiasi tipo.
+- Trolling, commenti offensivi o dispregiativi e attacchi personali o politici.
+- Molestie pubbliche o private.
+- Pubblicazione di informazioni private altrui, come l'indirizzo fisico o di posta elettronica, indirizzo e-mail, senza il loro esplicito consenso.
+- Altri comportamenti che potrebbero ragionevolmente essere considerati inappropriati in un contesto professionale.
 
 ## Responsabilità di applicazione
 

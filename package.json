@@ -1,11 +1,18 @@
 {
   "name": "puliservicesrls",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "private": true,
   "license": "AGPL-3.0-or-later",
+  "author": "Davide Sabia",
+  "categories": ["Other"],
+  "contributors": ["Luza00Ros"],
+  "keywords": ["Impresa di pulizie", "puliservicesrls", "web app"],
+  "description": "Il progetto Puliservice SRLS è una web app che rappresenta il sito web dell'omonima impresa Puliservice SRLS",
+  "main": "src/main.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "format": "yarn prettier . --write",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore",
     "test": "jest"
@@ -17,6 +24,7 @@
     "emailjs-com": "^3.2.0",
     "firebase": "^9.23.0",
     "node": "^20.5.0",
+    "prettier": "3.0.2",
     "roboto-fontface": "*",
     "vue": "^3.2.0",
     "vue-router": "^4.0.0",
