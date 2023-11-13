@@ -63,7 +63,7 @@ export default {
       let image = "";
       this.cards.forEach((card) => {
         if (this.step === card.id) {
-          image =  card.image;
+          image = card.image;
         }
       });
       return image;
