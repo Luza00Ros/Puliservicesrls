@@ -6,23 +6,23 @@ export default {
     cards: [
       {
         id: 1,
-        title: "Title 1",
-        subtitle: "Subtitle 1",
-        text: "lorem ipsum dolor... 1",
-        image: "src/assets/illustration/appartment_illustration.svg",
+        title: "Il fondatore dell'attività",
+        subtitle: "Nonno Ernesto",
+        text: "Ernesto Rosati, è il fondatore di questa azienda familiare di pulizie. ",
+        image: "src/assets/NonnoMod.jpeg",
       },
       {
         id: 2,
-        title: "Title 2",
-        subtitle: "Subtitle 2",
-        text: "lorem ipsum dolor... 2",
-        image: "src/assets/illustration/appartment_illustration.svg",
+        title: "Il secondo erede dell'attività",
+        subtitle: "Marco Rosati",
+        text: "Figlio di Enesto, ha guidato l'azienda per un lungo periodo.",
+        image: "src/assets/MarcoMod.jpeg",
       },
       {
         id: 3,
-        title: "Title 3",
-        subtitle: "Subtitle 3",
-        text: "lorem ipsum dolor... 3",
+        title: "La terza erede ",
+        subtitle: "Luciana Rosati",
+        text: "Nipote di Ernesto e figlia di Marco, ha scelto di portare avanti l'azienda famigliare.",
         image: "src/assets/illustration/appartment_illustration.svg",
       },
     ],
@@ -111,11 +111,9 @@ export default {
   <v-container>
     <div class="d-flex flex-row flex-wrap align-center justify-center">
       <v-card id="icon-color" variant="flat" height="100%">
-        <v-img
-          :src="currentImage"
-          max-height="600"
-          cover
-        />
+        <div class="d-flex flex-row align-center justify-center">
+          <v-img :src="currentImage" max-width="350" max-height="500" cover />
+        </div>
 
         <template v-slot:title>
           <div class="text-h6 font-weight-regular justify-start">
