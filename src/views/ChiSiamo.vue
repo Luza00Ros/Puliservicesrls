@@ -23,7 +23,7 @@ export default {
         title: "La terza erede ",
         subtitle: "Luciana Rosati",
         text: "Nipote di Ernesto e figlia di Marco, ha scelto di portare avanti l'azienda famigliare.",
-        image: "src/assets/illustration/appartment_illustration.svg",
+        image: "src/assets/luciana1.png",
       },
     ],
   }),
