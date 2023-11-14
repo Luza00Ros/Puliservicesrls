@@ -1,4 +1,4 @@
-![Logo pliservice srls](https://puliservicesrls-4246e.firebaseapp.com/assets/puliservice-d8cccafe.webp)
+![Logo pliservice srls](https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/readme_template.png?alt=media&token=512afe6e-5214-443c-9f96-9adf29101d30)
 
 ## Descrizione
 
