@@ -182,8 +182,8 @@ export default {
       <v-img
         max-width="800"
         max-height="500"
-        lazy-src="../assets/illustration/home_illustration.svg"
-        src="../assets/illustration/home_illustration.svg"
+        lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fhome_illustration.svg?alt=media&token=97908135-c2d2-4866-81e3-c71a47e0dd06"
+        src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fhome_illustration.svg?alt=media&token=97908135-c2d2-4866-81e3-c71a47e0dd06"
       ></v-img>
     </v-sheet>
   </v-container>
@@ -203,8 +203,8 @@ export default {
               class="h-50"
             >
               <v-img
-                lazy-src="../assets/vileda.webp"
-                src="../assets/vileda.webp"
+                src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/vileda.webp?alt=media&token=83e62bc9-a1f6-4940-8e05-f7cf37392f19"
+                lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/vileda.webp?alt=media&token=83e62bc9-a1f6-4940-8e05-f7cf37392f19"
                 alt="Marchi da noi utilizzati"
             /></a>
           </template>
@@ -217,8 +217,8 @@ export default {
               class="h-50"
             >
               <v-img
-                lazy-src="../assets/marbec.webp"
-                src="../assets/marbec.webp"
+                src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/sutter.webp?alt=media&token=c06812d3-f19d-4cb6-a83b-f7473fbf2634"
+                lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/sutter.webp?alt=media&token=c06812d3-f19d-4cb6-a83b-f7473fbf2634"
                 alt="Marchi da noi utilizzati"
             /></a>
           </template>
@@ -231,8 +231,8 @@ export default {
               class="h-50"
             >
               <v-img
-                lazy-src="../assets/sutter.webp"
-                src="../assets/sutter.webp"
+                src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/marbec.webp?alt=media&token=b9dc3f85-27b8-47d4-bd26-9cc4694b51d6"
+                lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/marbec.webp?alt=media&token=b9dc3f85-27b8-47d4-bd26-9cc4694b51d6"
                 alt="Marchi da noi utilizzati"
             /></a>
           </template>
@@ -324,8 +324,8 @@ export default {
     >
       <span v-if="service.id == 0">
         <v-img
-          src="../assets/illustration/bestPlace_illustration.svg"
-          lazy-src="../assets/illustration/bestPlace_illustration.svg"
+          src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2FbestPlace_illustration.svg?alt=media&token=ba9e4b23-483c-4eec-8681-87e0bb9214f1"
+          lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2FbestPlace_illustration.svg?alt=media&token=ba9e4b23-483c-4eec-8681-87e0bb9214f1"
           width="600"
           rounded="xl"
           cover
@@ -333,8 +333,8 @@ export default {
       </span>
       <span v-if="service.id == 1">
         <v-img
-          src="../assets/illustration/office_illustration.svg"
-          lazy-src="../assets/illustration/office_illustration.svg"
+          src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Foffice_illustration.svg?alt=media&token=60f9baf4-022a-4406-986b-18714b0d719b"
+          lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Foffice_illustration.svg?alt=media&token=60f9baf4-022a-4406-986b-18714b0d719b"
           width="600"
           rounded="xl"
           cover
@@ -342,8 +342,8 @@ export default {
       </span>
       <span v-if="service.id == 2">
         <v-img
-          src="../assets/illustration/shop_illustration.svg"
-          lazy-src="../assets/illustration/shop_illustration.svg"
+          src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fshop_illustration.svg?alt=media&token=d0353e2e-a19b-43b2-ba3a-753b754184f3"
+          lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fshop_illustration.svg?alt=media&token=d0353e2e-a19b-43b2-ba3a-753b754184f3"
           width="600"
           rounded="xl"
           cover
@@ -351,8 +351,8 @@ export default {
       </span>
       <span v-if="service.id == 3">
         <v-img
-          src="../assets/illustration/delivery_illustration.svg"
-          lazy-src="../assets/illustration/delivery_illustration.svg"
+          src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fdelivery_illustration.svg?alt=media&token=075f4dbd-d168-4766-84fe-f931858ae44b"
+          lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fdelivery_illustration.svg?alt=media&token=075f4dbd-d168-4766-84fe-f931858ae44b"
           width="600"
           rounded="xl"
           cover

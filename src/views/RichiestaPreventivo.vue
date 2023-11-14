@@ -14,7 +14,6 @@ export default {
         (value) =>
           !!value ||
           "Inserisci un indirizzo mail valido al quale potrai essere ricontattato",
-        (value) => (value || "").length <= 50 || "Max 50 caratteri",
         (value) => {
           const regex =
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -133,7 +132,8 @@ export default {
       isCheck: [(value) => !!value || "Questo campo è obligatorio"],
       phoneRules: [
         (value) =>
-          (value?.length > 9 && /[0-9-]+/.test(value)) ||
+          (value?.length > 9 &&
+            /^(?:(?:\+|00)39)?\s?[37]\d{2}[-\s]?\d{6,7}$/.test(value)) ||
           "Inserisci un numero di telefono valido",
       ],
       documentId: "Request",
@@ -192,10 +192,17 @@ export default {
 
     // Convalido i dati prima di reindirizzare l'utente
     onRedirect: function (name, email, phone, request, checkbox) {
+      const regex =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const phoneCheck = /^(?:(?:\+|00)39)?\s?[37]\d{2}[-\s]?\d{6,7}$/;
+
       if (
         name != "" &&
+        name.length < 50 &&
         email != "" &&
+        regex.test(email) &&
         phone != "" &&
+        phoneCheck.test(phone) &&
         request != "" &&
         checkbox != false
       ) {
@@ -205,13 +212,23 @@ export default {
     },
 
     // Notifica via email la nuova richiesta di preventivo (Emailjs)
-    sendEmail() {
-      emailjs.sendForm(this.serviceID, this.templateID, "form", this.userID, {
-        name: this.name,
-        email: this.email,
-        phone: this.phone,
-        message: this.request,
-      });
+    async sendEmail() {
+      try {
+        await emailjs.sendForm(
+          this.serviceID,
+          this.templateID,
+          "form",
+          this.userID,
+          {
+            name: this.name,
+            email: this.email,
+            phone: this.phone,
+            message: this.request,
+          },
+        );
+      } catch (error) {
+        console.error("Error: ", error);
+      }
     },
   },
   components: {
@@ -229,8 +246,8 @@ export default {
       <v-img
         max-width="800"
         max-height="500"
-        lazy-src="../assets/illustration/preventive_illustration.svg"
-        src="../assets/illustration/preventive_illustration.svg"
+        lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fpreventive_illustration.svg?alt=media&token=15a85eea-344d-46b3-9747-b3cd8d5fbe5a"
+        src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fpreventive_illustration.svg?alt=media&token=15a85eea-344d-46b3-9747-b3cd8d5fbe5a"
       ></v-img>
     </v-sheet>
     <v-sheet>
@@ -354,7 +371,7 @@ export default {
                   <a
                     class="text-decoration-none text-light-blue"
                     target="_blank"
-                    href="https://vuetifyjs.com"
+                    href="https://www.iubenda.com/privacy-policy/57879019"
                     v-bind="props"
                     @click.stop
                   >

@@ -17,8 +17,8 @@ export default {
       <v-img
         max-width="800"
         max-height="500"
-        src="../assets/illustration/mantence_illustration.svg"
-        lazy-src="../assets/illustration/mantence_illustration.svg"
+        src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fmantence_illustration.svg?alt=media&token=9408053a-df56-4ce4-ae79-a127027788f3"
+        lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fmantence_illustration.svg?alt=media&token=9408053a-df56-4ce4-ae79-a127027788f3"
       ></v-img>
     </v-sheet>
     <v-sheet>

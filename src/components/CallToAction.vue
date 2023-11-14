@@ -11,7 +11,7 @@ export default {
 
 <template>
   <v-parallax
-    src="/src/assets/callToActionBg.webp"
+    src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/callToActionBg.webp?alt=media&token=88db5faf-61b2-4bd6-b9d9-4e97d1238d9f"
     height="600"
     alt="Chiamata all'azione richiesta preventivo"
   >

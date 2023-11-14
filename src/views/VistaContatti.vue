@@ -28,8 +28,8 @@ export default {
       <v-img
         max-width="800"
         max-height="500"
-        src="../assets/illustration/contact_illustration.svg"
-        lazy-src="../assets/illustration/contact_illustration.svg"
+        src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fcontact_illustration.svg?alt=media&token=cbb26c78-2ccd-4c8b-8aa5-742ba8bfe439"
+        lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fcontact_illustration.svg?alt=media&token=cbb26c78-2ccd-4c8b-8aa5-742ba8bfe439"
       ></v-img>
     </v-sheet>
     <v-sheet>
@@ -78,7 +78,12 @@ export default {
         class="d-flex align-center justify-space-evenly"
         color="black"
       >
-        <v-img height="800" src="../assets/backgroundDesign.webp" cover>
+        <v-img
+          height="800"
+          lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/backgroundDesign.webp?alt=media&token=522d525c-43d4-4f8c-9095-b8dd38142210"
+          src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/backgroundDesign.webp?alt=media&token=522d525c-43d4-4f8c-9095-b8dd38142210"
+          cover
+        >
           <v-window v-model="tab">
             <v-window-item
               v-for="info in infos"
