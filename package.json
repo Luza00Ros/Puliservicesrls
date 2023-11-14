@@ -4,9 +4,17 @@
   "private": true,
   "license": "AGPL-3.0-or-later",
   "author": "Davide Sabia",
-  "categories": ["Other"],
-  "contributors": ["Luza00Ros"],
-  "keywords": ["Impresa di pulizie", "puliservicesrls", "web app"],
+  "categories": [
+    "Other"
+  ],
+  "contributors": [
+    "Luza00Ros"
+  ],
+  "keywords": [
+    "Impresa di pulizie",
+    "puliservicesrls",
+    "web app"
+  ],
   "description": "Il progetto Puliservice SRLS è una web app che rappresenta il sito web dell'omonima impresa Puliservice SRLS",
   "main": "src/main.js",
   "scripts": {

@@ -33,7 +33,8 @@ export default {
         :width="300"
         aspect-ratio="16/9"
         cover
-        src="../assets/puliservice.webp"
+        src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/puliservice.webp?alt=media&token=04c81343-8274-465a-bc6c-674bf499c46a"
+        lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/puliservice.webp?alt=media&token=04c81343-8274-465a-bc6c-674bf499c46a"
         class="mb-5 mt-5 ml-3"
       />
       <h4 class="ml-5">Modulo inviato correttamente</h4>

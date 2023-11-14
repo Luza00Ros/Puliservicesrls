@@ -15,7 +15,6 @@ export default {
         (value) =>
           !!value ||
           "Inserisci un indirizzo mail valido al quale potrai essere ricontattato",
-        (value) => (value || "").length <= 50 || "Max 50 caratteri",
         (value) => {
           const regex =
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -134,7 +133,8 @@ export default {
       isCheck: [(value) => !!value || "Questo campo è obligatorio"],
       phoneRules: [
         (value) =>
-          (value?.length > 9 && /[0-9-]+/.test(value)) ||
+          (value?.length > 9 &&
+            /^(?:(?:\+|00)39)?\s?[37]\d{2}[-\s]?\d{6,7}$/.test(value)) ||
           "Inserisci un numero di telefono valido",
       ],
       documentId: "Request",
@@ -144,7 +144,7 @@ export default {
       phone: "",
       request: "",
       today: new Date(),
-      serviceID: "service_ug7ho6h",
+      serviceID: "service_aebs294",
       templateID: "preventivo",
       userID: "NeJd-ufoJ2ewLG9eJ",
     };
@@ -193,30 +193,42 @@ export default {
 
     // Convalido i dati prima di reindirizzare l'utente
     onRedirect: function (name, email, phone, request, checkbox) {
+      const regex =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const phoneCheck = /^(?:(?:\+|00)39)?\s?[37]\d{2}[-\s]?\d{6,7}$/;
       if (
         name != "" &&
+        name.length < 50 &&
         email != "" &&
+        regex.test(email) &&
         phone != "" &&
+        phoneCheck.test(phone) &&
         request != "" &&
         checkbox != false
       ) {
-        console.log(name);
-        console.log(email);
-        console.log(phone);
-        console.log(request);
-        console.log(checkbox);
+        this.sendEmail();
         return this.$router.push("redirect");
       }
     },
 
     // Notifica via email la nuova richiesta di preventivo (Emailjs)
-    sendEmail() {
-      emailjs.sendForm(this.serviceID, this.templateID, "form", this.userID, {
-        name: this.name,
-        email: this.email,
-        phone: this.phone,
-        message: this.request,
-      });
+    async sendEmail() {
+      try {
+        await emailjs.sendForm(
+          this.serviceID,
+          this.templateID,
+          "form",
+          this.userID,
+          {
+            name: this.name,
+            email: this.email,
+            phone: this.phone,
+            message: this.request,
+          },
+        );
+      } catch (error) {
+        console.error("Error: ", error);
+      }
     },
   },
 };
@@ -233,7 +245,8 @@ export default {
     <v-container fluid>
       <v-card>
         <v-img
-          src="../assets/previewPreventivo.gif"
+          lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/previewPreventivo.gif?alt=media&token=c7046d19-ab42-4c5d-bb0e-a4cf0a5a4c1d"
+          src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/previewPreventivo.gif?alt=media&token=c7046d19-ab42-4c5d-bb0e-a4cf0a5a4c1d"
           rounded
           aspect-ratio="16/9"
           cover
@@ -350,7 +363,7 @@ export default {
                   <a
                     class="text-decoration-none text-light-blue"
                     target="_blank"
-                    href="https://vuetifyjs.com"
+                    href="https://www.iubenda.com/privacy-policy/57879019"
                     v-bind="props"
                     @click.stop
                   >

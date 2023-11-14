@@ -106,8 +106,8 @@ export default {
         <template v-slot:title>
           <div class="text-h6 font-weight-regular justify-space-between">
             <v-img
-              lazy-src="../assets/fb.png"
-              src="../assets/fb.png"
+              lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/fb.png?alt=media&token=ae0e7284-5411-4346-9a82-fb801fabe94b"
+              src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/fb.png?alt=media&token=ae0e7284-5411-4346-9a82-fb801fabe94b"
               width="25"
               height="25"
               aspect-ratio="16/9"

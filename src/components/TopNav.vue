@@ -108,7 +108,8 @@ export default {
   >
     <v-img
       v-on:click="scrollUp"
-      src="/src/assets/puliservice.webp"
+      src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/puliservice.webp?alt=media&token=04c81343-8274-465a-bc6c-674bf499c46a"
+      lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/puliservice.webp?alt=media&token=04c81343-8274-465a-bc6c-674bf499c46a"
       width="200"
       height="50"
       class="pa-1 ma-1"

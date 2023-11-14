@@ -3,7 +3,8 @@ export default {
   name: "PageNotFound",
   data() {
     return {
-      backgroundImage: "/src/assets/pageNotFound_Background.webp",
+      backgroundImage:
+        "https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/pageNotFound_Background.webp?alt=media&token=b965aa58-1329-44b0-89d0-2868e553af47",
       logo: "/src/assets/puliservice_logo.svg",
     };
   },

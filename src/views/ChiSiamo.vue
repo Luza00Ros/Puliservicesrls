@@ -1,32 +1,37 @@
 <script>
 export default {
   name: "ChiSiamo",
-  data: () => ({
-    step: 1,
-    cards: [
-      {
-        id: 1,
-        title: "Il fondatore dell'attività",
-        subtitle: "Nonno Ernesto",
-        text: "Ernesto Rosati, è il fondatore di questa azienda familiare di pulizie. ",
-        image: "https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/NonnoMod.jpeg?alt=media&token=b472b247-c04a-4da3-83a8-e0eeb175a77e",
-      },
-      {
-        id: 2,
-        title: "Il secondo erede dell'attività",
-        subtitle: "Marco Rosati",
-        text: "Figlio di Enesto, ha guidato l'azienda per un lungo periodo.",
-        image: "https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/MarcoMod.jpeg?alt=media&token=c4060f52-6b26-4645-9315-676c11ab3db3",
-      },
-      {
-        id: 3,
-        title: "La terza erede ",
-        subtitle: "Luciana Rosati",
-        text: "Nipote di Ernesto e figlia di Marco, ha scelto di portare avanti l'azienda famigliare.",
-        image: "https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/luciana1.png?alt=media&token=466e62ce-253b-4308-841e-620ad76952d3",
-      },
-    ],
-  }),
+  data() {
+    return {
+      step: 1,
+      cards: [
+        {
+          id: 1,
+          title: "Il fondatore dell'attività",
+          subtitle: "Nonno Ernesto",
+          text: "Ernesto Rosati, è il fondatore di questa azienda familiare di pulizie. ",
+          image:
+            "https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/NonnoMod.jpeg?alt=media&token=b472b247-c04a-4da3-83a8-e0eeb175a77e",
+        },
+        {
+          id: 2,
+          title: "Il secondo erede dell'attività",
+          subtitle: "Marco Rosati",
+          text: "Figlio di Enesto, ha guidato l'azienda per un lungo periodo.",
+          image:
+            "https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/MarcoMod.jpeg?alt=media&token=c4060f52-6b26-4645-9315-676c11ab3db3",
+        },
+        {
+          id: 3,
+          title: "La terza erede ",
+          subtitle: "Luciana Rosati",
+          text: "Nipote di Ernesto e figlia di Marco, ha scelto di portare avanti l'azienda famigliare.",
+          image:
+            "https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/luciana1.png?alt=media&token=466e62ce-253b-4308-841e-620ad76952d3",
+        },
+      ],
+    };
+  },
 
   computed: {
     currentTitle() {
@@ -86,8 +91,8 @@ export default {
       <v-img
         max-width="800"
         max-height="500"
-        lazy-src="../assets/illustration/story_illustration.svg"
-        src="../assets/illustration/story_illustration.svg"
+        lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fstory_illustration.svg?alt=media&token=6c27154d-1154-41fa-a74c-290100ade821"
+        src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fstory_illustration.svg?alt=media&token=6c27154d-1154-41fa-a74c-290100ade821"
       ></v-img>
     </v-sheet>
     <v-sheet>
@@ -241,8 +246,8 @@ export default {
         <v-card color="light-blue-darken-4" variant="flat">
           <div id="blue-circle"></div>
           <v-img
-            lazy-src="/src/assets/luciana.png"
-            src="/src/assets/luciana.png"
+            lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/luciana.png?alt=media&token=9e5d1e39-d253-4674-95ba-f89441ea744a"
+            src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/luciana.png?alt=media&token=9e5d1e39-d253-4674-95ba-f89441ea744a"
             width="100%"
             max-width="400px"
             aspect-ratio="16/9"

@@ -5,8 +5,16 @@ export default {
     return {
       data: false,
       legals: [
-        { id: 0, title: "Privacy Policy", link: "https://www.iubenda.com/privacy-policy/57879019" },
-        { id: 1, title: "Cookie Policy", link: "https://www.iubenda.com/privacy-policy/57879019/cookie-policy" },
+        {
+          id: 0,
+          title: "Privacy Policy",
+          link: "https://www.iubenda.com/privacy-policy/57879019",
+        },
+        {
+          id: 1,
+          title: "Cookie Policy",
+          link: "https://www.iubenda.com/privacy-policy/57879019/cookie-policy",
+        },
         { id: 2, title: "Credits", link: "https://github.com/Dino-996" },
       ],
       contacts: [
