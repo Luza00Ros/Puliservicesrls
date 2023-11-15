@@ -2,8 +2,8 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
+// import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 
-/*import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";*/
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDDwDSok1-KwoikpE9ae1ERX72uis0CwCA",
@@ -15,7 +15,7 @@ const firebaseConfig = {
   measurementId: "G-6LT023J95R",
 };
 
-/*const FIREBASE_CAPTCHA_CODE = '6LfMSgMnAAAAAEygEVsRmIcS9FMMbAszuuosic_I';*/
+//const FIREBASE_CAPTCHA_CODE = '6LfMSgMnAAAAAEygEVsRmIcS9FMMbAszuuosic_I';
 
 // Inizialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -28,7 +28,7 @@ const db = getFirestore(app);
 
 // Inizialize ReCaptchaV3
 /*
-const appCheck = initializeAppCheck(firebase, {
+const appCheck = initializeAppCheck(app, {
   provider: new ReCaptchaV3Provider(FIREBASE_CAPTCHA_CODE),
   isTokenAutoRefreshEnabled: true
 });
