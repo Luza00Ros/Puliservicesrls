@@ -65,8 +65,8 @@ export default {
       <v-img
         max-width="800"
         max-height="500"
-        src="../assets/illustration/delivery_illustration.svg"
-        lazy-src="../assets/illustration/delivery_illustration.svg"
+        src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fdelivery_illustration.svg?alt=media&token=075f4dbd-d168-4766-84fe-f931858ae44b"
+        lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fdelivery_illustration.svg?alt=media&token=075f4dbd-d168-4766-84fe-f931858ae44b"
       ></v-img>
     </v-sheet>
     <v-sheet>

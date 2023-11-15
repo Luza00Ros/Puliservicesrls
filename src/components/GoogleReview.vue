@@ -96,8 +96,8 @@ export default {
         <template v-slot:title>
           <div class="text-h6 font-weight-regular justify-space-between">
             <v-img
-              lazy-src="../assets/maps.png"
-              src="../assets/maps.png"
+              lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/maps.png?alt=media&token=e7e9cf94-3138-459f-a6c3-283cac5b65ff"
+              src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/maps.png?alt=media&token=e7e9cf94-3138-459f-a6c3-283cac5b65ff"
               width="25"
               height="25"
               aspect-ratio="16/9"
