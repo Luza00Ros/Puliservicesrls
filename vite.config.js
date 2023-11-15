@@ -21,10 +21,12 @@ export default defineConfig({
       },
     }),
     viteStaticCopy({
-      targets:[{
-        src: "sitemap.xml",
-        dest: ""
-      }]
+      targets: [
+        {
+          src: "sitemap.xml",
+          dest: "",
+        },
+      ],
     }),
   ],
   define: { "process.env": {} },
