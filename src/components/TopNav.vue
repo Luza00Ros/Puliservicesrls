@@ -114,10 +114,10 @@ const onTop = setTimeout(() => {
   <v-app-bar color="white" class="rounded-b-xl" flat>
 
     <template v-slot:extension>
-      <div class="top-responsive hidden-display d-flex flex-row align-center justify-center w-100"
-        v-for="contact in contacts" :key="contact.id">
-        <v-btn :prepend-icon="contact.icon" class="text-light-blue text-caption" density="compact" size="large" rounded="xl" variant="text" role="link" :href="contact.rel"
-          target="_blank"><span class="text-black">{{contact.title}}</span></v-btn>
+      <div class="d-flex flex-row align-center justify-center w-100">
+        <v-btn v-for="contact in contacts" :key="contact.id" :prepend-icon="contact.icon" class="text-light-blue text-caption mr-2" density="compact" size="large"
+          rounded="xl" variant="text" role="link" :href="contact.rel" target="_blank"><span
+            class="text-black">{{ contact.title }}</span></v-btn>
       </div>
     </template>
 
@@ -130,8 +130,9 @@ const onTop = setTimeout(() => {
     <v-img @click="routerPush('/')"
       src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/puliservice.webp?alt=media&token=04c81343-8274-465a-bc6c-674bf499c46a"
       lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/puliservice.webp?alt=media&token=04c81343-8274-465a-bc6c-674bf499c46a"
-      max-width="200" height="50" class="pa-1 ma-1" style="cursor: pointer !important" alt="Logo Puliservice srls">
+      max-width="200" height="100" class="ml-5 pa-1 ma-1" style="cursor: pointer !important;" alt="Logo Puliservice srls">
     </v-img>
+
 
     <v-spacer></v-spacer>
 
@@ -199,17 +200,18 @@ const onTop = setTimeout(() => {
     <v-list nav aria-label="menu-item">
       <v-tabs direction="vertical">
         <div class="d-flex flex-column justify-start align-end">
-          <v-btn class="rounded-pill mt-2 text-light-blue text-subtitle-1" size="large" density="compact" prepend-icon="mdi-home" variant="text"
-            @click="routerPush('/')"><span class="text-black">Home</span></v-btn>
+          <v-btn class="rounded-pill mt-2 text-light-blue text-subtitle-1" size="large" density="compact"
+            prepend-icon="mdi-home" variant="text" @click="routerPush('/')"><span class="text-black">Home</span></v-btn>
 
-          <v-btn class="rounded-pill mt-2 text-light-blue text-subtitle-1" size="large" density="compact" prepend-icon="mdi-human-greeting" variant="text"
-            @click="routerPush('chisiamo')"><span class="text-black">Chi siamo</span></v-btn>
+          <v-btn class="rounded-pill mt-2 text-light-blue text-subtitle-1" size="large" density="compact"
+            prepend-icon="mdi-human-greeting" variant="text" @click="routerPush('chisiamo')"><span class="text-black">Chi
+              siamo</span></v-btn>
 
           <v-menu transition="slide-y-transition">
             <template v-slot:activator="{ props }">
-              <v-btn class="rounded-pill mt-2 text-light-blue text-subtitle-1" size="large" density="compact" variant="text" prepend-icon="mdi-spray-bottle"
-                @click="toggleArrowZero" :append-icon="arrowZero ? 'mdi-chevron-double-up' : 'mdi-chevron-double-down'"
-                v-bind="props">
+              <v-btn class="rounded-pill mt-2 text-light-blue text-subtitle-1" size="large" density="compact"
+                variant="text" prepend-icon="mdi-spray-bottle" @click="toggleArrowZero"
+                :append-icon="arrowZero ? 'mdi-chevron-double-up' : 'mdi-chevron-double-down'" v-bind="props">
                 <span class="text-black">Pulizie</span>
               </v-btn>
             </template>
@@ -217,8 +219,8 @@ const onTop = setTimeout(() => {
             <v-list class="rounded-lg bg-white">
               <v-list-item v-for="pulizia in pulizie" :key="pulizia.id">
                 <v-list-item-title class="d-flex flex-column">
-                  <v-btn class="rounded-pill mt-2 text-light-blue text-subtitle-1" size="large" density="compact" :prepend-icon="pulizia.icon" variant="text" stacked
-                    @click="routerPush(pulizia.route)">
+                  <v-btn class="rounded-pill mt-2 text-light-blue text-subtitle-1" size="large" density="compact"
+                    :prepend-icon="pulizia.icon" variant="text" stacked @click="routerPush(pulizia.route)">
                     <span class="text-black">{{ pulizia.title }}</span>
                   </v-btn>
                 </v-list-item-title>
@@ -228,9 +230,9 @@ const onTop = setTimeout(() => {
 
           <v-menu transition="slide-y-transition">
             <template v-slot:activator="{ props }">
-              <v-btn class="rounded-pill mt-2 text-light-blue text-subtitle-1" size="large" density="compact" variant="text" prepend-icon="mdi-account-wrench"
-                @click.stop="toggleArrowOne" :append-icon="arrowOne ? 'mdi-chevron-double-up' : 'mdi-chevron-double-down'"
-                v-bind="props">
+              <v-btn class="rounded-pill mt-2 text-light-blue text-subtitle-1" size="large" density="compact"
+                variant="text" prepend-icon="mdi-account-wrench" @click.stop="toggleArrowOne"
+                :append-icon="arrowOne ? 'mdi-chevron-double-up' : 'mdi-chevron-double-down'" v-bind="props">
                 <span class="text-black">Servizi</span>
               </v-btn>
             </template>
@@ -238,8 +240,8 @@ const onTop = setTimeout(() => {
             <v-list class="rounded-lg bg-white">
               <v-list-item v-for="servizio in servizi" :key="servizio.id">
                 <v-list-item-title class="d-flex flex-column">
-                  <v-btn class="rounded-pill mt-2 text-light-blue text-subtitle-1" size="large" density="compact" :prepend-icon="servizio.icon" variant="text" stacked
-                    @click="routerPush(servizio.route)">
+                  <v-btn class="rounded-pill mt-2 text-light-blue text-subtitle-1" size="large" density="compact"
+                    :prepend-icon="servizio.icon" variant="text" stacked @click="routerPush(servizio.route)">
                     <span class="text-black">{{ servizio.title }}</span>
                   </v-btn>
                 </v-list-item-title>
@@ -247,22 +249,23 @@ const onTop = setTimeout(() => {
             </v-list>
           </v-menu>
 
-          <v-btn class="rounded-pill mt-2 mb-5 text-light-blue text-subtitle-1" size="large" density="compact" variant="text" prepend-icon="mdi-human-greeting-proximity"
-            @click="routerPush('contatti')"><span class="text-black">Contatti</span></v-btn>
+          <v-btn class="rounded-pill mt-2 mb-5 text-light-blue text-subtitle-1" size="large" density="compact"
+            variant="text" prepend-icon="mdi-human-greeting-proximity" @click="routerPush('contatti')"><span
+              class="text-black">Contatti</span></v-btn>
 
           <hr style="padding-right: 100%; border-color: #29B6F6;" />
 
-          <v-btn class="rounded-pill mt-5 text-light-blue text-subtitle-1" size="large" density="compact" prepend-icon="mdi-calendar-badge" variant="text"
-            @click="routerPush('preventivo')">
+          <v-btn class="rounded-pill mt-5 text-light-blue text-subtitle-1" size="large" density="compact"
+            prepend-icon="mdi-calendar-badge" variant="text" @click="routerPush('preventivo')">
             <span class="text-black">Preventivo</span>
           </v-btn>
 
-          <v-btn class="rounded-pill mt-2 text-light-blue text-subtitle-1" size="large" density="compact" prepend-icon="mdi-laptop-account" variant="text" role="link"
+          <v-btn class="rounded-pill mt-2 text-light-blue text-subtitle-1" size="large" density="compact"
+            prepend-icon="mdi-laptop-account" variant="text" role="link"
             href="https://calendar.app.google/TnEMSnYqn94RzMvT6" target="_blank">
             <span class="text-black">Consulenza</span>
           </v-btn>
         </div>
       </v-tabs>
     </v-list>
-  </v-navigation-drawer>
-</template>
+</v-navigation-drawer></template>
