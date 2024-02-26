@@ -59,24 +59,20 @@ const services = reactive([
   <TopNav />
 
   <v-container fluid class="d-flex justify-center header-align-center-reverse">
-    <v-sheet>
-      <v-img min-width="300" max-width="800" max-height="500"
-        src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fappartment_illustration.svg?alt=media&token=d983f3b7-7107-4062-933a-69172986a447"
-        lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fappartment_illustration.svg?alt=media&token=d983f3b7-7107-4062-933a-69172986a447"></v-img>
-    </v-sheet>
-    <v-sheet>
-      <div class="d-flex flex-column fill-height justify-center text-white">
-        <div class="text-start text-light-blue mt-5 mb-3 mr-5 ml-5">
-          <h1 class="title-responsive">Pulizia Appartamenti</h1>
-        </div>
-        <div class="ma-5 text-start">
-          <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
-            La pulizia straordinaria degli appartamenti è un processo
-            approfondito e dettagliato rispetto alla normale pulizia di routine
-          </p>
-        </div>
+    <v-img min-width="300" max-width="800" max-height="500"
+      src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fappartment_illustration.svg?alt=media&token=d983f3b7-7107-4062-933a-69172986a447"
+      lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fappartment_illustration.svg?alt=media&token=d983f3b7-7107-4062-933a-69172986a447"></v-img>
+    <div class="d-flex flex-column fill-height justify-center text-white">
+      <div class="text-start text-light-blue mt-5 mb-3 mr-5 ml-5">
+        <h1 class="title-responsive">Pulizia Appartamenti</h1>
       </div>
-    </v-sheet>
+      <div class="ma-5 text-start">
+        <p class="subtitle-responsive text-light-blue-darken-4 font-weight-bold">
+          La pulizia straordinaria degli appartamenti è un processo
+          approfondito e dettagliato rispetto alla normale pulizia di routine
+        </p>
+      </div>
+    </div>
   </v-container>
 
   <v-container>

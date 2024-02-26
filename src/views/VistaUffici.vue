@@ -42,12 +42,9 @@ const services = reactive([
   <TopNav />
 
   <v-container fluid class="d-flex justify-center header-align-center-reverse">
-    <v-sheet>
       <v-img min-width="300" max-width="800" max-height="500"
         src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Foffice_illustration.svg?alt=media&token=60f9baf4-022a-4406-986b-18714b0d719b"
         lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Foffice_illustration.svg?alt=media&token=60f9baf4-022a-4406-986b-18714b0d719b"></v-img>
-    </v-sheet>
-    <v-sheet>
       <div class="d-flex flex-column fill-height justify-center text-white">
         <div class="text-start mt-5 mb-3 mr-5 ml-5">
           <h1 class="title-responsive text-light-blue">Pulizie Uffici</h1>
@@ -59,7 +56,6 @@ const services = reactive([
           </p>
         </div>
       </div>
-    </v-sheet>
   </v-container>
 
   <v-container>

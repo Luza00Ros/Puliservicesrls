@@ -54,12 +54,9 @@ const services = reactive([
   <TopNav />
 
   <v-container fluid class="d-flex justify-center header-align-center-reverse">
-    <v-sheet>
       <v-img min-width="300" max-width="800" max-height="500"
         src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fdelivery_illustration.svg?alt=media&token=075f4dbd-d168-4766-84fe-f931858ae44b"
         lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fdelivery_illustration.svg?alt=media&token=075f4dbd-d168-4766-84fe-f931858ae44b"></v-img>
-    </v-sheet>
-    <v-sheet>
       <div class="d-flex flex-column fill-height justify-center text-white">
         <div class="text-start text-light-blue mt-5 mb-3 mr-5 ml-5">
           <h1 class="title-responsive">Facchinaggio</h1>
@@ -71,7 +68,6 @@ const services = reactive([
           </p>
         </div>
       </div>
-    </v-sheet>
   </v-container>
 
   <v-spacer />

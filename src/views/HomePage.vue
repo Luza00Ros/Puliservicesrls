@@ -102,11 +102,9 @@ const routerPush = (link) => { return router.push(link) }
       </div>
     </v-sheet>
 
-    <v-sheet>
       <v-img min-width="300" max-width="800" max-height="500"
         lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fhome_illustration.svg?alt=media&token=97908135-c2d2-4866-81e3-c71a47e0dd06"
         src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fhome_illustration.svg?alt=media&token=97908135-c2d2-4866-81e3-c71a47e0dd06"></v-img>
-    </v-sheet>
   </v-container>
 
   <v-carousel height="100" hide-delimiters :show-arrows="false" cycle interval="2000">
@@ -194,7 +192,7 @@ const routerPush = (link) => { return router.push(link) }
 
       <v-col class="d-flex justify-center" cols="auto" md="4" sm="12">
         <v-img src="/src/assets/puliservice_logo.svg" lazy-src="/src/assets/puliservice_logo.svg" width="100%"
-          max-width="300px" aspect-ratio="16/9" cover></v-img>
+          min-width="200px" max-width="250px" aspect-ratio="16/9" cover></v-img>
       </v-col>
     </v-row>
   </v-container>

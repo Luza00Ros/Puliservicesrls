@@ -8,12 +8,9 @@ import Bottom from "@/components/BottomFooter.vue";
   <TopNav />
 
   <v-container fluid class="d-flex justify-center header-align-center-reverse">
-    <v-sheet>
       <v-img min-width="300" max-width="800" max-height="500"
         src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fmantence_illustration.svg?alt=media&token=9408053a-df56-4ce4-ae79-a127027788f3"
         lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fmantence_illustration.svg?alt=media&token=9408053a-df56-4ce4-ae79-a127027788f3"></v-img>
-    </v-sheet>
-    <v-sheet>
       <div class="d-flex flex-column fill-height justify-center text-white">
         <div class="text-start text-light-blue mt-5 mb-3 mr-5 ml-5">
           <h1 class="title-responsive">Manutenzione generale</h1>
@@ -25,7 +22,6 @@ import Bottom from "@/components/BottomFooter.vue";
           </p>
         </div>
       </div>
-    </v-sheet>
   </v-container>
 
   <v-spacer />
