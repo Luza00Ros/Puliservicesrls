@@ -77,12 +77,9 @@ const currentImage = computed(() => {
   <TopNav />
 
   <v-container fluid class="d-flex justify-center header-align-center-reverse">
-    <v-sheet>
-      <v-img max-width="800" max-height="500"
+      <v-img min-width="300" max-width="800" max-height="500"
         lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fstory_illustration.svg?alt=media&token=6c27154d-1154-41fa-a74c-290100ade821"
         src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fstory_illustration.svg?alt=media&token=6c27154d-1154-41fa-a74c-290100ade821"></v-img>
-    </v-sheet>
-    <v-sheet>
       <div class="d-flex flex-column fill-height justify-center text-white">
         <div class="text-start text-light-blue mt-5 mb-3 mr-5 ml-5">
           <h1 class="title-responsive">La nostra Storia</h1>
@@ -93,7 +90,6 @@ const currentImage = computed(() => {
           </p>
         </div>
       </div>
-    </v-sheet>
   </v-container>
 
   <v-spacer></v-spacer>
@@ -190,8 +186,8 @@ const currentImage = computed(() => {
         </p>
       </v-col>
 
-      <v-col class="d-flex justify-center" cols="auto" md="4" style="margin-bottom: 0; padding-bottom: 0">
-        <v-card color="light-blue-darken-4" variant="flat">
+      <v-col class="d-flex justify-center mb-0 pb-0" cols="auto" md="4">
+        <v-card color="light-blue-darken-4" variant="flat" width="300px">
           <div id="blue-circle"></div>
           <v-img
             lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/howTo%2FLuciana-Imprenditrice.webp?alt=media&token=2753652b-243a-498e-883c-eedef6dee493"

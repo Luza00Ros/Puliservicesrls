@@ -175,7 +175,7 @@ const onRedirect = (name, email, phone, request, checkbox) => {
 
   <v-container fluid class="d-flex justify-center header-align-center-reverse">
     <v-sheet>
-      <v-img max-width="800" max-height="500"
+      <v-img min-width="300" max-width="800" max-height="500"
         lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fpreventive_illustration.svg?alt=media&token=15a85eea-344d-46b3-9747-b3cd8d5fbe5a"
         src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fpreventive_illustration.svg?alt=media&token=15a85eea-344d-46b3-9747-b3cd8d5fbe5a"></v-img>
     </v-sheet>

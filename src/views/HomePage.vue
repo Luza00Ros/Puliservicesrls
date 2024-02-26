@@ -103,7 +103,7 @@ const routerPush = (link) => { return router.push(link) }
     </v-sheet>
 
     <v-sheet>
-      <v-img max-width="800" max-height="500"
+      <v-img min-width="300" max-width="800" max-height="500"
         lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fhome_illustration.svg?alt=media&token=97908135-c2d2-4866-81e3-c71a47e0dd06"
         src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fhome_illustration.svg?alt=media&token=97908135-c2d2-4866-81e3-c71a47e0dd06"></v-img>
     </v-sheet>
@@ -118,35 +118,35 @@ const routerPush = (link) => { return router.push(link) }
               <v-img
                 src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/logos%2Fvileda.webp?alt=media&token=371ab4f4-1805-41db-8b0d-be5a291c9242"
                 lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/logos%2Fvileda.webp?alt=media&token=371ab4f4-1805-41db-8b0d-be5a291c9242"
-                alt="Marchi da noi utilizzati" /></a>
+                alt="Marchi da noi utilizzati" width="300"/></a>
           </template>
           <template v-if="slide.id == 1">
             <a role="link" aria-label="Le nostre marche certificate" target="_blank" :href="slide.link" class="h-50">
               <v-img
                 src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/logos%2Fmarbec.webp?alt=media&token=1b04c777-1500-4f29-b530-914f0598c28b"
                 lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/logos%2Fmarbec.webp?alt=media&token=1b04c777-1500-4f29-b530-914f0598c28b"
-                alt="Marchi da noi utilizzati" /></a>
+                alt="Marchi da noi utilizzati" width="300"/></a>
           </template>
           <template v-if="slide.id == 2">
             <a role="link" aria-label="Le nostre marche certificate" target="_blank" :href="slide.link" class="h-50">
               <v-img
                 src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/logos%2Fsutter.webp?alt=media&token=fc2500e4-ad05-4d34-8e2c-f532f01246c0"
                 lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/logos%2Fsutter.webp?alt=media&token=fc2500e4-ad05-4d34-8e2c-f532f01246c0"
-                alt="Marchi da noi utilizzati" /></a>
+                alt="Marchi da noi utilizzati" width="300"/></a>
           </template>
           <template v-if="slide.id == 3">
             <a role="link" aria-label="Le nostre marche certificate" target="_blank" :href="slide.link" class="h-50">
               <v-img
                 src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/logos%2Fsanitec.webp?alt=media&token=d2b61923-4d82-46aa-a8d8-6c85e1417b9c"
                 lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/logos%2Fsanitec.webp?alt=media&token=d2b61923-4d82-46aa-a8d8-6c85e1417b9c"
-                alt="Marchi da noi utilizzati" /></a>
+                alt="Marchi da noi utilizzati" width="300"/></a>
           </template>
           <template v-if="slide.id == 4">
             <a role="link" aria-label="Le nostre marche certificate" target="_blank" :href="slide.link" class="h-50">
               <v-img
                 src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/logos%2Flysoform.webp?alt=media&token=ee97bc43-db58-42a5-96ab-0c5f0a927cef"
                 lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/logos%2Flysoform.webp?alt=media&token=ee97bc43-db58-42a5-96ab-0c5f0a927cef"
-                alt="Marchi da noi utilizzati" /></a>
+                alt="Marchi da noi utilizzati" width="300"/></a>
           </template>
         </div>
       </v-sheet>
@@ -219,25 +219,25 @@ const routerPush = (link) => { return router.push(link) }
         <v-img
           src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2FbestPlace_illustration.svg?alt=media&token=ba9e4b23-483c-4eec-8681-87e0bb9214f1"
           lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2FbestPlace_illustration.svg?alt=media&token=ba9e4b23-483c-4eec-8681-87e0bb9214f1"
-          width="600" rounded="xl" cover></v-img>
+          width="400" rounded="xl" cover></v-img>
       </span>
       <span v-if="service.id == 1">
         <v-img
           src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Foffice_illustration.svg?alt=media&token=60f9baf4-022a-4406-986b-18714b0d719b"
           lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Foffice_illustration.svg?alt=media&token=60f9baf4-022a-4406-986b-18714b0d719b"
-          width="600" rounded="xl" cover></v-img>
+          width="400" rounded="xl" cover></v-img>
       </span>
       <span v-if="service.id == 2">
         <v-img
           src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fshop_illustration.svg?alt=media&token=d0353e2e-a19b-43b2-ba3a-753b754184f3"
           lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fshop_illustration.svg?alt=media&token=d0353e2e-a19b-43b2-ba3a-753b754184f3"
-          width="600" rounded="xl" cover></v-img>
+          width="400" rounded="xl" cover></v-img>
       </span>
       <span v-if="service.id == 3">
         <v-img
           src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fdelivery_illustration.svg?alt=media&token=075f4dbd-d168-4766-84fe-f931858ae44b"
           lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fdelivery_illustration.svg?alt=media&token=075f4dbd-d168-4766-84fe-f931858ae44b"
-          width="600" rounded="xl" cover></v-img>
+          width="400" rounded="xl" cover></v-img>
       </span>
 
       <v-card-item>

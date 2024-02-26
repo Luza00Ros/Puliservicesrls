@@ -64,7 +64,7 @@ const routerPush = (link) => {
 
   <v-container fluid class="d-flex justify-center header-align-center-reverse">
     <v-sheet>
-      <v-img max-width="800" max-height="500"
+      <v-img min-width="300" max-width="800" max-height="500"
         src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2FbestPlace_illustration.svg?alt=media&token=ba9e4b23-483c-4eec-8681-87e0bb9214f1"
         lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2FbestPlace_illustration.svg?alt=media&token=ba9e4b23-483c-4eec-8681-87e0bb9214f1"></v-img>
     </v-sheet>

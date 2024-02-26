@@ -60,7 +60,7 @@ const services = reactive([
 
   <v-container fluid class="d-flex justify-center header-align-center-reverse">
     <v-sheet>
-      <v-img max-width="800" max-height="500"
+      <v-img min-width="300" max-width="800" max-height="500"
         src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fappartment_illustration.svg?alt=media&token=d983f3b7-7107-4062-933a-69172986a447"
         lazy-src="https://firebasestorage.googleapis.com/v0/b/puliservicesrls-4246e.appspot.com/o/illustration%2Fappartment_illustration.svg?alt=media&token=d983f3b7-7107-4062-933a-69172986a447"></v-img>
     </v-sheet>
