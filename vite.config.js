@@ -1,7 +1,6 @@
 // Plugins
 import vue from "@vitejs/plugin-vue";
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
-import { viteStaticCopy } from "vite-plugin-static-copy";
 
 // Utilities
 import { defineConfig } from "vite";
@@ -19,14 +18,6 @@ export default defineConfig({
       styles: {
         configFile: "src/styles/settings.scss",
       },
-    }),
-    viteStaticCopy({
-      targets: [
-        {
-          src: "sitemap.xml",
-          dest: "",
-        },
-      ],
     }),
   ],
   define: { "process.env": {} },

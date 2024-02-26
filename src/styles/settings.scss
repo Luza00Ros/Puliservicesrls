@@ -112,35 +112,35 @@
 }
 
 h1 {
-  font-size: 62px;
+  font-size: 48px;
 }
 
 h2 {
-  font-size: 54px;
+  font-size: 36px;
 }
 
 h3 {
-  font-size: 46px;
-}
-
-h4 {
-  font-size: 38px;
-}
-
-h5 {
   font-size: 30px;
 }
 
-h6 {
-  font-size: 22px;
+h4 {
+  font-size: 24px;
 }
 
-p {
+h5 {
   font-size: 20px;
 }
 
+h6 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+}
+
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -213,9 +213,4 @@ p {
 
 .mar {
   margin-top: 3px !important;
-}
-
-.position-relative {
-  position: relative;
-  top: 200px;
 }
