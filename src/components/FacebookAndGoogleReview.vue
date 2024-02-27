@@ -1,11 +1,6 @@
-<script>
-export default {
-  name: "FacebookAndGoogleReview",
-  components: {
-    FacebookReview,
-    GoogleReview,
-  },
-};
+<script setup>
+import FacebookReview from "./FacebookReview.vue";
+import GoogleReview from "./GoogleReview.vue";
 </script>
 
 <template>
@@ -14,7 +9,7 @@ export default {
       Recensioni dei clienti
     </h1>
     <h2 class="subtitle-responsive text-light-blue">
-      Opinioni che ci riempiono di orgoglio
+      Opinioni che ci riempiono orgoglio
     </h2>
   </v-container>
   <v-spacer></v-spacer>
@@ -29,8 +24,3 @@ export default {
     </v-sheet>
   </v-container>
 </template>
-
-<script setup>
-import FacebookReview from "./FacebookReview.vue";
-import GoogleReview from "./GoogleReview.vue";
-</script>
